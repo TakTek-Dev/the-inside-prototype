@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Inside – Palestine · The Ledger · Friday 9 October 2026 (design proposal)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Overpass+Mono:wght@400;500;700&display=swap">
+<style>
+body{margin:0}
+
+:root{
+  --paper:#eef2ee; --paper2:#e2e9e4; --ink:#1c1a16; --ink2:#575142; --rule:#c4d3d9; --rule2:#9fb4bd;
+  --red:#a11d1d; --cloth:#1f3a33; --cloth2:#2b4b43; --onc:#efe9da; --onc2:#bfcfc6;
+  --serif:"Brygada 1918",Georgia,serif; --mono:"Overpass Mono",ui-monospace,monospace;
+  --gut:clamp(16px,3vw,40px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.55 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--red)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+img{display:block;max-width:100%;height:auto}
+.mono{font-family:var(--mono)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--gut)}
+.lbl{font:500 12px/1.4 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink2)}
+.red{color:var(--red)}
+
+/* proposal strip + binding */
+.strip{background:var(--cloth);color:var(--onc);font:400 11.5px/1.5 var(--mono);letter-spacing:.04em}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;padding-top:9px;padding-bottom:9px}
+.strip b{font-weight:700;color:#fff;background:var(--red);padding:2px 7px;margin-right:8px;letter-spacing:.1em}
+
+/* masthead */
+.mast{border-bottom:3px double var(--ink)}
+.mast .wrap{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px 40px;padding-top:30px;padding-bottom:18px}
+.word{font:600 clamp(40px,6.4vw,92px)/.92 var(--serif);letter-spacing:-.025em}
+.word .nw{white-space:nowrap}
+.word i{font-style:italic;font-weight:400;color:var(--red)}
+.word-note{margin-top:12px;font:400 12px/1.5 var(--mono);color:var(--ink2)}
+.mast-r{text-align:right;font:500 12px/1.7 var(--mono);color:var(--ink2)}
+.mast-r strong{display:block;font:italic 500 21px/1.3 var(--serif);color:var(--ink);letter-spacing:0;text-transform:none}
+nav.tabs{border-bottom:1px solid var(--ink)}
+nav.tabs ul{list-style:none;display:flex;flex-wrap:wrap}
+nav.tabs a{display:flex;align-items:center;min-height:46px;padding:0 18px;font:500 13px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-right:1px solid var(--rule2)}
+nav.tabs li:first-child a{padding-left:0}
+nav.tabs a[aria-current]{color:var(--red)}
+nav.tabs a[aria-current]::before{content:"";width:8px;height:8px;background:var(--red);margin-right:9px}
+
+/* the ledger sheet: ruled columns that every section shares */
+.cols{display:grid;grid-template-columns:110px 120px minmax(0,1fr) 230px;column-gap:0}
+.cols>*{padding:0 22px}
+.cols>*:first-child{padding-left:0}
+.colhead{border-bottom:1px solid var(--ink);position:sticky}
+.colhead>*{padding-top:10px;padding-bottom:8px}
+.vr{border-left:1px solid var(--rule2)}
+.margin{border-left:3px double var(--red)}
+
+/* SPINE: the count */
+.spine{padding:0 0 0}
+.spine .cols{border-bottom:1px solid var(--rule2)}
+.count-n{font:700 clamp(136px,22vw,330px)/.74 var(--mono);letter-spacing:-.05em;color:var(--red);margin:30px 0 0 -6px}
+.count-lede{font:500 clamp(22px,2.3vw,32px)/1.18 var(--serif);max-width:24ch;letter-spacing:-.01em}
+.count-src{margin-top:14px;font:400 12px/1.6 var(--mono);color:var(--ink2);max-width:58ch}
+.big-row{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:0 48px;padding:14px 0 34px}
+.cmp{margin-top:30px}
+.cmp table{width:100%;border-collapse:collapse;font:400 13px/1.3 var(--mono)}
+.cmp caption{text-align:left;padding-bottom:8px}
+.cmp th,.cmp td{border-bottom:1px solid var(--rule);padding:11px 8px 10px 0;text-align:right;vertical-align:baseline}
+.cmp th:first-child,.cmp td:first-child{text-align:left}
+.cmp thead th{font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);border-bottom:1px solid var(--ink)}
+.cmp td.k{font-weight:700;color:var(--red);font-size:15px}
+.cmp tr.turn td{background:var(--paper2)}
+.cmp .note{font:italic 400 16px/1.45 var(--serif);color:var(--ink);margin-top:14px;max-width:46ch}
+
+.bk{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.bk div{padding:14px 16px 14px 0}
+.bk div+div{border-left:1px solid var(--rule2);padding-left:16px}
+.bk b{display:block;font:700 38px/1 var(--mono);letter-spacing:-.03em}
+.bk span{display:block;margin-top:6px;font:400 13px/1.35 var(--serif);color:var(--ink2)}
+
+/* tally */
+.tally-wrap{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:0 40px;padding:26px 0 30px;border-bottom:3px double var(--ink)}
+.tally{display:flex;flex-wrap:wrap;gap:10px 13px;align-content:flex-start}
+.g{position:relative;display:inline-flex;gap:6px;height:30px;padding:0 1px}
+.g i{display:block;width:2px;height:30px;background:var(--ink)}
+.g.five::after{content:"";position:absolute;left:-4px;right:-4px;top:14px;height:2px;background:var(--red);transform:rotate(-24deg)}
+.tally-cap{font:400 15px/1.5 var(--serif);color:var(--ink2)}
+.tally-cap strong{color:var(--ink);font-weight:600}
+
+/* open / not yet entered */
+.open{background:var(--paper2);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:-1px}
+.open .wrap{display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 30px;padding-top:22px;padding-bottom:22px}
+.open h2{font:600 22px/1.15 var(--serif)}
+.open h2+p{margin-top:8px;font:400 14px/1.5 var(--serif);color:var(--ink2)}
+.open ol{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.open li{padding:2px 22px;border-left:1px dashed var(--ink2)}
+.open li .lbl{display:block;margin-bottom:6px;color:var(--red)}
+.open li p{font:400 16px/1.42 var(--serif)}
+
+/* JOURNAL: entries */
+.sec-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 30px;padding:46px 0 14px;border-bottom:1px solid var(--ink)}
+.sec-h h2{font:600 clamp(28px,3vw,40px)/1.05 var(--serif);letter-spacing:-.015em}
+.sec-h h2 em{font-weight:400;color:var(--red)}
+.sec-h p{font:400 12px/1.5 var(--mono);color:var(--ink2);max-width:62ch}
+.entry{border-bottom:1px solid var(--rule2)}
+.entry>*{padding-top:20px;padding-bottom:22px}
+.e-no{font:700 29px/1 var(--mono);letter-spacing:-.03em;color:var(--red)}
+.e-no small{display:block;margin-top:8px;font:400 10.5px/1.35 var(--mono);letter-spacing:.04em;color:var(--ink2);text-transform:uppercase}
+.e-no.blank{color:var(--ink2)}
+.e-date{font:500 12.5px/1.45 var(--mono)}
+.e-date .lbl{display:block;margin-top:8px}
+.e-body h3{font:600 25px/1.16 var(--serif);letter-spacing:-.01em;max-width:34ch}
+.e-body h3 a{text-decoration:none}
+.e-body h3 a:hover{text-decoration:underline}
+.e-body p{margin-top:9px;font-size:17.5px;max-width:68ch}
+.e-src{font:400 11.5px/1.55 var(--mono);color:var(--ink2)}
+.e-src a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink)}
+
+.entry.minor .e-body h3{font-size:20px}
+.entry.minor .e-body p{font-size:15.5px}
+.entry.minor>*{padding-top:14px;padding-bottom:16px}
+.entry.lead .e-body h3{font-size:clamp(32px,3.5vw,48px);line-height:1.04;max-width:22ch;letter-spacing:-.02em}
+.entry.lead .e-body p.dek{font-size:20px;line-height:1.5;margin-top:14px}
+.lead-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.25fr);gap:30px;margin-top:6px}
+.facts{list-style:none;margin-top:18px;border-top:1px solid var(--ink)}
+.facts li{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.facts b{font:700 17px/1.35 var(--mono);letter-spacing:-.02em;color:var(--red)}
+.facts span{font-size:15.5px;line-height:1.4}
+.street .txt p.lbl,.files p.lbl{font:500 11px/1.4 var(--mono);margin-top:0;color:var(--ink2)}
+figure figcaption{margin-top:8px;font:400 11px/1.5 var(--mono);color:var(--ink2)}
+.e-body .small{font-size:15px;color:var(--ink2)}
+
+/* climb charts */
+.climb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-bottom:3px double var(--ink)}
+.climb>section{padding:26px 34px 34px 0}
+.climb>section+section{border-left:1px solid var(--rule2);padding-left:34px;padding-right:0}
+.climb h3{font:600 23px/1.2 var(--serif)}
+.climb h3+p{margin-top:6px;font:400 15px/1.45 var(--serif);color:var(--ink2);max-width:52ch}
+.pairs{margin-top:20px}
+.pair{display:grid;grid-template-columns:86px minmax(0,1fr);gap:4px 14px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.pair .d{grid-row:span 2;font:500 12px/1.3 var(--mono);padding-top:3px}
+.bar{display:flex;align-items:center;gap:10px;font:500 12px/1 var(--mono)}
+.bar i{display:block;height:14px;background:var(--red)}
+.bar.y25 i{background:transparent;border:1.5px solid var(--ink);height:12px}
+.bar em{font-style:normal;color:var(--ink2);width:40px;flex:none}
+.key{display:flex;gap:20px;margin-top:12px;font:400 11.5px/1 var(--mono);color:var(--ink2)}
+.key span::before{content:"";display:inline-block;width:18px;height:10px;background:var(--red);margin-right:7px;vertical-align:-1px}
+.key span.k25::before{background:transparent;border:1.5px solid var(--ink)}
+.hund{margin-top:20px}
+.hrow{display:grid;grid-template-columns:52px minmax(0,1fr) 112px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule);font:400 12.5px/1.2 var(--mono)}
+.hrow .t{position:relative;height:16px;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/12 - 1px),var(--rule) calc(100%/12 - 1px) calc(100%/12))}
+.hrow .t i{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}
+.hrow.now .t i{background:var(--red)}
+.hrow.now{font-weight:700;color:var(--red)}
+.hrow .w{text-align:right}
+.months{display:grid;grid-template-columns:52px minmax(0,1fr) 112px;gap:12px;margin-top:6px;font:400 10px/1 var(--mono);color:var(--ink2)}
+.months div{display:flex;justify-content:space-between}
+
+/* names register */
+.reg{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0 40px;padding:34px 0 38px;border-bottom:3px double var(--ink)}
+.reg h2{font:600 26px/1.15 var(--serif)}
+.reg h2+p{margin-top:10px;font:400 15px/1.5 var(--serif);color:var(--ink2)}
+.evs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.ev{padding:0 24px}
+.ev:first-child{padding-left:0}
+.ev+.ev{border-left:1px solid var(--rule2)}
+.ev .lbl{color:var(--red)}
+.ev .ctx{margin-top:8px;font:400 15.5px/1.5 var(--serif)}
+.ev ul{list-style:none;margin-top:10px;border-top:1px solid var(--ink)}
+.ev .src{margin-top:10px;font:400 11.5px/1.5 var(--mono);color:var(--ink2)}
+.reg li{break-inside:avoid;padding:9px 0 10px;border-bottom:1px solid var(--rule)}
+.reg li b{display:block;font:600 19px/1.25 var(--serif)}
+.reg li span{font:400 11.5px/1.5 var(--mono);color:var(--ink2)}
+
+/* street */
+.street{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:30px;padding:34px 0 40px;border-bottom:1px solid var(--ink)}
+.street h2{font:600 clamp(28px,3vw,40px)/1.05 var(--serif);letter-spacing:-.015em}
+.street .txt p{margin-top:12px;font-size:17.5px}
+.street .txt p.small{font-size:15px;color:var(--ink2)}
+.street .pics{display:grid;gap:20px}
+
+/* background file + method */
+.files{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-bottom:3px double var(--ink)}
+.files article{padding:26px 28px 30px 0}
+.files article+article{border-left:1px solid var(--rule2);padding-left:28px}
+.files h3{font:600 21px/1.2 var(--serif);margin-top:8px}
+.files p{margin-top:8px;font-size:16px;line-height:1.5}
+.files p.small{font:400 11.5px/1.55 var(--mono);color:var(--ink2)}
+
+/* footer */
+footer{background:var(--cloth);color:var(--onc);margin-top:0}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:30px 48px;padding-top:40px;padding-bottom:40px}
+footer .word{font-size:44px;color:#fff}
+footer .word i{color:#f0b9a8}
+footer p{font-size:15px;line-height:1.55;color:var(--onc)}
+footer .lbl{color:var(--onc2)}
+footer ul{list-style:none;margin-top:8px}
+footer li a{display:inline-flex;align-items:center;min-height:44px;font:400 14px/1.2 var(--mono);text-decoration:none;color:var(--onc)}
+footer li a:hover{color:#fff;text-decoration:underline}
+form.sub{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+form.sub label{grid-column:1/-1;font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--onc2)}
+form.sub input{min-height:46px;padding:0 14px;border:1px solid var(--onc2);background:var(--cloth2);color:#fff;font:400 15px var(--mono)}
+form.sub input::placeholder{color:#a9bdb3}
+form.sub button{min-height:46px;padding:0 18px;border:0;background:var(--onc);color:var(--cloth);font:700 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.credits{border-top:1px solid var(--cloth2)}
+.credits .wrap{display:block;padding-top:16px;padding-bottom:22px;font:400 11px/1.6 var(--mono);color:var(--onc2)}
+.credits a{color:var(--onc);display:inline-flex;align-items:center;min-height:44px;vertical-align:middle}
+
+/* ---------- tablet ---------- */
+@media (max-width:1100px){
+  .cols{grid-template-columns:92px 108px minmax(0,1fr)}
+  .cols>.e-src,.cols>.c4{grid-column:3;padding-top:0}
+  .colhead .c4{display:none}
+  .entry>.e-src{padding-top:0;margin-top:-10px}
+  .big-row{grid-template-columns:1fr}
+  .lead-grid{grid-template-columns:1fr;gap:18px}
+  .lead-grid figure{order:-1}
+  .entry.lead .e-body p.dek{margin-top:0}
+  .reg{grid-template-columns:1fr}
+  .evs{grid-template-columns:1fr;margin-top:20px}
+  .ev,.ev:first-child{padding:0 0 22px}
+  .ev+.ev{border-left:0;border-top:1px solid var(--rule2);padding-top:18px}
+  .files{grid-template-columns:1fr}
+  .files article+article{border-left:0;border-top:1px solid var(--rule2);padding-left:0}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+/* ---------- phone ---------- */
+@media (max-width:720px){
+  body{font-size:17px}
+  .mast .wrap{grid-template-columns:1fr;padding-top:22px}
+  .mast-r{text-align:left}
+  nav.tabs ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  nav.tabs li:nth-child(n+5){border-top:1px solid var(--rule2)}
+  nav.tabs a,nav.tabs li:first-child a{white-space:nowrap;justify-content:center;padding:0 4px;font-size:11px;letter-spacing:.03em}
+  nav.tabs li:nth-child(4n) a{border-right:0}
+  nav.tabs a[aria-current]::before{margin-right:5px;width:6px;height:6px}
+  .cols{grid-template-columns:76px minmax(0,1fr)}
+  .cols>*{padding:0 0 0 14px}
+  .cols>*:first-child{padding-left:0}
+  .cols>.e-date{grid-column:2;padding-bottom:0}
+  .cols>.e-body,.cols>.e-src{grid-column:2;padding-left:14px}
+  .colhead{display:none}
+  .entry>.e-date{padding-bottom:4px}
+  .entry>.e-body{padding-top:4px;padding-bottom:12px}
+  .entry>.e-src{margin-top:0;padding-top:0;padding-bottom:20px}
+  .entry>.e-no,.entry>.e-date{padding-top:18px}
+  .e-no{font-size:22px}
+  .e-body h3{font-size:22px}
+  .count-n{margin-left:-3px}
+  .bk{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bk div{padding:12px 12px 12px 0}
+  .bk div+div{border-left:0;padding-left:0}
+  .bk div:nth-child(2n){border-left:1px solid var(--rule2);padding-left:14px}
+  .bk div:nth-child(n+3){border-top:1px solid var(--rule2)}
+  .bk div:last-child{grid-column:1/-1;border-left:0;padding-left:0}
+  .tally-wrap{grid-template-columns:1fr}
+  .tally-cap{margin-top:18px}
+  .tally{gap:9px 10px}
+  .open .wrap{grid-template-columns:1fr}
+  .open ol{grid-template-columns:1fr;margin-top:14px}
+  .open li{padding:12px 0;border-left:0;border-top:1px dashed var(--ink2)}
+  .climb{grid-template-columns:1fr}
+  .climb>section{padding-right:0}
+  .climb>section+section{border-left:0;border-top:1px solid var(--rule2);padding-left:0}
+  .hrow,.months{grid-template-columns:42px minmax(0,1fr) 92px;gap:8px}
+  .street{grid-template-columns:1fr}
+  .facts li{grid-template-columns:96px 1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .strip .wrap{font-size:11px}
+}
+
+</style>
+</helmet>
+<div>
+<div class="strip"><div class="wrap"><span><b>PROPOSAL</b>Homepage design sample · direction ti-3 “Ledger” · name set as type, not a logo</span><span>Friday 9 October 2026</span></div></div>
+
+<header class="mast">
+  <div class="wrap">
+    <div>
+      <a href="#" style="text-decoration:none" aria-label="The Inside – Palestine, home"><div class="word">The Inside <span class="nw"><i>–</i> Palestine</span></div></a>
+      <p class="word-note">News of Palestinian citizens of Israel, kept as a record.</p>
+    </div>
+    <div class="mast-r"><strong>The count is the front page.</strong>Every story below is entered against it.</div>
+  </div>
+  <nav class="tabs" aria-label="Sections"><div class="wrap"><ul>
+    <li><a href="#ledger" aria-current="page">The Ledger</a></li>
+    <li><a href="#entries">Police</a></li>
+    <li><a href="#entries">Government</a></li>
+    <li><a href="#entries">Courts</a></li>
+    <li><a href="#street">Protest</a></li>
+    <li><a href="#entries">Roads</a></li>
+    <li><a href="#entries">Rights</a></li>
+    <li><a href="#method">Method</a></li>
+  </ul></div></nav>
+</header>
+
+<main>
+<!-- ================= SPINE ================= -->
+<section class="spine" id="ledger" aria-labelledby="count-h">
+  <div class="wrap">
+    <div class="big-row">
+      <div>
+        <h1 class="count-n" id="count-h" aria-label="181">181</h1>
+        <p class="count-lede">Arab citizens and residents of Israel killed in crime and violence since 1 January 2026.</p>
+        <p class="count-src">AS OF 25 SEP 2026 · Count: The Abraham Initiatives, as reported by Arab48 / Bokra. This is the latest published update; incidents reported since are listed below.</p>
+      </div>
+      <div class="cmp">
+        <table>
+          <caption class="lbl">Same date, last year — Abraham Initiatives updates</caption>
+          <thead><tr><th scope="col">Update</th><th scope="col">2026</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead>
+          <tbody>
+            <tr><td>3 May</td><td class="k">100+</td><td>—</td><td>fastest in 5 yrs</td></tr>
+            <tr><td>5 Jul</td><td class="k">152</td><td>128</td><td>+18%</td></tr>
+            <tr><td>20 Jul</td><td class="k">157</td><td>139</td><td>+13%</td></tr>
+            <tr class="turn"><td>25 Sep</td><td class="k">181</td><td>187</td><td>−3%</td></tr>
+          </tbody>
+        </table>
+        <p class="note">For the first time this year the count sits below the same date in 2025 — a year that ended at 252, the worst on record. The gap closed because last September was worse, not because this one was calm.</p>
+      </div>
+    </div>
+    <div class="bk" aria-label="How the 181 died">
+      <div><b>153</b><span>shot</span></div>
+      <div><b>9</b><span>stabbed</span></div>
+      <div><b>6</b><span>killed in arson</span></div>
+      <div><b>13</b><span>women and girls</span></div>
+      <div><b class="red">9</b><span>killed by police gunfire</span></div>
+    </div>
+    <div class="tally-wrap">
+      <div class="tally" role="img" aria-label="181 tally marks, one for each person counted"><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g five"><i></i><i></i><i></i><i></i></span><span class="g"><i></i></span></div>
+      <p class="tally-cap"><strong>One stroke, one life.</strong> Each mark stands for one person in the watchdog’s register. Categories overlap and do not add up to 181; the watchdog lists them separately.</p>
+    </div>
+  </div>
+</section>
+
+<section class="open" aria-labelledby="open-h">
+  <div class="wrap">
+    <div><h2 id="open-h">Since the last count</h2><p>Shootings and deaths reported after the 25 September update. A death enters the ledger only when the watchdog counts it.</p></div>
+    <ol>
+      <li><span class="lbl">Thu 8 Oct · Or Akiva junction, Road 4</span><p>A man in his forties died when a car exploded at the entrance to Or Akiva, north of Hadera. Police opened an investigation; the cause is not yet known.</p></li>
+      <li><span class="lbl">Wed 7 Oct · Negev</span><p>Two people wounded in a shooting, one of them a boy, who is in serious condition.</p></li>
+      <li><span class="lbl">Sat 3 Oct · Jaffa</span><p>A young man seriously wounded in a shooting.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= ENTRIES ================= -->
+<section id="entries" aria-labelledby="entries-h">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="entries-h">Entries <em>this fortnight</em></h2><p>Each story is posted against the count on the day it happened. Where no count was published that day, the No. column stays blank.</p></div>
+    <div class="cols colhead" aria-hidden="true">
+      <div class="lbl">No.</div><div class="lbl vr">Date</div><div class="lbl vr">Entry</div><div class="lbl vr c4">Source</div>
+    </div>
+
+    <article class="entry lead cols">
+      <div class="e-no">181<small>count on the day</small></div>
+      <div class="e-date vr">25 Sep<span class="lbl">Government</span></div>
+      <div class="e-body vr">
+        <h3><a href="#">A third of this year’s crime-fighting money for Arab towns was still unspent in mid-September</a></h3>
+        <div class="lead-grid">
+          <div>
+            <p class="dek">A Prime Minister’s Office document shows the National Security Ministry had used about two-thirds of its NIS 300 million for 2026. Roughly NIS 100 million remained. In 2025, a similar sum went back to the Treasury. The ministry rejects the figures: the police money is in its budget and being used, it says, and this year’s remainder has not been returned.</p>
+            <ul class="facts">
+              <li><b>NIS 950m</b><span>used of NIS 1.5bn allocated under the 2022–2026 government plan</span></li>
+              <li><b>~100 / ~180</b><span>officers at Lod police station, against roughly 180 posts — the recruitment targets the money was for</span></li>
+            </ul>
+          </div>
+          <figure>
+            <img src="/_blob/8ed805308a98d1f85ba36561b30d22b2" width="1280" height="720" alt="Protesters at night holding red-hand placards; one in Arabic reads “Stop the crime war”.">
+            <figcaption>“Stop the crime war”: placards at the Tel Aviv rally, 31 January 2026. Photo: Nizzan Cohen, CC BY 4.0, Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="e-src vr">Source: PMO document reported by Arab48, via Bokra, 25 Sep 2026.<br><a href="#">Follow the money file →</a></div>
+    </article>
+
+    <article class="entry cols">
+      <div class="e-no blank">—<small>case from 2023</small></div>
+      <div class="e-date vr">8 Oct<span class="lbl">Courts</span></div>
+      <div class="e-body vr">
+        <h3><a href="#">Brother, cousin and father sentenced over the 2023 killing of Aya Abu Hajjaj in Lod</a></h3>
+        <p>The Central District Court gave her brother, 14½ at the time, 22 years and a cousin 17 years for aggravated murder; her father got 15 years for aiding the murder. The three must pay more than NIS 300,000 to her two children. Prosecutors said she was killed for refusing to move back to her father’s family in Hura.</p>
+      </div>
+      <div class="e-src vr">Source: Arab48, 8 Oct 2026.</div>
+    </article>
+
+    <article class="entry cols">
+      <div class="e-no blank">134<small>second ledger · roads</small></div>
+      <div class="e-date vr">6 Oct<span class="lbl">Roads</span></div>
+      <div class="e-body vr">
+        <h3><a href="#">The other count: 134 Arab citizens killed on the roads in nine months</a></h3>
+        <p>Road-safety group Or Yarok counts 134 Arab road deaths to 5 October, about 19% more than in the same period of 2025 — 39% of the 342 people killed on Israel’s roads, from a community that is about a fifth of the population. Fourteen died in September alone.</p>
+      </div>
+      <div class="e-src vr">Source: Or Yarok data, Arab48, 6 Oct 2026.</div>
+    </article>
+
+    <article class="entry minor cols">
+      <div class="e-no blank">—<small>no count</small></div>
+      <div class="e-date vr">2 Oct<span class="lbl">Rights</span></div>
+      <div class="e-body vr">
+        <h3><a href="#">Supreme Court unanimously lifts the election committee’s ban on Arab lists</a></h3>
+        <p>Ra’am and the Joint List can stand on 27 October; Hadash MK Ofer Cassif was cleared by 7–2. Balad chairman Sami Abu Shehadeh withdrew after the court signalled it would uphold his own disqualification. <span class="small">Our election desk has the full story.</span></p>
+      </div>
+      <div class="e-src vr">Source: Times of Israel, 2 Oct; JTA, 5 Oct 2026.</div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= CLIMB ================= -->
+<section aria-label="How the count climbed">
+  <div class="wrap">
+    <div class="sec-h"><h2>How the count <em>climbed</em></h2><p>Two readings of the same record. Left: 2026 against the same date in 2025. Right: the day of the year each count reached 100.</p></div>
+    <div class="climb">
+      <section>
+        <h3>Ahead all summer, behind in September</h3>
+        <p>Year-to-date killings at each published update.</p>
+        <div class="pairs">
+          <div class="pair"><div class="d">5 Jul</div>
+            <div class="bar"><em>2026</em><i style="width:calc((100% - 90px)*152/190)"></i>152</div>
+            <div class="bar y25"><em>2025</em><i style="width:calc((100% - 90px)*128/190)"></i>128</div></div>
+          <div class="pair"><div class="d">20 Jul</div>
+            <div class="bar"><em>2026</em><i style="width:calc((100% - 90px)*157/190)"></i>157</div>
+            <div class="bar y25"><em>2025</em><i style="width:calc((100% - 90px)*139/190)"></i>139</div></div>
+          <div class="pair"><div class="d">25 Sep</div>
+            <div class="bar"><em>2026</em><i style="width:calc((100% - 90px)*181/190)"></i>181</div>
+            <div class="bar y25"><em>2025</em><i style="width:calc((100% - 90px)*187/190)"></i>187</div></div>
+        </div>
+        <div class="key"><span>2026</span><span class="k25">2025, same date</span></div>
+      </section>
+      <section>
+        <h3>The hundredth death came sooner</h3>
+        <p>In 2026 the count passed 100 on day 121 — the fastest in five years.</p>
+        <div class="hund">
+          <div class="hrow"><span>2021</span><div class="t"><i style="width:79.7%"></i></div><span class="w">18 Oct</span></div>
+          <div class="hrow"><span>2022</span><div class="t"><i style="width:89.9%"></i></div><span class="w">24 Nov</span></div>
+          <div class="hrow"><span>2023</span><div class="t"><i style="width:43.8%"></i></div><span class="w">9 Jun</span></div>
+          <div class="hrow"><span>2024</span><div class="t"><i style="width:47.8%"></i></div><span class="w">23 Jun</span></div>
+          <div class="hrow"><span>2025</span><div class="t"><i style="width:41.1%"></i></div><span class="w">30 May</span></div>
+          <div class="hrow now"><span>2026</span><div class="t"><i style="width:33.2%"></i></div><span class="w">day 121</span></div>
+        </div>
+        <div class="months" aria-hidden="true"><span></span><div><span>1 Jan</span><span>1 Jul</span><span>31 Dec</span></div><span></span></div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REGISTER ================= -->
+<section aria-labelledby="reg-h">
+  <div class="wrap">
+    <div class="reg">
+      <div><h2 id="reg-h">Named in September</h2><p>People whose names were published in news reports this month, with age and town as reported, and what was reported about how they died. No photographs. A ledger that keeps only totals forgets who was in it.</p></div>
+      <div class="evs">
+        <div class="ev">
+          <p class="lbl">2–3 Sep · Nazareth · count 172 on 4 Sep</p>
+          <p class="ctx">Four killed in under 24 hours. Police raided compounds linked to what they call the Bakri crime organisation and arrested 30.</p>
+          <ul>
+            <li><b>Noor Nafafea</b><span>31 · 2 Sep</span></li>
+            <li><b>Noor Khlo</b><span>20 · 2 Sep</span></li>
+            <li><b>Mustafa Badra</b><span>27 · 2 Sep</span></li>
+            <li><b>Mahmoud Biatra</b><span>30 · 3 Sep</span></li>
+          </ul>
+          <p class="src">Times of Israel, 4 Sep 2026.</p>
+        </div>
+        <div class="ev">
+          <p class="lbl">Found 13 Sep · near Baqa al-Gharbiya · count 173 on 11 Sep</p>
+          <p class="ctx">Three young men found dead in a burned car. Police are treating their deaths as murder.</p>
+          <ul>
+            <li><b>Zain Odeh</b><span>16 · brother of Qassem</span></li>
+            <li><b>Qassem Odeh</b><span>20</span></li>
+            <li><b>Yahya Bassimi</b><span>20 · their relative</span></li>
+          </ul>
+          <p class="src">Times of Israel, 13 Sep 2026; count, Abraham Initiatives.</p>
+        </div>
+        <div class="ev">
+          <p class="lbl">Police gunfire · 9 this year to 25 Sep</p>
+          <p class="ctx">Alaa Mahameed was unarmed, Haaretz reported, citing the police investigations department; police say he lunged at a Border Police officer after a chase on Route 65. The officer was released to five days’ house arrest.</p>
+          <ul>
+            <li><b>Alaa Mahameed</b><span>38 · Umm al-Fahm · 17 Sep</span></li>
+            <li><b>Omar Hawari</b><span>al-Reina · in Nazareth · Sep</span></li>
+          </ul>
+          <p class="src">Times of Israel, 18 Sep 2026; Arab48 / Bokra, 25 Sep 2026.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STREET ================= -->
+<section id="street" aria-labelledby="street-h">
+  <div class="wrap">
+    <div class="street">
+      <figure><img src="/_blob/8448f32bfaa13e6d95103c300a507be1" width="1280" height="720" alt="Marchers at night behind a long banner in Hebrew reading “Enough neglect and crime. We want to live!”">
+        <figcaption>“Enough neglect and crime. We want to live!” Tel Aviv, 31 January 2026. Photo: Nizzan Cohen, CC BY 4.0, Wikimedia Commons.</figcaption></figure>
+      <div class="txt">
+        <p class="lbl">From the archive · Protest</p>
+        <h2 id="street-h">The street kept its own count</h2>
+        <p>It began in Sakhnin in late January, when shopkeepers shut their doors against protection rackets. Within days the High Follow-Up Committee had taken the strike nationwide, and on 31 January tens of thousands marched from Hostages Square to Habima Square — about half of them Arab, many on chartered buses.</p>
+        <p class="small">Source: Times of Israel, 5 Feb 2026. At the time the year’s count stood at 37.</p>
+        <figure style="margin-top:18px"><img src="/_blob/db8cd7135addd623f899ea43e1c66d66" width="1280" height="720" alt="A large crowd with black flags in front of the lit Habima national theatre in Tel Aviv at night.">
+          <figcaption>Habima Square, 31 January 2026. Photo: Nizzan Cohen, CC BY 4.0, Wikimedia Commons.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FILES ================= -->
+<section id="method" aria-label="Background and method">
+  <div class="wrap">
+    <div class="files">
+      <article>
+        <p class="lbl">Background · Government</p>
+        <h3><a href="#">Government lets the Shin Bet into the fight against crime in Arab towns</a></h3>
+        <p>The July decision gave the domestic security service a formal part in tackling crime in Arab towns, and drew objections from civil-rights groups, among them the Association for Civil Rights in Israel.</p>
+        <p class="small">Times of Israel, 16 Jul 2026.</p>
+      </article>
+      <article>
+        <p class="lbl">The years before</p>
+        <h3>244 · 230 · 252</h3>
+        <p>Killings in Arab society in 2023, 2024 and 2025. 2023 more than doubled the year before; 2025 was the deadliest year on record.</p>
+        <p class="small">Abraham Initiatives figures via Times of Israel (2023, 2025) and Jerusalem Post, 28 Dec 2025 (2024, 2025).</p>
+      </article>
+      <article>
+        <p class="lbl">Method</p>
+        <h3>Whose count, and why one</h3>
+        <p>We keep the Abraham Initiatives’ tally — citizens and permanent residents killed in crime and violence, including by police. Other monitors count differently. When they disagree we name the source; we never average.</p>
+        <p class="small">Counts change after deaths in hospital; we correct the ledger, never overwrite it.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="word">The Inside <span class="nw"><i>–</i> Palestine</span></div>
+      <p style="margin-top:12px">A proposal. The name is set in type; no logo has been drawn and no domain is attached.</p>
+    </div>
+    <div>
+      <p class="lbl">The daily ledger</p>
+      <p>The count and the day’s entries, each morning at 07:00.</p>
+      <form class="sub" action="#" method="post">
+        <label for="em">Email address</label>
+        <input id="em" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div>
+      <p class="lbl">Sections</p>
+      <ul>
+        <li><a href="#ledger">The Ledger</a></li>
+        <li><a href="#entries">Police · Courts · Government</a></li>
+        <li><a href="#method">Method and corrections</a></li>
+        <li><a href="#">[SOCIAL LINKS]</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="credits"><div class="wrap">Photographs: Nizzan Cohen, “Demonstration against violence, criminal organizations and the lack of government enforcement in Israeli Arab society (Tel Aviv, 31 January 2026)” nos. 15, 29 and 40, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons. Type: Brygada 1918 and Overpass Mono (Google Fonts). Design sample — not a live site.</div></div>
+</footer>
+
+<!--
+SOURCES (checked 9 Oct 2026)
+- 181 killed since 1 Jan 2026 (to 25 Sep); 153 shot, 9 stabbed, 6 arson, 13 women and girls, 9 by police gunfire; same period 2025 = 187; PMO document: ~NIS 100m of NIS 300m unspent mid-Sep, NIS 950m of 1.5bn used 2022-2026, Lod station ~100 officers vs ~180 posts; ministry rejects; Omar Hawari (al-Reina) shot by police in Nazareth — Abraham Initiatives update via Arab48 / Bokra, 25 Sep 2026: https://bokra.net/Article-1604399
+- 100+ killed in 121 days; dates 100 reached: 2025 30 May, 2024 23 Jun, 2023 9 Jun, 2022 24 Nov, 2021 18 Oct — Abraham Initiatives via Bokra, 3 May 2026: https://bokra.net/Article-1593652
+- 152 vs 128 (+18%) — Abraham Initiatives via Bokra, 5 Jul 2026: https://bokra.net/Article-1598326
+- 157 vs 139 (+13%) — Abraham Initiatives via Bokra, 20 Jul 2026: https://bokra.net/Article-1599455
+- 172 killed; Nazareth raids, 30 arrested, Bakri organisation; Noor Nafafea 31, Noor Khlo 20, Mustafa Badra 27, Mahmoud Biatra 30 — Times of Israel, 4 Sep 2026: https://www.timesofisrael.com/cops-raid-nazareth-after-4-murdered-in-24-hours-arrest-30-over-alleged-gangland-killings/
+- 173 as of 11 Sep; three found near Baqa al-Gharbiya (Zain Odeh 16, Qassem Odeh 20, Yahya Bassimi 20); 2023 = 244 — Times of Israel, 13 Sep 2026: https://www.timesofisrael.com/bodies-of-3-men-found-in-back-seat-of-burned-car-near-baqa-al-gharbiya-in-suspected-murder/
+- Alaa Mahameed, 38, Umm al-Fahm; DIPI questioning, house arrest — Times of Israel, 18 Sep 2026: https://www.timesofisrael.com/police-internal-affairs-questions-border-cop-who-shot-killed-arab-man-after-car-chase/
+- Supreme Court overturns ban on Arab lists, Cassif 7-2, Abu Shehadeh withdraws, election 27 Oct — Times of Israel, 2 Oct 2026: https://www.timesofisrael.com/supreme-court-unanimously-overturns-election-panels-ban-on-arab-parties/ ; JTA, 5 Oct 2026: https://www.jta.org/2026/10/05/israel/israels-supreme-court-says-arab-parties-can-run-in-oct-27-election
+- Lod sentencing (Aya Abu Hajjaj) — Arab48, 8 Oct 2026: https://www.arab48.com/محليات/أخبار-محلية/2026/10/08/السجن-22-و17-و15-عاما-لثلاثة-من-عائلة-آية-أبو-حجاج-بعد-قتلها-في-اللد
+- Or Akiva car blast, man in his 40s died — Arab48, 8 Oct 2026: https://www.arab48.com/الأخبار/أخبار-عاجلة/2026/10/08/مصاب-بحالة-حرجة-في-انفجار-مركبة-بمنطقة-الخضيرة
+- Negev shooting, two wounded — Arab48, 7 Oct 2026: https://www.arab48.com/محليات/أخبار-محلية/2026/10/07/النقب-مصابان-أحدهما-فتى-بحالة-خطيرة-في-جريمة-إطلاق-نار
+- Jaffa shooting — Arab48, 3 Oct 2026: https://www.arab48.com/الأخبار/أخبار-عاجلة/2026/10/03/يافا-إصابة-خطيرة-لشاب-في-جريمة-إطلاق-نار
+- Road deaths 134, +19%, 39% of 342, 14 in Sept (Or Yarok) — Arab48, 6 Oct 2026: https://www.arab48.com/محليات/أخبار-محلية/2026/10/06/134-ضحية-في-9-أشهر-ارتفاع-وفيات-حوادث-الطرق-في-المجتمع-العربي-بنسبة-19
+- 2025 = 252, 2024 = 230 — Jerusalem Post, 28 Dec 2025: https://www.jpost.com/israel-news/crime-in-israel/article-881593 ; Times of Israel: https://www.timesofisrael.com/arab-society-marks-deadliest-year-on-record-with-252-murder-victims-in-2025/
+- 31 Jan Tel Aviv rally, Sakhnin strike, 37 killed at the time — Times of Israel, 5 Feb 2026: https://www.timesofisrael.com/ramping-up-protests-over-deadly-crime-arab-society-brings-struggle-to-jewish-street/
+- Shin Bet approved to fight crime in Arab society — Times of Israel, 16 Jul 2026 (topic page https://www.timesofisrael.com/topic/arab-israelis/)
+- Photos: Nizzan Cohen, CC BY 4.0, Wikimedia Commons, series "Demonstration against violence, criminal organizations and the lack of government enforcement in Israeli Arab society (Tel Aviv, 31 January 2026)" nos. 15, 29, 40.
+-->
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5296}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

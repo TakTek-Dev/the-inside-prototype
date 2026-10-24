@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Inside – Palestine · The Long Read (design proposal ti-2)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Manrope:wght@500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..500&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+
+:root{
+  --paper:#FFFFFF; --paper-2:#EEF1F5; --ink:#141A26; --ink-2:#5A5F6B; --rule:#D3D9E2;
+  --blue:#1D3A6B; --night:#14213A; --night-line:#2E3B57; --night-text:#B9C3D3; --night-accent:#8FB4F0;
+  --display:"Fraunces", Georgia, serif;
+  --text:"Source Serif 4", Georgia, serif;
+  --label:"Manrope", "Helvetica Neue", sans-serif;
+  --wrap:1240px; --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.62;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+[class],h1,h2,h3{font-optical-sizing:auto}
+.cover h1,.polls h2{font-variation-settings:"SOFT" 0,"opsz" 144}
+.wordmark{font-variation-settings:"SOFT" 100,"opsz" 144,"WONK" 0}
+.ch-head .num,.opening p:first-child::first-letter,.contents .n,.calendar .d{font-variation-settings:"SOFT" 100,"opsz" 144}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.label{font-family:var(--label);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.skip{position:absolute;left:-999px}
+.skip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px}
+.skip:focus{left:16px;top:16px;background:var(--ink);color:var(--paper);z-index:9}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* proposal strip */
+.proposal{background:var(--night);color:var(--paper)}
+.proposal .wrap{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;padding-top:9px;padding-bottom:9px}
+.proposal .label{font-size:11px}
+.proposal em{font-style:normal;color:var(--night-accent)}
+
+/* masthead */
+.mast{border-bottom:1px solid var(--ink)}
+.mast-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:10px 32px;padding-top:30px;padding-bottom:20px}
+.mast-date{font-family:var(--label);font-size:13px;font-weight:700;color:var(--ink);display:block}
+.wordmark{font-family:var(--display);font-weight:500;font-size:clamp(38px,5.6vw,72px);line-height:.92;letter-spacing:-.025em;text-align:left;margin:0;text-decoration:none;display:inline-block;color:var(--blue)}
+.wordmark em{font-style:italic;font-weight:400;color:var(--ink)}
+.wordmark span{color:var(--blue)}
+.mast-issue{justify-self:end;text-align:right;line-height:1.6;font-family:var(--label);font-size:13px;font-weight:600;color:var(--ink-2)}
+.nav{border-top:1px solid var(--rule)}
+.nav ul{list-style:none;margin:0 auto;display:flex;justify-content:flex-start;flex-wrap:wrap}
+.nav li:first-child a{padding-left:0}
+.nav a{display:flex;align-items:center;justify-content:center;min-height:46px;min-width:48px;padding:0 16px;font-family:var(--label);font-size:14px;font-weight:600;text-decoration:none}
+.nav a:hover{color:var(--blue)}
+.nav a[aria-current]{color:var(--blue)}
+
+/* cover */
+.cover{padding-top:clamp(28px,4vw,56px)}
+.kicker{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-bottom:22px}
+.kicker .label{color:var(--blue)}
+.count{font-family:var(--label);font-size:13px;font-weight:600;color:var(--ink-2)}
+.count b{font-family:var(--display);font-weight:500;font-size:22px;color:var(--ink);margin-right:4px}
+.cover h1{font-family:var(--display);font-weight:600;font-size:clamp(42px,7.2vw,112px);line-height:.96;letter-spacing:-.03em;margin:0;max-width:13.2em}
+.cover h1 i{font-style:italic;font-weight:500;color:var(--blue)}
+.cover-meta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin:30px 0 30px}
+.standfirst{font-size:clamp(21px,2.1vw,27px);line-height:1.4;font-style:italic;margin:0;max-width:34em}
+.byline{font-family:var(--label);font-size:13px;font-weight:600;color:var(--ink-2);text-align:right;line-height:1.6}
+.byline strong{color:var(--ink)}
+.cover-photo{margin:0}
+.cover-photo img{width:100%;aspect-ratio:1800/880;object-fit:cover}
+figcaption{font-family:var(--label);font-size:13px;line-height:1.5;color:var(--ink-2);padding-top:10px}
+figcaption cite{font-style:normal;opacity:.95}
+
+/* opening spread */
+.spread{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,5vw,72px);padding-top:clamp(36px,5vw,64px);padding-bottom:clamp(40px,5vw,72px);border-bottom:1px solid var(--ink)}
+.opening{columns:2 300px;column-gap:40px}
+.opening p{margin:0 0 1em;hyphens:auto}
+.opening p:first-child::first-letter{font-family:var(--display);float:left;font-size:5.1em;line-height:.82;padding:6px 10px 0 0;color:var(--blue)}
+.cont{display:inline-flex;align-items:center;min-height:44px;font-family:var(--label);font-size:14px;font-weight:700;color:var(--blue);text-decoration:none;border-bottom:2px solid currentColor}
+.ballot{border-top:4px solid var(--ink);padding-top:14px}
+.ballot h2{font-family:var(--display);font-weight:500;font-size:30px;line-height:1.1;margin:4px 0 16px}
+.ballot dl{margin:0}
+.ballot .row{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--rule)}
+.ballot dt{font-family:var(--label);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding-top:4px}
+.ballot dd{margin:0;font-size:17px;line-height:1.45}
+.ballot dd strong{font-family:var(--display);font-weight:500;font-size:22px;display:block;line-height:1.2}
+.ballot .src{font-family:var(--label);font-size:12px;color:var(--ink-2);margin:12px 0 0}
+
+/* chapters index */
+.contents{padding-top:clamp(36px,5vw,64px);padding-bottom:8px}
+.contents-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:12px}
+.contents-head h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,3vw,38px);margin:0}
+.contents ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.contents li{border-bottom:1px solid var(--rule)}
+.contents li:nth-child(3n+1),.contents li:nth-child(3n+2){border-right:1px solid var(--rule)}
+.contents a{display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;padding:16px 18px 16px 0;min-height:44px;text-decoration:none}
+.contents li:nth-child(3n+2) a,.contents li:nth-child(3n) a{padding-left:18px}
+.contents .n{font-family:var(--display);font-size:26px;color:var(--blue);line-height:1}
+.contents .t{font-family:var(--text);font-size:18px;font-weight:500;line-height:1.3}
+.contents .t small{display:block;font-family:var(--label);font-size:12px;font-weight:600;color:var(--ink-2);margin-top:4px}
+.contents a:hover .t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* chapter */
+.chapter{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,3fr);gap:clamp(24px,4vw,56px);padding:clamp(40px,5vw,72px) 0;border-bottom:1px solid var(--rule)}
+.ch-head .num{font-family:var(--display);font-size:64px;line-height:.9;color:var(--blue);display:block}
+.ch-head h3{font-family:var(--display);font-weight:500;font-size:clamp(28px,2.6vw,36px);line-height:1.08;margin:12px 0 10px}
+.ch-head .label{color:var(--ink-2)}
+.ch-body p{margin:0 0 1em;max-width:36em}
+.ch-body p.lede-in{font-size:21px;line-height:1.5}
+figure.ch-side{margin:0}
+.ch-side img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.quote{margin:0;padding:6px 0 0;border-top:4px solid var(--ink)}
+.quote p{font-family:var(--display);font-size:clamp(24px,2.2vw,30px);line-height:1.18;margin:10px 0 12px}
+.quote footer{font-family:var(--label);font-size:13px;font-weight:600;color:var(--ink-2)}
+.ch-side .quote p{font-size:clamp(22px,1.8vw,25px)}
+.quote p,.ch-head h3,.contents-head h2,.ballot h2,.ballot dd strong{font-weight:600}
+.src-note{font-family:var(--label);font-size:12px;color:var(--ink-2);margin-top:6px}
+
+/* wide image break */
+.break{margin:0 auto;padding-top:clamp(40px,5vw,72px)}
+.break-grid{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(24px,4vw,48px);align-items:end}
+.break img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.break .quote p{font-size:clamp(28px,3vw,42px)}
+
+/* polls: night section */
+.polls{background:var(--night);color:var(--paper);margin-top:clamp(40px,5vw,72px);padding:clamp(44px,6vw,80px) 0}
+.polls-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:34px}
+.polls .label{color:var(--night-accent)}
+.polls h2{font-family:var(--display);font-weight:500;font-size:clamp(34px,4.4vw,60px);line-height:1;margin:10px 0 0}
+.polls-head p{margin:0;color:var(--night-text);font-size:18px}
+.ptable{width:100%;border-collapse:collapse;font-family:var(--label);font-size:15px}
+.ptable caption{text-align:left;font-size:13px;color:var(--night-text);padding-bottom:12px}
+.ptable th{text-align:left;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--night-text);font-weight:700;padding:10px 12px 10px 0;border-bottom:1px solid var(--night-line)}
+.ptable td{padding:14px 12px 14px 0;border-bottom:1px solid var(--night-line);vertical-align:middle}
+.ptable td.firm{font-weight:700;color:var(--paper)}
+.ptable td.firm span{display:block;font-weight:500;color:var(--night-text);font-size:13px}
+.ptable td.num{font-family:var(--display);font-size:26px;font-weight:400;width:60px}
+.ptable th.bars,.ptable td.bars{width:38%}
+.seats{display:flex;gap:3px;flex-wrap:wrap}
+.seats i{display:block;width:12px;height:22px;background:var(--paper)}
+.seats i.r{background:transparent;box-shadow:inset 0 0 0 2px var(--night-accent)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px;font-family:var(--label);font-size:13px;color:var(--night-text)}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;vertical-align:-1px;background:var(--paper)}
+.legend span.r::before{background:transparent;box-shadow:inset 0 0 0 2px var(--night-accent)}
+.polls .note{font-family:var(--label);font-size:13px;color:var(--night-text);margin:18px 0 0;max-width:62em}
+
+/* calendar */
+.calendar{padding-top:clamp(44px,6vw,80px);padding-bottom:clamp(44px,6vw,80px)}
+.calendar h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,3vw,38px);margin:8px 0 26px}
+.calendar ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:4px solid var(--ink)}
+.calendar li{padding:18px 20px 6px 0;position:relative}
+.calendar li+li{padding-left:20px;border-left:1px solid var(--rule)}
+.calendar .d{font-family:var(--display);font-size:clamp(34px,3.2vw,46px);line-height:1;display:block}
+.calendar .d small{font-family:var(--label);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-left:6px;color:var(--ink-2)}
+.calendar p{margin:10px 0 0;font-size:17px;line-height:1.45}
+.calendar li.today .d{color:var(--blue)}
+
+/* also inside */
+.also{padding:clamp(44px,6vw,80px) 0}
+.also-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px)}
+.also h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,3vw,38px);margin:8px 0 12px;line-height:1.1}
+.also-intro p{color:var(--ink-2);font-size:17px;margin:0}
+.also-intro figure{margin:24px 0 0}
+.also-intro img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.briefs{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.briefs li{border-bottom:1px solid var(--rule)}
+.briefs a{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;padding:20px 0;text-decoration:none}
+.briefs time{font-family:var(--label);font-size:13px;font-weight:700;color:var(--blue);padding-top:5px}
+.briefs h3{font-family:var(--text);font-weight:600;font-size:23px;line-height:1.25;margin:0 0 6px}
+.briefs p{margin:0;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.briefs a:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+
+/* letter */
+.letter{background:var(--paper-2);padding:clamp(40px,5vw,64px) 0}
+.letter-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,5vw,72px);align-items:center}
+.letter h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,3.4vw,46px);line-height:1.05;margin:8px 0 10px}
+.letter p{margin:0;font-size:18px;color:var(--ink-2)}
+.letter .label{color:var(--blue)}
+.form label{display:block;font-family:var(--label);font-size:14px;font-weight:700;margin-bottom:8px}
+.form .f{display:flex;gap:0}
+.form input{flex:1;min-width:0;min-height:52px;padding:0 16px;font:inherit;font-size:17px;border:1px solid var(--ink);border-right:0;background:var(--paper);color:var(--ink);border-radius:0}
+.form button{min-height:52px;padding:0 22px;font-family:var(--label);font-size:15px;font-weight:700;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:0;cursor:pointer}
+.form button:hover{background:var(--blue);border-color:var(--blue)}
+.form small{display:block;font-family:var(--label);font-size:13px;color:var(--ink-2);margin-top:10px}
+
+/* footer */
+.foot{background:var(--night);color:var(--night-text);padding:48px 0 36px;font-family:var(--label);font-size:14px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,5fr);gap:32px}
+.foot .wordmark{color:var(--paper);font-size:36px}
+.foot .wordmark em{color:var(--night-accent)}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--paper);font-weight:600}
+.foot li a:hover{color:var(--night-accent)}
+.foot h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--night-accent);margin:0 0 8px}
+.foot p{margin:10px 0 0;line-height:1.6}
+.credits{font-size:13px;line-height:1.6}
+.credits li{margin-bottom:6px}
+.foot-base{border-top:1px solid var(--night-line);margin-top:36px;padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px}
+
+/* tablet */
+@media (max-width:1060px){
+  .chapter{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+  .ch-side{grid-column:2}
+  .ch-side img{aspect-ratio:16/10}
+  .contents ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contents li:nth-child(n){border-right:0}
+  .contents li:nth-child(odd){border-right:1px solid var(--rule)}
+  .contents li:nth-child(n) a{padding-left:0}
+  .contents li:nth-child(even) a{padding-left:18px}
+}
+@media (max-width:860px){
+  body{font-size:18px}
+  .mast-top{grid-template-columns:1fr;gap:10px;padding-top:22px;padding-bottom:16px}
+  .mast-issue{justify-self:start;text-align:left;font-size:12px}
+  .nav ul{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav a{padding:0 13px;white-space:nowrap}
+  .cover-meta{grid-template-columns:1fr;gap:14px}
+  .byline{text-align:left}
+  .cover-photo img{aspect-ratio:4/3}
+  .spread{grid-template-columns:1fr}
+  .chapter{grid-template-columns:1fr;gap:20px}
+  .ch-side{grid-column:auto}
+  .ch-head .num{font-size:48px}
+  .break-grid{grid-template-columns:1fr}
+  .polls-head{grid-template-columns:1fr}
+  .calendar ol{grid-template-columns:1fr 1fr}
+  .calendar li:nth-child(3){padding-left:0;border-left:0}
+  .calendar li:nth-child(n+3){border-top:1px solid var(--rule);margin-top:12px}
+  .also-grid,.letter-grid,.foot-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .contents ol{grid-template-columns:1fr}
+  .contents li:nth-child(n){border-right:0}
+  .contents li:nth-child(n) a{padding-left:0}
+  .ptable .hide-s{display:none}
+  .ptable th.bars,.ptable td.bars{width:auto}
+  .ptable td.num{font-size:22px;width:36px}
+  .ptable th,.ptable td{padding-right:8px}
+  .seats i{width:5px;height:18px}
+  .seats{gap:2px;flex-wrap:nowrap}
+  .calendar ol{grid-template-columns:1fr}
+  .calendar li,.calendar li+li{padding:16px 0 4px;border-left:0}
+  .calendar li+li{border-top:1px solid var(--rule);margin-top:10px}
+  .briefs a{grid-template-columns:1fr;gap:4px}
+  .form .f{flex-direction:column;gap:10px}
+  .form input{border-right:1px solid var(--ink)}
+  .opening p:first-child::first-letter{font-size:4.4em}
+  .opening p{hyphens:manual}
+}
+
+</style>
+</helmet>
+<div>
+<a class="skip" href="#read">Skip to the long read</a>
+
+<div class="proposal" role="note">
+  <div class="wrap">
+    <span class="label">Design proposal · not a live site · direction ti-2 <em>“The Long Read”</em></span>
+    <span class="label">Sample front page for Friday 9 October 2026</span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="wrap mast-top">
+    <a class="wordmark" href="#top" id="top">The Inside <em>– Palestine</em></a>
+    <span class="mast-issue"><span class="mast-date">Friday, 9 October 2026</span>Palestinian citizens of Israel · English edition</span>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <ul class="wrap">
+      <li><a href="#read" aria-current="page">Knesset 2026</a></li>
+      <li><a href="#also">Politics</a></li>
+      <li><a href="#also">Towns</a></li>
+      <li><a href="#also">Rights &amp; courts</a></li>
+      <li><a href="#also">Safety</a></li>
+      <li><a href="#also">Daily life</a></li>
+      <li><a href="#contents">Long reads</a></li>
+      <li><a href="#letter">The Count newsletter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="read">
+  <article>
+    <section class="cover wrap" aria-labelledby="lead-title">
+      <div class="kicker">
+        <span class="label">The Long Read · Knesset election 2026</span>
+        <span class="count"><b>18</b>days to polling day, Tuesday 27 October</span>
+      </div>
+      <h1 id="lead-title">Two lists, one ruling, and the question that decides the rest: <i>will the Arab vote turn out?</i></h1>
+      <div class="cover-meta">
+        <p class="standfirst">A week ago both Arab-led lists were struck off the ballot. The Supreme Court put them back, but not everyone on them. With polls giving the Joint List and Ra’am between 12 and 15 seats together, the arithmetic of Israel’s next government may run through towns from the Galilee to the Naqab.</p>
+        <p class="byline"><strong>The Inside desk</strong><br>Six chapters · about 14 minutes</p>
+      </div>
+      <figure class="cover-photo">
+        <img src="/_blob/08c07d264bca4ec3f2db421d848bebfb" width="1800" height="1056" alt="A tray of Israeli election ballot slips, each printed with party letters in Hebrew and Arabic.">
+        <figcaption>Ballot slips carry each list’s letters in Hebrew and Arabic. A polling booth tray from the April 2019 Knesset election. <cite>Photo: Laliv g / Wikimedia Commons, CC BY-SA 4.0</cite></figcaption>
+      </figure>
+    </section>
+
+    <div class="wrap">
+      <div class="spread">
+        <div>
+          <div class="opening">
+            <p>On 23 September, the Central Elections Committee voted to bar both the Joint List and Ra’am from the 27 October election, together with Hadash MK Ofer Cassif and Balad chairman Sami Abu Shehadeh. For nine days, the parties that have spoken for most Palestinian citizens of Israel in the Knesset were, on paper, not running at all.</p>
+            <p>On 2 October the Supreme Court unanimously reversed the bans on both lists, and by seven votes to two restored Cassif. Abu Shehadeh was a different case. The court’s president, Yitzhak Amit, told him a majority of the nine justices favoured disqualification, and he was given until Friday to withdraw. He did.</p>
+            <p>So the ballot is set: a Joint List of Hadash, Ta’al and Balad, headed by Hadash chairman Yousef Jabareen, and a Ra’am running alone, with a Jewish former Yesh Atid MK, Yoav Segalovitz, on its slate. The two have signed a surplus-vote agreement. What neither can sign for is the voter who stays home.</p>
+            <p>In November 2022, turnout among Arab citizens was 53.2 per cent. A Moshe Dayan Center survey published in May projected about the same again. Everything in this read comes back to that number.</p>
+          </div>
+          <a class="cont" href="#ch-1">Begin with chapter one</a>
+        </div>
+
+        <aside class="ballot" aria-labelledby="ballot-title">
+          <span class="label">At a glance</span>
+          <h2 id="ballot-title">The ballot, as it stands today</h2>
+          <dl>
+            <div class="row"><dt>Polling day</dt><dd><strong>Tuesday 27 October</strong>Official results due 4 November.</dd></div>
+            <div class="row"><dt>Joint List</dt><dd><strong>Hadash · Ta’al · Balad</strong>Headed by Yousef Jabareen (Hadash). Reinstated by the Supreme Court on 2 October.</dd></div>
+            <div class="row"><dt>Ra’am</dt><dd><strong>United Arab List</strong>Led by Mansour Abbas, in a technical bloc with Yoav Segalovitz. Reinstated on 2 October.</dd></div>
+            <div class="row"><dt>Outgoing Knesset</dt><dd><strong>10 of 120 seats</strong>Hadash–Ta’al 5, Ra’am 5. Balad missed the threshold in 2022.</dd></div>
+            <div class="row"><dt>Latest polls</dt><dd><strong>12–15 seats combined</strong>Five polls, 4–8 October. See the table below.</dd></div>
+          </dl>
+          <p class="src">Sources: Central Elections Committee timetable and polls as compiled on Wikipedia; Al Jazeera, 2 Oct 2026.</p>
+        </aside>
+      </div>
+    </div>
+
+    <nav class="contents wrap" id="contents" aria-labelledby="contents-title">
+      <div class="contents-head">
+        <h2 id="contents-title">In this read</h2>
+        <span class="label" style="color:var(--ink-2)">Six chapters</span>
+      </div>
+      <ol>
+        <li><a href="#ch-1"><span class="n">I</span><span class="t">Struck off, written back<small>23 September – 2 October</small></span></a></li>
+        <li><a href="#ch-2"><span class="n">II</span><span class="t">The man who stepped aside<small>Sami Abu Shehadeh</small></span></a></li>
+        <li><a href="#ch-3"><span class="n">III</span><span class="t">A campaign in Hebrew<small>Tel Aviv, 5 October</small></span></a></li>
+        <li><a href="#ch-4"><span class="n">IV</span><span class="t">Ra’am’s other road<small>Mansour Abbas and the Naqab</small></span></a></li>
+        <li><a href="#ch-5"><span class="n">V</span><span class="t">The turnout question<small>53 per cent, or more?</small></span></a></li>
+        <li><a href="#ch-6"><span class="n">VI</span><span class="t">After the count<small>Who will sit with whom</small></span></a></li>
+      </ol>
+    </nav>
+
+    <div class="wrap">
+      <section class="chapter" id="ch-1" aria-labelledby="ch1-t">
+        <header class="ch-head">
+          <span class="num" aria-hidden="true">I</span>
+          <span class="label">Chapter one</span>
+          <h3 id="ch1-t">Struck off, written back</h3>
+        </header>
+        <div class="ch-body">
+          <p class="lede-in">The committee’s vote on 23 September was not a surprise in form. Israel’s election panel, made up of party representatives, has voted to bar Arab candidates before, and the Supreme Court has almost always overruled it.</p>
+          <p>What was new was the scale: both Arab-led lists at once, weeks before polling day. Jabareen asked how a committee could bar parties representing more than 1.25 million voters. The legal centre Adalah said it would challenge the decision, and the two lists appealed to the Supreme Court on 29 September.</p>
+          <p>The ruling on 2 October found that the committee’s decision did not meet the legal requirements for exclusion. The same week, petitions to disqualify the parties of Itamar Ben-Gvir and Bezalel Smotrich were rejected by the committee itself.</p>
+          <a class="cont" href="#ch-1">Read chapter one</a>
+        </div>
+        <div class="ch-side">
+          <blockquote class="quote">
+            <p>“Grave consequences for the country’s political and parliamentary life.”</p>
+            <footer>Balad, on what a court-ordered removal would have meant, as reported by Al Jazeera, 2 October</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="chapter" id="ch-2" aria-labelledby="ch2-t">
+        <header class="ch-head">
+          <span class="num" aria-hidden="true">II</span>
+          <span class="label">Chapter two</span>
+          <h3 id="ch2-t">The man who stepped aside</h3>
+        </header>
+        <div class="ch-body">
+          <p class="lede-in">Sami Abu Shehadeh, Balad’s chairman, was the one name the court would not restore. The push to bar him, led by National Security Minister Itamar Ben-Gvir, turned on an article he wrote after 7 October 2023. He denies supporting the attack.</p>
+          <p>At a hearing on Thursday 1 October, he was told a majority of the bench favoured disqualification and was given until the next day to withdraw. He withdrew, telling Al Jazeera he “didn’t have any other choices”. The attorney general, Gali Baharav-Miara, had backed his disqualification while finding no sufficient basis to exclude the far-right parties.</p>
+          <p>He remains Balad’s leader, and was on stage in Tel Aviv four days later. Balad’s candidates run on the Joint List without him.</p>
+          <a class="cont" href="#ch-2">Read chapter two</a>
+        </div>
+        <div class="ch-side">
+          <blockquote class="quote">
+            <p>“A historical catastrophe for democracy.”</p>
+            <footer>Sami Abu Shehadeh on his disqualification, to Al Jazeera, 2 October</footer>
+          </blockquote>
+        </div>
+      </section>
+    </div>
+
+    <figure class="break wrap" id="ch-3">
+      <div class="break-grid">
+        <div>
+          <img src="/_blob/19724192d6696f1192e77dfda12e0faa" width="1200" height="898" alt="A Joint List campaign banner reading ‘Dignity and rights’ in Arabic, tied to a fence on a street in Lod.">
+          <figcaption>“Dignity and rights”: a Joint List banner on Tzahal Street, Lod, in the 2021 campaign. <cite>Photo: DGtal / Wikimedia Commons, CC BY-SA 4.0</cite></figcaption>
+        </div>
+        <blockquote class="quote">
+          <span class="label" style="color:var(--blue)">Chapter three · A campaign in Hebrew</span>
+          <p>“We want to be a safety net for the Arab community and for the democratic Jewish community.”</p>
+          <footer>Yousef Jabareen at the Joint List’s Hebrew-language launch, Tel Aviv, 5 October (Times of Israel)</footer>
+        </blockquote>
+      </div>
+    </figure>
+
+    <div class="wrap">
+      <section class="chapter" aria-labelledby="ch3-t">
+        <header class="ch-head">
+          <span class="num" aria-hidden="true">III</span>
+          <span class="label">Chapter three</span>
+          <h3 id="ch3-t">A campaign in Hebrew</h3>
+        </header>
+        <div class="ch-body">
+          <p class="lede-in">Three days after the ruling, the Joint List opened a Hebrew-language campaign in Tel Aviv. Jabareen told the Times of Israel the list expects between 10,000 and 15,000 Jewish votes.</p>
+          <p>A party source set the bar higher: about one seat’s worth, which on the last election’s figures is just over 36,000 votes. Ahmad Tibi pitched the list as “the address” for left-wing Jews who oppose the war. The real test, though, is in the Triangle, the Galilee and the Naqab.</p>
+          <a class="cont" href="#ch-3">Read chapter three</a>
+        </div>
+        <div class="ch-side">
+          <blockquote class="quote">
+            <p>“The Joint List is the address for left-wing, liberal democratic Jews who want a party that opposes war and war crimes.”</p>
+            <footer>MK Ahmad Tibi, Tel Aviv, 5 October (Times of Israel)</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="chapter" id="ch-4" aria-labelledby="ch4-t">
+        <header class="ch-head">
+          <span class="num" aria-hidden="true">IV</span>
+          <span class="label">Chapter four</span>
+          <h3 id="ch4-t">Ra’am’s other road</h3>
+        </header>
+        <div class="ch-body">
+          <p class="lede-in">Mansour Abbas stayed out of the Joint List for the same reason he took Ra’am into a coalition in 2021: he wants a seat at the table, not a bloc outside it.</p>
+          <p>The frame was set months ago. At Ra’am’s campaign launch in Rahat in June, held with the southern branch of the Islamic Movement, Abbas called the election a “war of existence” and set a goal of lifting the party’s Naqab vote from about 80,000 to 100,000. In late August he added Yoav Segalovitz, a Jewish former police official and Yesh Atid MK, to his slate, a pairing built around fighting crime in Arab towns.</p>
+          <a class="cont" href="#ch-4">Read chapter four</a>
+        </div>
+        <figure class="ch-side">
+          <img src="/_blob/80c93b77ab65c1f16e0aa1c3ef0c34c0" width="1200" height="720" alt="Kafr Qasim from the air: a dense town of pale low-rise houses against dry hills.">
+          <figcaption>Kafr Qasim, in the Triangle, from the air. <cite>Photo: Nizzan Cohen / Wikimedia Commons, CC BY 4.0</cite></figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="ch-5" aria-labelledby="ch5-t">
+        <header class="ch-head">
+          <span class="num" aria-hidden="true">V</span>
+          <span class="label">Chapter five</span>
+          <h3 id="ch5-t">The turnout question</h3>
+        </header>
+        <div class="ch-body">
+          <p class="lede-in">The Dayan Center’s May survey, for its Konrad Adenauer Program for Jewish-Arab Cooperation, found Arab turnout would be 53 per cent if the election were held then, about the 53.2 per cent of November 2022.</p>
+          <p>It also modelled a reunited list of all four parties, Ra’am included, and found that would lift turnout to 67 per cent, the highest the series has recorded. That list was not formed. The campaign now runs on two lists, a ruling that cut one leader from the ballot, and a war that the Israel Democracy Institute found weighs differently by community: in its September survey, 32 per cent of Arab respondents called 7 October central to their vote, against 68 per cent of Jewish respondents.</p>
+          <a class="cont" href="#ch-5">Read chapter five</a>
+        </div>
+        <figure class="ch-side">
+          <img src="/_blob/b0260391b3b805f0f2a12c9a33645ed9" width="1200" height="675" alt="The centre of Umm al-Fahm, houses climbing a hillside with a mosque dome and minaret among them.">
+          <figcaption>Umm al-Fahm, in the Triangle. <cite>Photo: MihMin / Wikimedia Commons, CC BY 4.0</cite></figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="ch-6" aria-labelledby="ch6-t">
+        <header class="ch-head">
+          <span class="num" aria-hidden="true">VI</span>
+          <span class="label">Chapter six</span>
+          <h3 id="ch6-t">After the count</h3>
+        </header>
+        <div class="ch-body">
+          <p class="lede-in">Three of the four polls published on 5–8 October leave the parties of Netanyahu’s current coalition short of 61 seats; Channel 14’s gives them 63. That is why the Arab-led lists matter after the count, and why both camps are arguing about them now.</p>
+          <p>On 26 September Gadi Eisenkot, Naftali Bennett, Yair Lapid, Avigdor Liberman and Yair Golan signed a pact to build a government together. Likud’s reply was that there is no Eisenkot government without Ra’am. Bennett has said the Arab parties “are not Zionist, and therefore we will not rely on them”. Eisenkot’s conditions for any partner leave room for Ra’am alone, and he has stopped short of ruling out Arab support. In the Dayan Center’s survey, 77.2 per cent of Arab respondents said an Arab party should join the next government.</p>
+          <a class="cont" href="#ch-6">Read chapter six</a>
+        </div>
+        <figure class="ch-side">
+          <img src="/_blob/6537a564fdac6091ab8fff72ea28c5e9" width="1200" height="800" alt="The front of the Knesset building in Jerusalem across a wide paved plaza.">
+          <figcaption>The Knesset, Jerusalem. <cite>Photo: Clema12 / Wikimedia Commons, CC BY-SA 4.0</cite></figcaption>
+        </figure>
+      </section>
+    </div>
+  </article>
+
+  <section class="polls" aria-labelledby="polls-title">
+    <div class="wrap">
+      <div class="polls-head">
+        <div>
+          <span class="label">The numbers</span>
+          <h2 id="polls-title">What the last five polls say</h2>
+        </div>
+        <p>Projected seats out of 120 for the two Arab-led lists. One block is one seat. The spread is narrow; the open variable is who votes.</p>
+      </div>
+      <table class="ptable">
+        <caption>Seat projections, published 4–8 October 2026</caption>
+        <thead>
+          <tr><th scope="col">Outlet · pollster</th><th scope="col" class="hide-s">Fieldwork</th><th scope="col">JL</th><th scope="col">Ra’am</th><th scope="col" class="bars">Seats</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="firm">Israel Hayom<span>Kantar · n=555</span></td><td class="hide-s">7–8 Oct</td><td class="num">8</td><td class="num">5</td><td class="bars"><span class="seats" role="img" aria-label="13 seats: 8 Joint List, 5 Ra’am"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i></span></td></tr>
+          <tr><td class="firm">Channel 13<span>MP+TM+SN+A · n=1,013</span></td><td class="hide-s">7 Oct</td><td class="num">9</td><td class="num">6</td><td class="bars"><span class="seats" role="img" aria-label="15 seats: 9 Joint List, 6 Ra’am"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i></span></td></tr>
+          <tr><td class="firm">Channel 14<span>SF+ND · n=2,175</span></td><td class="hide-s">7 Oct</td><td class="num">7</td><td class="num">5</td><td class="bars"><span class="seats" role="img" aria-label="12 seats: 7 Joint List, 5 Ra’am"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i></span></td></tr>
+          <tr><td class="firm">HaHadashot 12<span>Midgam Research &amp; Consulting · n=501</span></td><td class="hide-s">5 Oct</td><td class="num">8</td><td class="num">5</td><td class="bars"><span class="seats" role="img" aria-label="13 seats: 8 Joint List, 5 Ra’am"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i></span></td></tr>
+          <tr><td class="firm">Kan 11<span>Kantar · n=553</span></td><td class="hide-s">4 Oct</td><td class="num">8</td><td class="num">5</td><td class="bars"><span class="seats" role="img" aria-label="13 seats: 8 Joint List, 5 Ra’am"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i><i class="r"></i></span></td></tr>
+        </tbody>
+      </table>
+      <div class="legend"><span>Joint List (Hadash · Ta’al · Balad)</span><span class="r">Ra’am</span></div>
+      <p class="note">Source: each outlet’s published poll, as compiled in “Opinion polling for the 2026 Israeli legislative election” (Wikipedia), read 9 October 2026. Pollster names as listed with each poll. n = sample size. The threshold is 3.25 per cent of valid votes.</p>
+    </div>
+  </section>
+
+  <section class="calendar wrap" aria-labelledby="cal-title">
+    <span class="label" style="color:var(--blue)">The road to the count</span>
+    <h2 id="cal-title">Four dates between now and the result</h2>
+    <ol>
+      <li><span class="d">16<small>Oct</small></span><p>Deadline for surplus-vote agreements at the Central Elections Committee. The Joint List and Ra’am have already signed theirs.</p></li>
+      <li><span class="d">20<small>Oct</small></span><p>Diplomatic missions abroad vote.</p></li>
+      <li class="today"><span class="d">27<small>Oct</small></span><p>Polling day for the 26th Knesset.</p></li>
+      <li><span class="d">4<small>Nov</small></span><p>Official results are due.</p></li>
+    </ol>
+  </section>
+
+  <section class="also" id="also" aria-labelledby="also-title">
+    <div class="wrap also-grid">
+      <div class="also-intro">
+        <span class="label" style="color:var(--blue)">Also from the Inside</span>
+        <h2 id="also-title">The week, in shorter reads</h2>
+        <p>Filed alongside the long read. Each piece links back to its chapter.</p>
+        <figure>
+          <img src="/_blob/9686fea20be7c0eebf93d962dd6b4301" width="675" height="1200" alt="Inside a polling station: a classroom with a covered voting table and an official seated at a desk." style="aspect-ratio:3/2;object-position:50% 62%">
+          <figcaption>A polling station in a school classroom, April 2019. <cite>Photo: Rakoon / Wikimedia Commons, CC0</cite></figcaption>
+        </figure>
+      </div>
+      <ul class="briefs">
+        <li><a href="#ch-1"><time datetime="2026-10-03">3 October</time><div><h3>A double standard on the ballot? Arab leader out, far right cleared</h3><p>Ben-Gvir’s and Smotrich’s parties stay on after the committee rejected petitions against them, as Abu Shehadeh withdraws. Critics, Adalah among them, call it a double standard.</p></div></a></li>
+        <li><a href="#ch-5"><time datetime="2026-10-06">6 October</time><div><h3>7 October weighs on Jewish voters’ choice far more than on Arab voters’</h3><p>The Israel Democracy Institute’s September Israeli Voice Index, 755 respondents: 68 per cent of Jews and 32 per cent of Arabs call the attack central to their vote.</p></div></a></li>
+        <li><a href="#ch-3"><time datetime="2026-10-05">5 October</time><div><h3>The Joint List goes looking for one seat of Jewish votes</h3><p>A Hebrew campaign opens in Tel Aviv, aimed at voters who oppose the wars and Israel’s continued control of the West Bank.</p></div></a></li>
+        <li><a href="#ch-1"><time datetime="2026-10-02">2 October</time><div><h3>Supreme Court restores the Joint List, Ra’am and Ofer Cassif</h3><p>Unanimous on both lists, seven to two on Cassif. The court says the committee’s decision did not meet the legal bar for exclusion.</p></div></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="letter" id="letter" aria-labelledby="letter-title">
+    <div class="wrap letter-grid">
+      <div>
+        <span class="label">Newsletter</span>
+        <h2 id="letter-title">The Count: one email each weekday until the results</h2>
+        <p>The day’s campaign news from Arab towns, the latest polls with their sources, and nothing you have to scroll past.</p>
+      </div>
+      <form class="form" action="#letter" method="post">
+        <label for="email">Your email address</label>
+        <div class="f">
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+          <button type="submit">Sign up</button>
+        </div>
+        <small>Unsubscribe from any issue. [PRIVACY POLICY LINK]</small>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="wordmark" href="#top">The Inside <em>– Palestine</em></a>
+      <p>News about Palestinian citizens of Israel: their towns, politics, rights and daily life. In English.</p>
+      <p>Design proposal, direction ti-2. Wordmark set in Fraunces as a placeholder; no logo has been supplied.</p>
+    </div>
+    <div>
+      <h2>Sections</h2>
+      <ul>
+        <li><a href="#read">Knesset 2026</a></li>
+        <li><a href="#also">Towns</a></li>
+        <li><a href="#also">Rights &amp; courts</a></li>
+        <li><a href="#contents">Long reads</a></li>
+        <li><a href="#letter">Newsletter</a></li>
+      </ul>
+      <p>[SOCIAL LINKS]</p>
+    </div>
+    <div>
+      <h2>Photographs</h2>
+      <ul class="credits">
+        <li>Ballot slips, 2019: Laliv g, CC BY-SA 4.0</li>
+        <li>Joint List banner, Lod: DGtal, CC BY-SA 4.0</li>
+        <li>Kafr Qasim aerial view: Nizzan Cohen, CC BY 4.0</li>
+        <li>Umm al-Fahm centre: MihMin, CC BY 4.0</li>
+        <li>Knesset front: Clema12, CC BY-SA 4.0</li>
+        <li>Polling station, 2019: Rakoon, CC0</li>
+      </ul>
+      <p>All via Wikimedia Commons.</p>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© 2026 The Inside – Palestine · [CONTACT]</span>
+    <span>Sample built for a proposal on 9 October 2026</span>
+  </div>
+</footer>
+<!--
+SOURCES (checked 9 October 2026)
+- Election date 27 Oct 2026; diplomatic missions vote 20 Oct; official results 4 Nov; Knesset dissolved 17 Jul; Joint List = Hadash, Ta'al, Balad, headed by Yousef Jabareen; Ra'am separate, Segalovitz; JL–Ra'am surplus-vote agreement; CEC bans 23 Sep; appeal 29 Sep; ruling 2 Oct: "2026 Israeli legislative election", Wikipedia, https://en.wikipedia.org/wiki/2026_Israeli_legislative_election (read 9 Oct 2026)
+- Polls (Kantar/Israel Hayom 7–8 Oct n=555 JL 8 Ra'am 5; MP+TM+SN+A/Channel 13 7 Oct n=1013 JL 9 Ra'am 6; SF+ND/Channel 14 7 Oct n=2175 JL 7 Ra'am 5; Midgam R&C/HaHadashot 12 5 Oct n=501 JL 8 Ra'am 5; Kantar/Kan 11 4 Oct n=553 JL 8 Ra'am 5); surplus-vote deadline 16 Oct; Ra'am technical bloc with Segalovitz; threshold 3.25%: "Opinion polling for the 2026 Israeli legislative election", Wikipedia, https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Israeli_legislative_election (raw wikitext read 9 Oct 2026)
+- Supreme Court ruling 2 Oct, unanimous on lists, 7–2 on Cassif; Amit told Abu Shehadeh majority favoured disqualification; he withdrew; "didn't have any other choices"; "a historical catastrophe for democracy"; Ben-Gvir led push; ~20% population: Al Jazeera, 2 Oct 2026, https://www.aljazeera.com/news/2026/10/2/israels-supreme-court-overturns-election-panel-ban-on-arab-parties
+- Jabareen: parties representing more than 1.25 million voters: Al Jazeera, 24 Sep 2026, https://www.aljazeera.com/news/2026/9/24/israel-moves-to-bar-both-main-arab-lists-from-october-election
+- Ben-Gvir and Smotrich parties cleared; AG Baharav-Miara backed Abu Shehadeh disqualification; Adalah criticism: Al Jazeera (Usaid Siddiqui), 3 Oct 2026, https://www.aljazeera.com/news/2026/10/3/israel-election-double-standard-arab-leader-forced-out-far-right-cleared
+- Hebrew campaign launch, Tel Aviv, 5 Oct; 10,000–15,000 Jewish voters; just over 36,000 votes = one seat; Jabareen and Tibi quotes: Times of Israel liveblog (Noam Lehmann), 5 Oct 2026, https://www.timesofisrael.com/liveblog_entry/seeking-one-seat-worth-of-jewish-votes-arab-majority-joint-list-launches-hebrew-campaign-in-tel-aviv/
+- Ra'am campaign launch in Rahat with southern Islamic Movement; "war of existence"; Naqab vote 80,000 -> 100,000: Israel National News, 30 Jun 2026, https://www.israelnationalnews.com/news/429438
+- Segalovitz added to Ra'am slate, crime focus, late August: Al Jazeera opinion, 5 Sep 2026, https://www.aljazeera.com/opinions/2026/9/5/mansour-abbas-is-betting-on-a-zionist-to-make-arab-votes-count ; Wikipedia election article
+- Dayan Center survey (Konrad Adenauer Program), published 13 May 2026: turnout 53% now, 67% if all four parties reunite, 2022 turnout 53.2%, 77.2% want an Arab party in government: Tel Aviv University, https://english.tau.ac.il/node/3932 ; https://dayan.org/content/considerations-arab-voters-upcoming-26th-knesset-elections
+- IDI Israeli Voice Index (Sept 2026, 755 respondents): 68% Jews / 32% Arabs say 7 Oct central to vote: Jerusalem Post, 6 Oct 2026, https://www.jpost.com/israel-election-2026/article-910790
+- Opposition pact signed 26 Sep by Eisenkot, Liberman, Golan, Bennett, Lapid; Likud: no Eisenkot government without Ra'am: JNS, 27 Sep 2026, https://www.jns.org/news/israel-news/israeli-opposition-leaders-sign-cooperation-pact-to-oust-netanyahu
+- Bennett: 'the Arab parties are not Zionist, and therefore we will not rely on them'; Eisenkot's three conditions leave room for Ra'am; he 'stopped short of ruling out Arab party support entirely': Arab Center Washington DC (Joseph Mansour), 15 Jul 2026, https://arabcenterdc.org/resource/israels-election-and-eisenkots-arab-coalition-dilemma/
+- NOT USED (not confirmed in either source): that Liberman has ruled out governing with an Arab party; that Eisenkot has not ruled out outside support.
+- Coalition-parties totals (Gov. column) 51 / 63 / 50 / 49: Kantar-Israel Hayom 7-8 Oct, Channel 14 7 Oct, Channel 13 7 Oct, N12 5 Oct, Wikipedia polling table
+- 2022 seats: Hadash–Ta'al 5, Ra'am 5, Balad below threshold: "2022 Israeli legislative election", Wikipedia
+PHOTOS (Wikimedia Commons)
+- img/ballots.jpg: File:Israeli legislative election 2019 ballots (3).jpg, Laliv g, CC BY-SA 4.0
+- img/lod.jpg: File:Joint List ad in Tzahal Street in Lod 2021.jpg, DGtal, CC BY-SA 4.0
+- img/kafr-qasim.jpg: File:Kafr Qasim aerial.jpg, Nizzan Cohen, CC BY 4.0 (cropped)
+- img/umfc.jpg: File:Umm-al-Fahm-centre-2.jpg, MihMin, CC BY 4.0
+- img/knesset.jpg: File:Knesset front side - 2022.jpg, Clema12, CC BY-SA 4.0
+- img/poll.jpg: File:20190409 Polling station in Israel 001.jpg, Rakoon, CC0
+-->
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":9729}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

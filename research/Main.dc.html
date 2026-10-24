@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Inside – Palestine · Towns (design proposal)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+
+:root{
+  --paper:#f3efe5;
+  --sand:#e8e1d0;
+  --ink:#1e1c18;
+  --muted:#5b5548;
+  --rule:#cbc1ab;
+  --earth:#9c3d1c;
+  --sabr:#2c5a4c;
+  --night:#1e1c18;
+  --night-text:#efe9db;
+  --night-muted:#bdb4a0;
+  --serif:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --sans:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ar:"Amiri","Times New Roman",serif;
+  --wrap:1320px;
+  --gut:clamp(16px,3vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--sans);font-feature-settings:"tnum" 0}
+h1,h2,h3,h4,.town-xl,.wordmark,.reg-list .t,.stat b,.dates .day,.quote p,.side-quote p,.foot .wm{font-variation-settings:"wdth" 100;font-optical-sizing:auto}
+.town-xl,.wordmark,.row .town h3,.gaz-head h2{letter-spacing:-.035em}
+.lead h2,.row .story h4,.band h2,.reg-head h2{letter-spacing:-.02em}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--earth)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--earth);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.num{font-variant-numeric:tabular-nums}
+.ar{font-family:var(--ar);font-weight:400;direction:rtl;unicode-bidi:isolate}
+.label{font:600 12px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.nw{white-space:nowrap}
+.row .town .ar,.town-xl-ar{text-align:left}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* proposal strip */
+.proposal{background:var(--ink);color:var(--night-text);font:500 13px/1.4 var(--sans)}
+.proposal .wrap{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.proposal strong{color:#f0b89d;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12px;margin-right:8px}
+
+/* masthead */
+.mast{border-bottom:1px solid var(--ink)}
+.mast-top{display:grid;grid-template-columns:1fr auto;align-items:end;gap:16px 32px;padding-top:28px;padding-bottom:20px}
+.wordmark{margin:0;font:800 clamp(44px,7.4vw,104px)/.92 var(--serif);letter-spacing:-.04em}
+.wordmark a{text-decoration:none;color:var(--ink)}
+.wordmark .dash{color:var(--earth)}
+.wordmark .pal{display:inline-block;white-space:nowrap}
+.mast-note{max-width:330px;text-align:right;color:var(--muted);font-size:15px;line-height:1.45;margin:0 0 6px}
+.mast-note .date{display:block;color:var(--ink);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.nav{border-top:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:8px 24px;flex-wrap:wrap}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap}
+.nav li a{display:flex;align-items:center;min-height:48px;padding:0 14px;font:600 14px/1 var(--sans);letter-spacing:.04em;text-decoration:none}
+.nav li:first-child a{padding-left:0}
+.nav li a[aria-current]{color:var(--earth);box-shadow:inset 0 -3px 0 var(--earth)}
+.search{display:flex;align-items:center;gap:0}
+.search input{font:400 15px var(--sans);height:44px;width:220px;padding:0 12px;border:1px solid var(--ink);border-right:0;background:var(--paper);color:var(--ink);border-radius:0}
+.search button{height:44px;min-width:44px;padding:0 14px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font:600 14px var(--sans);cursor:pointer;border-radius:0}
+
+/* register */
+.register{padding:20px 0 24px;border-bottom:1px solid var(--ink)}
+.reg-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap;margin-bottom:12px}
+.reg-head h2{margin:0;font:700 28px/1.1 var(--serif)}
+.reg-key{display:flex;gap:6px 18px;flex-wrap:wrap;margin:0;padding:0;list-style:none;color:var(--muted);font-size:14px}
+.reg-key li{display:flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:50%;flex:none;border:1.5px solid var(--ink)}
+.dot.now{background:var(--earth);border-color:var(--earth)}
+.dot.recent{background:var(--sabr);border-color:var(--sabr)}
+.dot.quiet{background:transparent;border-color:var(--muted)}
+.reg-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.reg-list li{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.reg-list a{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;padding:8px 14px;min-height:56px;text-decoration:none;height:100%}
+.reg-list a:hover{background:var(--sand);color:var(--ink)}
+.reg-list .n{grid-row:1/3;font:600 12px/1.9 var(--sans);color:var(--muted)}
+.reg-list .t{font:800 19px/1.15 var(--serif)}
+.reg-list .s{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);margin-top:4px}
+.reg-list .lead-cell a{background:var(--ink);color:var(--paper)}
+.reg-list .lead-cell .n,.reg-list .lead-cell .s{color:var(--night-muted)}
+.reg-list .lead-cell a:hover{background:#000;color:#fff}
+
+/* lead entry */
+.lead{padding:30px 0 52px;border-bottom:1px solid var(--ink)}
+.entry-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto 1fr;gap:28px 56px}
+.entry-head{display:flex;flex-direction:column;grid-column:1;grid-row:1}
+.lead-right{grid-column:2;grid-row:1/3}
+.side-col{grid-column:1;grid-row:2;align-self:start}
+.entry-no{display:flex;gap:14px;align-items:center;color:var(--muted)}
+.entry-no .label{color:var(--earth)}
+.town-xl{margin:10px 0 0;font:800 clamp(84px,12vw,176px)/.82 var(--serif);letter-spacing:-.05em}
+.town-xl-ar{font-size:clamp(34px,4vw,54px);line-height:1.2;color:var(--muted);margin:6px 0 0}
+.facts{margin:26px 0 0;display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--ink)}
+.facts dt,.facts dd{margin:0;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.facts dt{color:var(--muted);padding-right:22px;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;line-height:1.8}
+.lead-photo figure{margin:0}
+.lead-photo img{width:100%;aspect-ratio:21/9;object-fit:cover}
+figcaption{font-size:13px;line-height:1.45;color:var(--muted);margin-top:8px}
+figcaption .cr{display:block}
+.lead-right{display:flex;flex-direction:column}
+.lead-story{display:contents}
+.lead-right .kicker{order:1}.lead-right h2{order:2}.lead-right .dek{order:3}.lead-photo{order:4;margin-top:22px}.lead-right .cols{order:5}.lead-right .more{order:6}
+.kicker{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;color:var(--muted);font-size:14px;margin:0 0 10px}
+.kicker .tag{color:var(--earth);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
+.lead h2{margin:0;font:700 clamp(32px,3.3vw,48px)/1.08 var(--serif);letter-spacing:-.025em}
+.lead h2 a{text-decoration:none}
+.dek{font-size:20px;line-height:1.5;margin:16px 0 0;color:#36332c}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-top:22px}
+.cols p{margin:0 0 14px;font-size:16.5px}
+.quote{grid-column:1;margin:0;padding:22px 0 0;border-top:1px solid var(--ink)}
+.quote p{margin:0;font:600 32px/1.12 var(--serif)}
+.quote footer{margin-top:10px;color:var(--muted);font-size:14px}
+.stat{grid-column:1;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:center;padding:18px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stat b{font:800 64px/1 var(--serif);color:var(--earth)}
+.stat span{font-size:15px;line-height:1.45}
+.stat small{grid-column:1/-1;color:var(--muted);font-size:13px}
+.side-col{display:flex;flex-direction:column;gap:22px;margin-top:0}
+.ledger-line{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--muted);padding:12px 0;border-top:1px solid var(--rule)}
+.ledger-line a{font-weight:600;color:var(--ink)}
+.more{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--rule)}
+.more li{padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.more .d{color:var(--muted);margin-right:10px;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+
+/* gazetteer */
+.gaz{padding:46px 0 20px}
+.gaz-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px 56px;align-items:end;margin-bottom:10px}
+.gaz-head h2{margin:0;font:800 clamp(40px,5vw,68px)/.95 var(--serif)}
+.gaz-head p{margin:0;color:var(--muted);font-size:16px;max-width:620px}
+.region{margin-top:34px}
+.region-name{display:flex;align-items:center;gap:16px;margin:0 0 0;padding:10px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);font:700 13px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.region-name .ar{font-size:20px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--muted);margin-left:auto}
+.row{display:grid;grid-template-columns:64px minmax(0,3fr) minmax(0,5fr) minmax(0,3.4fr);gap:18px 32px;padding:26px 0;border-bottom:1px solid var(--rule)}
+.row .no{font:600 13px/1.9 var(--sans);color:var(--muted)}
+.row .town h3{margin:0;font:800 clamp(32px,2.9vw,42px)/.98 var(--serif);letter-spacing:-.035em}
+.row .town .ar{display:block;font-size:24px;line-height:1.3;color:var(--muted);margin-top:4px}
+.row .town .where{display:block;font-size:13.5px;color:var(--muted);margin-top:8px}
+.status{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-size:13px;font-weight:600}
+.row .story h4{margin:0;font:700 24px/1.18 var(--serif)}
+.row .story h4 a{text-decoration:none}
+.row .story p{margin:10px 0 0;font-size:16px}
+.row .story .src{color:var(--muted);font-size:13.5px;margin-top:10px}
+.row .pic img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.row .pic.wide img{aspect-ratio:16/9}
+.row.quiet .story{color:var(--muted)}
+.side-quote{margin:0;padding:18px 0 0;border-top:3px solid var(--earth)}
+.side-quote p{margin:0;font:600 24px/1.15 var(--serif)}
+.side-quote footer{margin-top:10px;color:var(--muted);font-size:14px}
+.row.quiet .story h4{color:var(--ink)}
+.desk{border:1px dashed var(--muted);padding:14px 16px;font-size:14.5px;color:var(--muted)}
+.desk a{color:var(--ink);font-weight:600}
+.pointer{display:flex;gap:10px;align-items:baseline;margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);font-size:14.5px;color:var(--muted)}
+.pointer .label{color:var(--ink);flex:none;font-size:11px}
+.pointer a{color:var(--ink);font-weight:600}
+.compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.compact .row{grid-template-columns:64px minmax(0,1fr);}
+.compact .row .story{grid-column:2}
+
+.cta{display:inline-block;padding:12px 0;font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.cta:hover{color:var(--earth)}
+.quiet-line{margin-top:34px}
+.qtowns{margin:18px 0 6px;font:700 clamp(24px,2.4vw,32px)/1.25 var(--serif);letter-spacing:-.02em}
+.qtowns span{white-space:nowrap}
+.qnote{margin:0;color:var(--muted);max-width:720px;font-size:16px}
+
+/* dates + follow */
+.band{background:var(--sand);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:40px}
+.band .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 56px;padding-top:40px;padding-bottom:44px}
+.band h2{margin:0 0 16px;font:700 34px/1.05 var(--serif)}
+.dates{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.dates li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.dates .day{font:800 40px/1 var(--serif)}
+.dates .day small{display:block;font:600 12px/1.6 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dates h3{margin:0;font:600 17px/1.35 var(--sans)}
+.dates p{margin:4px 0 0;font-size:15px;color:#3d3a32}
+.follow{background:var(--paper);border:1px solid var(--ink);padding:24px}
+.follow p{margin:0 0 16px;font-size:15.5px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font:600 13px var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.field input,.field select{height:48px;padding:0 12px;border:1px solid var(--ink);background:#fff;font:400 16px var(--sans);color:var(--ink);border-radius:0;width:100%}
+.follow button{height:48px;width:100%;border:0;background:var(--earth);color:#fff;font:700 15px var(--sans);letter-spacing:.04em;cursor:pointer}
+.follow button:hover{background:#7f3016}
+.follow small{display:block;color:var(--muted);margin-top:10px;font-size:13px}
+
+/* footer */
+.foot{background:var(--night);color:var(--night-text);padding:44px 0 36px;font-size:14px}
+.foot a{color:var(--night-text)}
+.foot-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:28px 48px}
+.foot .wm{font:700 34px/1 var(--serif);margin:0 0 12px}
+.foot .wm .dash{color:#e08a62}
+.foot p{margin:0 0 10px;color:var(--night-muted)}
+.foot h2{font:700 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px;color:var(--night-text)}
+.credits{list-style:none;margin:0;padding:0;color:var(--night-muted);font-size:13px}
+.credits li{padding:5px 0;border-bottom:1px solid #3a362f}
+.foot ul.links{list-style:none;margin:0;padding:0}
+.foot ul.links a{display:flex;align-items:center;min-height:44px;text-decoration:none;border-bottom:1px solid #3a362f}
+.foot .base{margin-top:30px;padding-top:16px;border-top:1px solid #3a362f;display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;color:var(--night-muted);font-size:13px}
+
+/* responsive */
+@media (max-width:1180px){
+  .reg-list{grid-template-columns:repeat(4,1fr)}
+  .row{grid-template-columns:52px minmax(0,3fr) minmax(0,5fr)}
+  .row .pic{grid-column:2/-1;max-width:520px}
+}
+@media (max-width:900px){
+  .entry-grid,.gaz-head,.band .wrap,.foot-grid{grid-template-columns:1fr}
+  .lead-story{grid-column:1}
+  .entry-head,.lead-right,.side-col{grid-column:1;grid-row:auto}
+  .mast-top{grid-template-columns:1fr}
+  .mast-note{text-align:left;max-width:none}
+  .reg-list{grid-template-columns:repeat(3,1fr)}
+  .compact{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .town-xl{font-size:64px;margin-top:4px}
+  .proposal .dir{display:none}
+  .town-xl-ar{font-size:30px;margin-top:0}
+  .lead h2{font-size:28px}
+  .proposal .wrap{font-size:12.5px}
+  .nav ul{flex-wrap:wrap;width:100%}
+  .nav li a{white-space:nowrap;padding:0 10px;min-height:44px}
+  .search{width:100%;padding:0 0 12px}
+  .mn-desc{display:none}
+  .mast-top{padding-top:18px;padding-bottom:12px}
+  .register{padding:14px 0 16px}
+  .reg-head{margin-bottom:10px}
+  .reg-head h2{font-size:19px}
+  .reg-key{display:none}
+  .reg-list{display:flex;overflow-x:auto;gap:8px;border:0;scrollbar-width:thin;padding-bottom:6px;scroll-snap-type:x proximity}
+  .reg-list li{flex:none;border:1px solid var(--rule);scroll-snap-align:start}
+  .reg-list .lead-cell{order:-1;border-color:var(--ink)}
+  .lead{padding:16px 0 40px}
+  .entry-grid{display:flex;flex-direction:column;gap:0}
+  .entry-head,.lead-right,.lead-story{display:contents}
+  .entry-no{order:1}.town-xl{order:2}.town-xl-ar{order:3}
+  .lead-right .kicker{order:4;margin-top:14px}
+  .lead-right h2{order:5}
+  .lead-right .dek{order:6}
+  .lead-photo{order:7;margin-top:18px}
+  .lead-right .cols{order:8}
+  .lead-right .more{order:9}
+  .facts{order:10}
+  .side-col{order:11;margin-top:26px}
+  .search input{flex:1;width:auto;min-width:0}
+  .reg-list a{padding:10px 12px}
+  .reg-list .t{font-size:17px;white-space:nowrap}
+  .cols{grid-template-columns:1fr}
+  .dek{font-size:18px}
+  .quote p{font-size:28px}
+  .row{grid-template-columns:1fr;gap:12px;padding:22px 0}
+  .row .no{display:none}
+  .row .pic{grid-column:1;max-width:none;order:-1}
+  .row .side-quote{order:0}
+  .row .town{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px}
+  .row .town .ar{margin-top:0;font-size:22px}
+  .row .town .where{flex-basis:100%;margin-top:2px}
+  .row .town .status{margin-top:4px}
+  .compact .row{grid-template-columns:1fr}
+  .compact .row .story{grid-column:1}
+  .row .story h4{font-size:24px}
+  .dates li{grid-template-columns:72px minmax(0,1fr)}
+  .dates .day{font-size:32px}
+  .region-name .ar{font-size:18px}
+}
+
+</style>
+</helmet>
+<div>
+<div class="proposal" role="note">
+  <div class="wrap">
+    <span><strong>Proposal</strong>Design sample for The Inside – Palestine. Not a live site; no domain or logo yet.</span>
+    <span class="dir">Direction ti-1 · «Towns»</span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="wrap mast-top">
+    <h1 class="wordmark"><a href="#top">The Inside <span class="pal"><span class="dash">–</span> Palestine</span></a></h1>
+    <p class="mast-note"><span class="date">Friday 9 October 2026</span><span class="mn-desc">News from the towns of the Galilee, the Triangle, the mixed cities and the Naqab — filed town by town.</span></p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <div class="wrap">
+      <ul>
+        <li><a href="#register" aria-current="page">Towns</a></li>
+        <li><a href="#latest">Latest</a></li>
+        <li><a href="#earlier">Earlier</a></li>
+        <li><a href="#quiet">Quiet towns</a></li>
+        <li><a href="#dates">Dates</a></li>
+        <li><a href="#follow">Follow a town</a></li>
+      </ul>
+      <form class="search" action="#" role="search">
+        <label class="sr" for="q">Search towns and stories</label>
+        <input id="q" name="q" type="search" placeholder="Find a town or story">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="register" id="register" aria-labelledby="reg-title">
+  <div class="wrap">
+    <div class="reg-head">
+      <h2 id="reg-title">The register: twelve towns, north to south</h2>
+      <ul class="reg-key" aria-label="Key">
+        <li><span class="dot now" aria-hidden="true"></span>Filed this week</li>
+        <li><span class="dot recent" aria-hidden="true"></span>Filed in the last 30 days</li>
+        <li><span class="dot quiet" aria-hidden="true"></span>Nothing we can stand behind yet</li>
+      </ul>
+    </div>
+    <ol class="reg-list">
+      <li><a href="#majd-al-krum"><span class="n num">01</span><span class="t">Majd <span class="nw">al-Krum</span></span><span class="s"><span class="dot recent" aria-hidden="true"></span>17 Sep</span></a></li>
+      <li><a href="#sakhnin"><span class="n num">02</span><span class="t">Sakhnin</span><span class="s"><span class="dot quiet" aria-hidden="true"></span>Quiet</span></a></li>
+      <li><a href="#haifa"><span class="n num">03</span><span class="t">Haifa</span><span class="s"><span class="dot recent" aria-hidden="true"></span>1 Oct</span></a></li>
+      <li><a href="#nazareth"><span class="n num">04</span><span class="t">Nazareth</span><span class="s"><span class="dot recent" aria-hidden="true"></span>4 Sep</span></a></li>
+      <li><a href="#umm-al-fahm"><span class="n num">05</span><span class="t">Umm <span class="nw">al-Fahm</span></span><span class="s"><span class="dot recent" aria-hidden="true"></span>21 Sep</span></a></li>
+      <li><a href="#tayibe"><span class="n num">06</span><span class="t">Tayibe</span><span class="s"><span class="dot quiet" aria-hidden="true"></span>Quiet</span></a></li>
+      <li><a href="#kafr-qasim"><span class="n num">07</span><span class="t">Kafr Qasim</span><span class="s"><span class="dot recent" aria-hidden="true"></span>29 Oct ahead</span></a></li>
+      <li><a href="#jaffa"><span class="n num">08</span><span class="t">Jaffa</span><span class="s"><span class="dot quiet" aria-hidden="true"></span>Quiet</span></a></li>
+      <li><a href="#lydd"><span class="n num">09</span><span class="t">Lydd</span><span class="s"><span class="dot quiet" aria-hidden="true"></span>Quiet</span></a></li>
+      <li class="lead-cell"><a href="#rahat"><span class="n num">10</span><span class="t">Rahat</span><span class="s"><span class="dot now" aria-hidden="true"></span>7 Oct · Lead</span></a></li>
+      <li><a href="#hura"><span class="n num">11</span><span class="t">Hura</span><span class="s"><span class="dot now" aria-hidden="true"></span>7 Oct</span></a></li>
+      <li><a href="#segev-shalom"><span class="n num">12</span><span class="t">Segev Shalom</span><span class="s"><span class="dot now" aria-hidden="true"></span>8 Oct</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<article class="lead" id="rahat" aria-labelledby="lead-h">
+  <div class="wrap entry-grid">
+    <div class="entry-head">
+      <div class="entry-no"><span class="label">Town of the day</span><span class="label num">No. 10 · The Naqab</span></div>
+      <p class="town-xl">Rahat</p>
+      <p class="town-xl-ar ar" lang="ar">رهط</p>
+      <dl class="facts">
+        <dt>Region</dt><dd>Northern Naqab (Negev)</dd>
+        <dt>Where</dt><dd>Zyadna neighbourhood, on the city's edge</dd>
+        <dt>Filed</dt><dd class="num">Wednesday 7 October 2026</dd>
+        <dt>Reporting</dt><dd>Local Call, via Middle East Eye</dd>
+      </dl>
+    </div>
+
+    <div class="lead-right">
+      <div class="lead-photo">
+        <figure>
+          <img src="/_blob/ada68e923a07ba1b0ff492d7ba9c18ed" width="1600" height="800" alt="White storks resting and taking off on open scrub ground at the edge of Rahat">
+          <figcaption>Open ground on the edge of Rahat, where migrating storks rest each spring (March 2017).<span class="cr">Photo: BACbKA / Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
+        </figure>
+      </div>
+      <div class="lead-story">
+        <p class="kicker"><span class="tag">Planning &amp; demolitions</span><span class="num">7 Oct 2026</span><span>Rahat desk</span></p>
+        <h2 id="lead-h"><a href="#rahat">Bulldozers reach Zyadna, and Rahat’s Nova rescuer loses his sheds and his nephew’s home</a></h2>
+        <p class="dek">Dozens of bulldozers came to the Bedouin neighbourhood beside Rahat this week. Among the structures taken down: Yousef Zyadna’s warehouse and chicken coop, and the house of a nephew who had recently married.</p>
+        <div class="cols">
+          <div>
+            <p>Zyadna, a minibus driver, went to the Nova festival site on the morning of 7 October 2023 and drove people out. Israel later honoured him for it. Four of his relatives were taken into Gaza that day; Bilal and Aisha came home in November 2023, and the bodies of Hamza and Yousef were returned in January 2025.</p>
+            <p>None of that kept the demolition crews away. Local Call, which first reported the operation, counts 65 demolition orders against homes in the neighbourhood.</p>
+          </div>
+          <div>
+            <p>Opposition MK Naama Lazimi of the Democrats called the demolition “a moral and ethical disgrace.” National Security Minister Itamar Ben Gvir has made Negev demolitions a pillar of his ministry, describing them as restoring “governance.”</p>
+            <p>The reports do not say which authority signed the orders. Zyadna told Local Call he does not regret what he did on 7 October: “these are our values.”</p>
+          </div>
+        </div>
+        <ul class="more" aria-label="Also from Rahat">
+          <li><span class="d num">27 Sep</span>Neighbours in Givot Bar and Mishmar HaNegev reported four hours of gunfire from the city on Saturday morning; police said it stemmed from a family dispute.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="side-col">
+        <blockquote class="quote">
+          <p>“I will not leave my land.”</p>
+          <footer>Yousef Zyadna, to Local Call. He says his family holds Ottoman-era papers for the plot.</footer>
+        </blockquote>
+        <div class="stat">
+          <b class="num">65</b>
+          <span>demolition orders now stand against homes in the Zyadna neighbourhood.</span>
+          <small>Local Call figure, as reported by Middle East Eye, 7 October 2026.</small>
+        </div>
+      </div>
+  </div>
+</article>
+
+<section class="gaz" aria-labelledby="gaz-title">
+  <div class="wrap">
+    <div class="gaz-head">
+      <h2 id="gaz-title">The gazetteer</h2>
+      <p>Every town keeps its own page and its own last-filed date, newest first. Where our reporters have nothing they can verify, the town is listed as quiet instead of filled.</p>
+    </div>
+
+    <section class="region" id="latest" aria-labelledby="r-latest">
+      <h3 class="region-name" id="r-latest">Filed since 25 September <span class="ar" lang="ar">الأحدث</span></h3>
+      <div class="row" id="segev-shalom">
+        <span class="no num">01</span>
+        <div class="town">
+          <h3>Segev Shalom</h3>
+          <span class="ar" lang="ar">شقيب السلام</span>
+          <span class="where">Northern Naqab · local council</span>
+          <span class="status"><span class="dot now" aria-hidden="true"></span>Filed 8 Oct</span>
+        </div>
+        <div class="story">
+          <h4><a href="#segev-shalom">Shin Bet says five townsmen were arrested in the spring over an alleged plot</a></h4>
+          <p>The security service said on Thursday that it detained five residents of Segev Shalom in May and June, alleging they planned to form a “military battalion” and carry out attacks. The announcement came two days after the agency’s chief briefed ministers on the Naqab.</p>
+          <p class="src">Haaretz, 8 Oct 2026</p>
+        </div>
+      </div>
+
+      <div class="row" id="hura">
+        <span class="no num">02</span>
+        <div class="town">
+          <h3>Hura</h3>
+          <span class="ar" lang="ar">حورة</span>
+          <span class="where">Northern Naqab · local council</span>
+          <span class="status"><span class="dot now" aria-hidden="true"></span>Filed 7 Oct</span>
+        </div>
+        <div class="story">
+          <h4><a href="#hura">“There is no such thing among us”: Hura’s council head answers the Shin Bet</a></h4>
+          <p>Shin Bet chief David Zini told ministers this week of “very worrying” signs of militant organising in unrecognised Bedouin villages, and the prime minister asked for a plan. Habes al-Atawna, head of the Hura Local Council, rejected it to Walla and called the timing, weeks before the election, suspicious. “There is criminality among a small minority,” he said, but not terrorism. The Regional Council of Unrecognised Villages called the warning “a total spin.”</p>
+          <p class="src">Jerusalem Post, 7 Oct 2026, citing Walla · i24NEWS, 6 Oct 2026</p>
+        </div>
+        <blockquote class="pic side-quote">
+          <p>“It cannot be viewed merely as an issue of policing and enforcement.”</p>
+          <footer>Ra’ed al-Qian, activist, Hura, to the Jerusalem Post</footer>
+        </blockquote>
+      </div>
+
+      <div class="row" id="haifa">
+        <span class="no num">03</span>
+        <div class="town">
+          <h3>Haifa</h3>
+          <span class="ar" lang="ar">حيفا</span>
+          <span class="where">The coast · Wadi Nisnas, Halisa, Abbas St</span>
+          <span class="status"><span class="dot recent" aria-hidden="true"></span>Last filed 1 Oct</span>
+        </div>
+        <div class="story">
+          <h4><a href="#haifa">From a Haifa legal centre, a count of students put on trial by their colleges</a></h4>
+          <p>Adalah, the rights centre based in the city, says 132 Palestinian students who faced disciplinary proceedings after 7 October 2023 asked it for help, 101 of them women. Its cases span 40 of Israel’s 61 accredited institutions. Close to home: the University of Haifa’s rector suspended six Arab students on 8 October 2023, suspensions its own committees reversed in January 2024.</p>
+          <p class="src">+972 Magazine, 1 Oct 2026, citing Adalah’s report “Apartheid in Israeli Academia”</p>
+        </div>
+        <figure class="pic" style="margin:0">
+          <img src="/_blob/a4c09d1049bcb4e57c63f3b7a322cd28" width="900" height="600" alt="Laundry drying on racks outside a house with an iron-grilled door in Wadi Nisnas">
+          <figcaption>Washing day in Wadi Nisnas, Haifa.<span class="cr">Lizi Shanan / PikiWiki Israel, CC BY 2.5</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="row" id="kafr-qasim">
+        <span class="no num">04</span>
+        <div class="town">
+          <h3>Kafr Qasim</h3>
+          <span class="ar" lang="ar">كفر قاسم</span>
+          <span class="where">Southern Triangle · population 27,996 (2024)</span>
+          <span class="status"><span class="dot recent" aria-hidden="true"></span>Date ahead: 29 Oct</span>
+        </div>
+        <div class="story">
+          <h4><a href="#kafr-qasim">Seventy years on, 29 October falls two days after a national vote</a></h4>
+          <p>The town marks seventy years since the Kafr Qasim massacre of 29 October 1956, when Border Police shot dead villagers returning from their fields under a curfew they had not been told about. This year the anniversary lands two days after the Knesset election.</p>
+          <p class="src">Background: Wikipedia, “Kafr Qasim massacre”; election date, Wikipedia, “2026 Israeli legislative election”</p>
+        </div>
+        <figure class="pic wide" style="margin:0">
+          <img src="/_blob/b33a18fecefbd25fb5ad98bc58d068c3" width="1200" height="540" alt="Kafr Qasim seen from an aircraft window, dense housing below brown hills">
+          <figcaption>Kafr Qasim from the air.<span class="cr">Nizzan Cohen / Wikimedia Commons, CC BY 4.0</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="region" id="earlier" aria-labelledby="r-earlier">
+      <h3 class="region-name" id="r-earlier">Earlier <span class="ar" lang="ar">سابقاً</span></h3>
+      <div class="row" id="majd-al-krum">
+        <span class="no num">05</span>
+        <div class="town">
+          <h3>Majd <span class="nw">al-Krum</span></h3>
+          <span class="ar" lang="ar">مجد الكروم</span>
+          <span class="where">Western Galilee · Shaghur</span>
+          <span class="status"><span class="dot recent" aria-hidden="true"></span>Last filed 17 Sep</span>
+        </div>
+        <div class="story">
+          <h4><a href="#majd-al-krum">The settler camp is gone from the forest plot. The JNF says a smaller one comes back</a></h4>
+          <p>Youths from the West Bank settlement of Tekoa pitched tents on a Jewish National Fund grazing plot inside the town’s boundaries in mid-September, wired to water and power the council says it never supplied. Hundreds of residents protested every evening; police arrested several. The JNF ordered the camp down, and chairman Eyal Ostrovsky admitted “mistakes and failures.” He also said grazing will resume after Yom Kippur from a relocated camp with no more than three people. Residents want their groves clear before the olive harvest.</p>
+          <p class="src">Times of Israel 13 Sep · Middle East Eye 15 Sep · +972 Magazine 17 Sep</p>
+        </div>
+        <figure class="pic" style="margin:0">
+          <img src="/_blob/f8e792cb2673d06c80ad990c62a91f67" width="900" height="675" alt="A sunny residential street in Majd al-Krum with parked cars and shopfronts">
+          <figcaption>A street in Majd al-Krum.<span class="cr">Shlomo Rodd / PikiWiki Israel, CC BY 2.5</span></figcaption>
+        </figure>
+      </div>
+      <div class="quiet-line" id="quiet">
+        <h3 class="region-name">Quiet this week <span class="ar" lang="ar">لا جديد</span></h3>
+        <p class="qtowns"><span id="sakhnin">Sakhnin</span> · <span id="nazareth">Nazareth</span> · <span id="umm-al-fahm">Umm al-Fahm</span> · <span id="tayibe">Tayibe</span> · <span id="jaffa">Jaffa</span> · <span id="lydd">Lydd</span></p>
+        <p class="qnote">No story from these six towns has cleared our checks since 25 September. Council business, schools, planning and housing are what their pages are for.</p>
+        <a class="cta" href="#follow">Send the desk a tip</a>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="band" id="dates" aria-labelledby="dates-title">
+  <div class="wrap">
+    <div>
+      <h2 id="dates-title">Dates in the towns</h2>
+      <ol class="dates">
+        <li>
+          <span class="day num">27<small>Oct · Tue</small></span>
+          <div>
+            <h3>Knesset election: every town votes</h3>
+            <p>Two days later, Kafr Qasim marks its anniversary.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day num">29<small>Oct · Thu</small></span>
+          <div>
+            <h3>Kafr Qasim: seventy years since the massacre</h3>
+            <p>The town’s annual march and memorial. Details from the council when they are published.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day num">—<small>Ongoing</small></span>
+          <div>
+            <h3>Majd al-Krum: will the grazing camp return?</h3>
+            <p>The JNF says a camp of up to three people will resume grazing on a relocated plot. We will report when, and where.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <form class="follow" id="follow" action="#" method="post" aria-labelledby="follow-title">
+      <h2 id="follow-title">Follow a town</h2>
+      <p>One email when your town gets a new entry. Nothing else.</p>
+      <div class="field">
+        <label for="town">Town</label>
+        <select id="town" name="town">
+          <option>Majd al-Krum</option><option>Sakhnin</option><option>Haifa</option><option>Nazareth</option>
+          <option>Umm al-Fahm</option><option>Tayibe</option><option>Kafr Qasim</option><option>Jaffa</option>
+          <option>Lydd</option><option selected>Rahat</option><option>Hura</option><option>Segev Shalom</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+      </div>
+      <button type="submit">Follow this town</button>
+      <small>Tips go to the regional desk: [TIPS EMAIL]</small>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="wm">The Inside <span class="dash">–</span> Palestine</p>
+        <p>Palestinian citizens of Israel, town by town. Proposal wordmark only: no domain or logo has been chosen.</p>
+        <p>[SOCIAL LINKS]</p>
+      </div>
+      <div>
+        <h2>Photographs</h2>
+        <ul class="credits">
+          <li>Rahat storks: BACbKA, CC BY-SA 4.0</li>
+          <li>Majd al-Krum: Shlomo Rodd / PikiWiki Israel, CC BY 2.5</li>
+          <li>Wadi Nisnas, Haifa: Lizi Shanan / PikiWiki Israel, CC BY 2.5</li>
+          <li>Kafr Qasim: Nizzan Cohen, CC BY 4.0</li>
+          <li>All via Wikimedia Commons.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>The site</h2>
+        <ul class="links">
+          <li><a href="#register">All towns</a></li>
+          <li><a href="#follow">Follow a town</a></li>
+          <li><a href="#top">About the desk</a></li>
+          <li><a href="#top">Corrections</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>Design proposal · direction ti-1 «Towns» · 9 October 2026</span>
+      <span>[CONTACT EMAIL]</span>
+    </div>
+  </div>
+</footer>
+
+<!--
+SOURCES (checked 9 Oct 2026)
+- Rahat / Zyadna demolitions, 65 orders, quotes (Zyadna, Lazimi, Ben Gvir), family history:
+  Middle East Eye, "Israel demolishes properties of Palestinian who saved 30 Israelis on 7 October", Nadav Rapaport, 7 Oct 2026, citing Local Call.
+  https://www.middleeasteye.net/news/israel-demolishes-properties-palestinian-who-saved-30-israelis-7-october
+- Rahat gunfire, Givot Bar / Mishmar HaNegev: Times of Israel, 27 Sep 2026.
+  https://www.timesofisrael.com/negev-residents-report-insane-gunfire-for-several-hours-feel-reminded-of-oct-7/
+- Majd al-Krum outpost: Times of Israel 13 Sep 2026 https://www.timesofisrael.com/galilee-arab-municipality-says-west-bank-settlers-erected-an-outpost-on-its-land/
+  Middle East Eye 15 Sep 2026 https://www.middleeasteye.net/news/palestinian-citizens-israel-mobilise-against-settler-outpost-galilee
+  +972 Magazine, Oren Ziv & Baker Zoubi, 17 Sep 2026 https://www.972mag.com/israeli-settlers-outpost-galilee-majd-al-krum/
+  JNF/KKL chairman on relocated camp (max three people): JFeed https://www.jfeed.com/latest-news/kkl-chairman-addresses-jewish-shepherds-controversy-near-majd-al-krum-51984 ; Haaretz 16 Sep 2026
+- Haifa / Adalah students report (132 students, 101 women, 40 of 61 institutions; Univ. of Haifa suspensions):
+  +972 Magazine, Gil Gertel, 1 Oct 2026 https://www.972mag.com/israeli-academia-disciplinary-apartheid-palestinian-students/
+  Adalah https://www.adalah.org/en/content/view/11693
+- Nazareth: Times of Israel 3 Sep 2026 and 4 Sep 2026 ("Cops raid Nazareth after 4 murdered in 24 hours, arrest 30")
+  https://www.timesofisrael.com/cops-raid-nazareth-after-4-murdered-in-24-hours-arrest-30-over-alleged-gangland-killings/
+- Umm al-Fahm: Times of Israel 21 Sep 2026 https://www.timesofisrael.com/palestinian-found-dead-in-umm-al-fahm-2-killed-on-roads-over-yom-kippur/
+- Populations (2024 estimates): Wikipedia, "Arab localities in Israel" (Umm al-Fahm 60,209; Tayibe 46,870; Kafr Qasim 27,996).
+- Kafr Qasim massacre 29 Oct 1956: Wikipedia, "Kafr Qasim massacre". Election 27 Oct 2026: Wikipedia, "2026 Israeli legislative election".
+- Sakhnin Land Day (30 Mar 1976, six from Sakhnin), 50 years: +972 Magazine, "Fifty years on, does Land Day still matter" https://www.972mag.com/land-day-50-years/
+- Hura / Shin Bet: Jerusalem Post 7 Oct 2026 (al-Atawna quotes via Walla; Regional Council of Unrecognized Villages; Hura activist Ra'ed Al-Qian)
+  https://www.jpost.com/israel-news/article-910852 ; i24NEWS https://www.i24news.tv/en/news/israel/artc-exclusive-shin-bet-chief-warns-of-militarization-of-bedouin-in-the-negev ;
+  Israel Hayom 7 Oct 2026 (PM orders plan) https://www.israelhayom.com/2026/10/07/netanyahu-negev-bedouin-weapons-shin-bet/
+- Segev Shalom arrests: Haaretz, 8 Oct 2026 https://www.haaretz.com/israel-news/israel-security/2026-10-08/ty-article/.premium/shin-bet-arrests-five-bedouin-israelis-over-alleged-terrorist-plot/000001a1-1bb7-dd2b-a3ef-9bff19f40000
+- Photos: Wikimedia Commons — File:2017-03-11 Migratory storks resting in Rahat.jpg; File:139515 majd al-khorum-- a street in the town PikiWiki Israel.jpg;
+  File:133713 the arab city of sakhnin PikiWiki Israel.jpg; File:150405 haifa - wadi nisnas PikiWiki Israel.jpg; File:20110223 Israel 0250 Nazareth (5539870213).jpg;
+  File:Al-Souq Street in Umm al-Fahm.jpg; File:123925 taibe the old city square PikiWiki Israel.jpg; File:Kafr Qasim aerial.jpg
+-->
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4917}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

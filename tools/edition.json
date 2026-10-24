@@ -1,0 +1,2958 @@
+{
+ "date": "2026-10-24",
+ "description": "The count: 186 Arab citizens and residents of Israel killed in crime and violence in 2026, and every story entered against it.",
+ "count": {
+  "n": 186,
+  "asof": "2026-10-23",
+  "lede": "Arab citizens and residents of Israel killed in crime and violence since 1 January 2026.",
+  "source": "Count: The Abraham Initiatives, as reported by Bokra on 23 October. 177 citizens and 9 residents. Incidents reported since are listed below.",
+  "breakdown": [
+   {
+    "n": 158,
+    "label": "shot"
+   },
+   {
+    "n": 9,
+    "label": "stabbed"
+   },
+   {
+    "n": 6,
+    "label": "killed in arson"
+   },
+   {
+    "n": 13,
+    "label": "women and girls"
+   },
+   {
+    "n": 9,
+    "label": "killed by police gunfire",
+    "red": true
+   }
+  ],
+  "trail": [
+   {
+    "v": "100+",
+    "date": "2026-05-01"
+   },
+   {
+    "v": "152",
+    "date": "2026-07-05"
+   },
+   {
+    "v": "157",
+    "date": "2026-07-20"
+   },
+   {
+    "v": "181",
+    "date": "2026-09-25"
+   },
+   {
+    "v": "182",
+    "date": "2026-09-25"
+   },
+   {
+    "v": "183",
+    "date": "2026-10-10"
+   },
+   {
+    "v": "184",
+    "date": "2026-10-13"
+   },
+   {
+    "v": "186",
+    "date": "2026-10-23"
+   }
+  ],
+  "cmp_caption": "Same date, last year · Abraham Initiatives updates",
+  "compare": [
+   {
+    "date": "2026-06-29",
+    "y26": 143,
+    "y25": 128,
+    "chg": "+12%"
+   },
+   {
+    "date": "2026-07-20",
+    "y26": 157,
+    "y25": 139,
+    "chg": "+13%"
+   },
+   {
+    "date": "2026-09-25",
+    "y26": 181,
+    "y25": 187,
+    "chg": "−3%",
+    "turn": true
+   },
+   {
+    "date": "2026-10-13",
+    "y26": 184,
+    "y25": 200,
+    "chg": "−8%"
+   },
+   {
+    "date": "2026-10-23",
+    "y26": 186,
+    "y25": 208,
+    "chg": "−10.5%"
+   }
+  ],
+  "note": "Since late September the count has sat below the same date in 2025, a year that ended at 252, the worst on record. The gap widened because last autumn was worse, not because this one has been calm: four people were killed in the first three weeks of October.",
+  "monthly": [
+   {
+    "m": "5 Feb",
+    "n": 37
+   },
+   {
+    "m": "26 Feb",
+    "n": 21
+   },
+   {
+    "m": "29 Mar",
+    "n": 19
+   },
+   {
+    "m": "1 May",
+    "n": 23
+   },
+   {
+    "m": "30 May",
+    "n": 18
+   },
+   {
+    "m": "29 Jun",
+    "n": 25
+   },
+   {
+    "m": "20 Jul",
+    "n": 14
+   },
+   {
+    "m": "4 Sep",
+    "n": 15
+   },
+   {
+    "m": "25 Sep",
+    "n": 10
+   },
+   {
+    "m": "23 Oct",
+    "n": 4
+   }
+  ],
+  "field_label": "186 tally marks in rows, one row for each span between published counts.",
+  "field_cap": "Each mark stands for one person in the watchdog’s register. Each row is the span between two published counts, dated by the update that closed it, so the marks add up to the count exactly.",
+  "monthly_note": "Rows from Abraham Initiatives updates reported by the Times of Israel and Bokra. The watchdog does not publish monthly totals; the dates are those of its updates.",
+  "pairs": [
+   {
+    "d": "2026-03-29",
+    "a": 77,
+    "p": 60
+   },
+   {
+    "d": "2026-04-06",
+    "a": 83,
+    "p": 64
+   },
+   {
+    "d": "2026-05-30",
+    "a": 118,
+    "p": 100
+   },
+   {
+    "d": "2026-06-29",
+    "a": 143,
+    "p": 128
+   },
+   {
+    "d": "2026-09-25",
+    "a": 181,
+    "p": 187
+   },
+   {
+    "d": "2026-10-10",
+    "a": 183,
+    "p": 197
+   },
+   {
+    "d": "2026-10-13",
+    "a": 184,
+    "p": 200
+   },
+   {
+    "d": "2026-10-23",
+    "a": 186,
+    "p": 208
+   }
+  ],
+  "climb_h": "Ahead all summer, behind since September",
+  "climb_p": "Year-to-date killings at each published update: 2026 against the same date in 2025.",
+  "hundred": [
+   {
+    "y": 2021,
+    "w": "18 Oct",
+    "pct": 79.7
+   },
+   {
+    "y": 2022,
+    "w": "24 Nov",
+    "pct": 89.9
+   },
+   {
+    "y": 2023,
+    "w": "9 Jun",
+    "pct": 43.8
+   },
+   {
+    "y": 2024,
+    "w": "23 Jun",
+    "pct": 47.8
+   },
+   {
+    "y": 2025,
+    "w": "30 May",
+    "pct": 41.1
+   },
+   {
+    "y": 2026,
+    "w": "day 121",
+    "pct": 33.2,
+    "now": true
+   }
+  ],
+  "hundred_p": "In 2026 the count passed one hundred on 1 May, day 121: the fastest in five years.",
+  "updates": [
+   {
+    "asof": "2026-10-23",
+    "n": 186,
+    "y25": 208,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-10-13",
+    "n": 184,
+    "y25": 200,
+    "source": "Times of Israel"
+   },
+   {
+    "asof": "2026-10-10",
+    "n": 183,
+    "y25": 197,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-09-25",
+    "n": 182,
+    "y25": null,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-09-25",
+    "n": 181,
+    "y25": 187,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-09-11",
+    "n": 173,
+    "y25": null,
+    "source": "Times of Israel"
+   },
+   {
+    "asof": "2026-09-04",
+    "n": 172,
+    "y25": null,
+    "source": "Times of Israel"
+   },
+   {
+    "asof": "2026-07-02",
+    "n": 149,
+    "y25": null,
+    "source": "Times of Israel"
+   },
+   {
+    "asof": "2026-06-29",
+    "n": 143,
+    "y25": 128,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-06-19",
+    "n": 134,
+    "y25": null,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-06-08",
+    "n": 127,
+    "y25": null,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-05-30",
+    "n": 118,
+    "y25": 100,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-05-21",
+    "n": 110,
+    "y25": null,
+    "source": "Bokra"
+   },
+   {
+    "asof": "2026-04-06",
+    "n": 83,
+    "y25": 64,
+    "source": "Times of Israel"
+   },
+   {
+    "asof": "2026-03-29",
+    "n": 77,
+    "y25": 60,
+    "source": "Times of Israel"
+   }
+  ],
+  "years": [
+   {
+    "y": 2025,
+    "n": 252,
+    "note": "The deadliest year on record."
+   },
+   {
+    "y": 2024,
+    "n": 230,
+    "note": ""
+   },
+   {
+    "y": 2023,
+    "n": 244,
+    "note": "More than double the year before."
+   }
+  ]
+ },
+ "open": [
+  {
+   "date": "2026-10-15",
+   "place": "Golani junction",
+   "text": "The body of Rabia Obeidi, 38, from Zububa near Jenin, was found in the Lavi forest; three suspects were arrested. As a West Bank resident he is probably outside the count."
+  },
+  {
+   "date": "2026-10-14",
+   "place": "Abu Tor, Jerusalem",
+   "text": "Mohammed Ashraf Shweiki, 24, was shot dead and two others were wounded. Whether the watchdog has counted him, as an East Jerusalem resident, is not yet clear."
+  },
+  {
+   "date": "2026-10-06",
+   "place": "Haifa",
+   "text": "A man died after police used a Taser on him. His name, age and community were not published; an investigation was opened."
+  }
+ ],
+ "open_note": "Deaths reported after the 23 October update that the watchdog has not counted, or may not count. A death enters the ledger only when it does.",
+ "election": {
+  "date": "2026-10-27",
+  "title": "Two Arab lists, both cleared to run, polling 14 to 16 seats between them",
+  "slates": [
+   {
+    "name": "Joint List",
+    "who": "Hadash, Ta’al and Balad, headed by Yousef Jabareen, with Ahmad Tibi and Ofer Cassif on the slate.",
+    "polls": [
+     {
+      "poll": "Madad (Channel 13)",
+      "date": "2026-10-23",
+      "s": 9
+     },
+     {
+      "poll": "Midgam (Channel 12)",
+      "date": "2026-10-23",
+      "s": 9
+     },
+     {
+      "poll": "Kantar (Kan)",
+      "date": "2026-10-23",
+      "s": 9
+     }
+    ],
+    "status": "Cleared to run by the Supreme Court on 2 October. Balad’s chairman Sami Abu Shehadeh withdrew a day earlier."
+   },
+   {
+    "name": "Ra’am",
+    "who": "The United Arab List, led by Mansour Abbas; former police official Yoav Segalovitz is No. 2, the first Jewish candidate on its slate.",
+    "polls": [
+     {
+      "poll": "Madad (Channel 13)",
+      "date": "2026-10-23",
+      "s": 7
+     },
+     {
+      "poll": "Midgam (Channel 12)",
+      "date": "2026-10-23",
+      "s": 5
+     },
+     {
+      "poll": "Kantar (Kan)",
+      "date": "2026-10-23",
+      "s": 5
+     }
+    ],
+    "status": "Cleared on 2 October. Gadi Eisenkot has said Ra’am will not sit in a government he leads."
+   },
+   {
+    "name": "The Arab vote",
+    "who": "Turnout decides how many seats the two lists win, and whether the change bloc can reach 61.",
+    "polls": [],
+    "status": "Stat-Net forecasts 63% Arab turnout, against about 53% in 2022. In Maariv’s poll 81% of Arab-party supporters said they would surely vote, up from 74% on 8 October."
+   }
+  ],
+  "facts": [
+   {
+    "v": "14–16",
+    "label": "seats for the two lists in the final polls of 23 October"
+   },
+   {
+    "v": "63%",
+    "label": "forecast Arab turnout (Stat-Net); about 53% in 2022"
+   },
+   {
+    "v": "3.25%",
+    "label": "threshold of valid votes, about four seats"
+   },
+   {
+    "v": "20:00",
+    "label": "free trains and intercity buses from Monday evening to the end of election day"
+   }
+  ],
+  "src": "Final polls: Madad for Channel 13, Midgam for Channel 12 and Kantar for Kan, 23 October, via the Times of Israel. Turnout: Stat-Net via the Times of Israel; Lazar for Maariv via Bokra.",
+  "key_dates": [
+   {
+    "date": "2026-10-01",
+    "event": "Balad chairman Sami Abu Shehadeh withdraws candidacy after Supreme Court signals it will uphold his disqualification"
+   },
+   {
+    "date": "2026-10-02",
+    "event": "Supreme Court unanimously overturns CEC bans on Ra'am and the Joint List; clears Ofer Cassif 7-2"
+   },
+   {
+    "date": "2026-10-23",
+    "event": "Final permitted polls published (Friday)"
+   },
+   {
+    "date": "2026-10-26",
+    "event": "Free intercity buses and trains from 20:00 until end of service on 27 Oct"
+   },
+   {
+    "date": "2026-10-27",
+    "event": "Election day (Tuesday)"
+   }
+  ],
+  "polls": [
+   {
+    "pollster": "Madad (Channel 13)",
+    "date": "2026-10-23",
+    "joint_list": 9,
+    "raam": 7,
+    "arab_total": 16,
+    "change_bloc": 54,
+    "coalition": 50,
+    "source": "https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/"
+   },
+   {
+    "pollster": "Midgam (Channel 12)",
+    "date": "2026-10-23",
+    "joint_list": 9,
+    "raam": 5,
+    "arab_total": 14,
+    "change_bloc": 56,
+    "coalition": 50,
+    "source": "https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/"
+   },
+   {
+    "pollster": "Kantar (Kan)",
+    "date": "2026-10-23",
+    "joint_list": 9,
+    "raam": 5,
+    "arab_total": 14,
+    "change_bloc": 52,
+    "coalition": 50,
+    "source": "https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/"
+   },
+   {
+    "pollster": "Lazar / Panel4All (Maariv)",
+    "date": "2026-10-16",
+    "joint_list": 8,
+    "raam": 6,
+    "arab_total": 14,
+    "coalition": 51,
+    "change_bloc": 51,
+    "source": "https://bokra.net/Article-1605814"
+   },
+   {
+    "pollster": "Channel 13",
+    "date": "2026-10-14",
+    "joint_list": 9,
+    "raam": 6,
+    "arab_total": 15,
+    "source": "https://bokra.net/Article-1605735"
+   },
+   {
+    "pollster": "Channel 13",
+    "date": "2026-09-30",
+    "joint_list": 9,
+    "raam": 5,
+    "arab_total": 14,
+    "coalition": 54,
+    "change_bloc": 52,
+    "source": "https://bokra.net/Article-1604785"
+   }
+  ]
+ },
+ "home": {
+  "lead": "police-claim-14-percent-drop-in-arab-murders",
+  "entries": [
+   "count-reaches-186-after-shefa-amr-killing",
+   "life-sentence-maisar-burning-killing",
+   "deir-hanna-wedding-hall-demolished",
+   "two-relatives-arrested-asma-abu-ghanem-killing",
+   "acri-warns-964m-cut-from-arab-plan",
+   "two-young-men-killed-segev-shalom-umm-al-fahm",
+   "al-dahiya-negev-village-demolished",
+   "or-yarok-134-arab-road-deaths",
+   "netanyahu-billion-shekels-shin-bet-crime"
+  ],
+  "life": [
+   "sakhnin-school-tops-excellence-bagrut",
+   "tel-aviv-university-honours-said-abu-shakra",
+   "sakhnin-fans-bus-stoned",
+   "nazareth-city-palace-music-days"
+  ],
+  "street": {
+   "photo": "tel-aviv-crime-march-banner-2026",
+   "photo2": "sakhnin-land-day-monument-2025",
+   "lbl": "Protest · Arraba, 3 October",
+   "h": "Twenty-six years on, the march still starts at the graves",
+   "p": [
+    "On 3 October Arab towns marked the anniversary of October 2000, when thirteen men were killed by police, twelve of them Arab citizens. The High Follow-Up Committee led a route through the graves in Jatt, Umm al-Fahm, Muawiya, Nazareth, Kafr Kanna, Kafr Manda and Sakhnin.",
+    "The march left Arraba’s old mosque on Daher al-Omar Street at four in the afternoon and ended at the memorial in the school square. Earlier this year the street kept its own count: in January a shopkeepers’ strike in Sakhnin against protection rackets grew into a march of tens of thousands in Tel Aviv."
+   ],
+   "src": "Bokra, 3 October 2026; Times of Israel, 5 February 2026."
+  }
+ },
+ "named": [
+  {
+   "label": "October · counted 183 to 186",
+   "ctx": "Four killings entered in the first three weeks of the month.",
+   "people": [
+    {
+     "name": "Mousa Yousef al-Jabour",
+     "meta": "26 · Rahat · 10 Oct"
+    },
+    {
+     "name": "Yassin al-Shawi",
+     "meta": "about 20 · Segev Shalom · 12 Oct"
+    },
+    {
+     "name": "Nimer Jabareen",
+     "meta": "20 · Umm al-Fahm · 13 Oct"
+    },
+    {
+     "name": "Ibrahim Bashkar",
+     "meta": "81 · Shefa-Amr · 23 Oct"
+    }
+   ],
+   "src": "Bokra, 10–23 Oct 2026; Times of Israel."
+  },
+  {
+   "label": "25 September · counted 181 and 182",
+   "ctx": "A woman found beaten in her building in Haifa; her husband was arrested. That evening a young man from Tamra died after a shooting in Kabul.",
+   "people": [
+    {
+     "name": "Yonit Masswada",
+     "meta": "30s · Silwan, found in Haifa · 25 Sep"
+    },
+    {
+     "name": "Mohammed Yassin",
+     "meta": "about 25 · Tamra · 25 Sep"
+    }
+   ],
+   "src": "Bokra, 25 Sep 2026."
+  },
+  {
+   "label": "Police gunfire · 9 this year",
+   "ctx": "Alaa Mahameed was unarmed, Haaretz reported, citing the police investigations department; police say he lunged at an officer after a chase on Route 65.",
+   "people": [
+    {
+     "name": "Alaa Mahameed",
+     "meta": "38 · Umm al-Fahm · 17 Sep"
+    },
+    {
+     "name": "Omar Hawari",
+     "meta": "al-Reina · in Nazareth · Sep"
+    }
+   ],
+   "src": "Times of Israel, 18 Sep 2026; Bokra, 25 Sep 2026."
+  },
+  {
+   "label": "2–3 September · Nazareth",
+   "ctx": "Four killed in under 24 hours; police raided compounds in the city and arrested 30.",
+   "people": [
+    {
+     "name": "Noor Nafafea",
+     "meta": "31 · 2 Sep"
+    },
+    {
+     "name": "Noor Khlo",
+     "meta": "20 · 2 Sep"
+    },
+    {
+     "name": "Mustafa Badra",
+     "meta": "27 · 2 Sep"
+    },
+    {
+     "name": "Mahmoud Biatra",
+     "meta": "30 · 3 Sep"
+    }
+   ],
+   "src": "Times of Israel, 4 Sep 2026."
+  },
+  {
+   "label": "Found 13 September · near Baqa al-Gharbiya",
+   "ctx": "Three young men found dead in a burned car; police are treating their deaths as murder.",
+   "people": [
+    {
+     "name": "Zain Odeh",
+     "meta": "16 · brother of Qassem"
+    },
+    {
+     "name": "Qassem Odeh",
+     "meta": "20"
+    },
+    {
+     "name": "Yahya Bassimi",
+     "meta": "20 · their relative"
+    }
+   ],
+   "src": "Times of Israel, 13 Sep 2026."
+  }
+ ],
+ "named_h": "Named this autumn",
+ "files": [
+  {
+   "lbl": "Background · Government",
+   "h": "NIS 1 billion and an ‘iron fist’: the Shin Bet joins the fight against crime",
+   "sid": "netanyahu-billion-shekels-shin-bet-crime",
+   "p": "In July the cabinet moved about NIS 497 million from the five-year plan for Arab society to the Shin Bet and police. In October the prime minister announced NIS 1 billion more.",
+   "src": "Bokra; Times of Israel, 8 Oct 2026."
+  },
+  {
+   "lbl": "The years before",
+   "h": "244 · 230 · 252",
+   "fig": true,
+   "href": "count.html",
+   "p": "Killings in Arab society in 2023, 2024 and 2025. 2023 more than doubled the year before; 2025 was the deadliest year on record.",
+   "src": "Abraham Initiatives figures via the Times of Israel and the Jerusalem Post."
+  },
+  {
+   "lbl": "Method",
+   "h": "Whose count, and why one",
+   "href": "method.html",
+   "p": "We keep the Abraham Initiatives’ tally. Police figures count murder cases, not people, and other monitors count differently. When they disagree we name the source; we never average.",
+   "src": "Counts change after deaths in hospital: we correct the ledger, never overwrite it."
+  }
+ ],
+ "roads": {
+  "arab_deaths_2026": 134,
+  "as_of": "2026-10-05",
+  "same_period_2025": 113,
+  "change": "+19%",
+  "national_deaths_2026": 342,
+  "arab_share": "39% (population share ~20%)",
+  "september_2026_arab": 14,
+  "breakdown": {
+   "private_cars": 61,
+   "heavy_trucks_buses": 14,
+   "pedestrians": 21,
+   "motorcycle_scooter": 25,
+   "young_drivers_under_24": 29,
+   "children_under_14": 16,
+   "age_15_24": 50,
+   "age_65_plus": 4,
+   "intercity_roads": 95,
+   "urban_roads": 30,
+   "open_areas": 9
+  },
+  "earlier": {
+   "arab_deaths": 120,
+   "as_of": "2026-09-05",
+   "same_period_2025": 100
+  },
+  "source": "Or Yarok via Bokra (https://bokra.net/Article-1605173, 6 Oct 2026; Arab48 ran the same release)",
+  "note": "No later Or Yarok Arab figure found as of 24 Oct."
+ },
+ "stories": {
+  "count-reaches-186-after-shefa-amr-killing": {
+   "date": "2026-10-23",
+   "section": "police",
+   "place": "Shefa-Amr",
+   "headline": "Count reaches 186 after an 81-year-old is shot dead in Shefa-Amr",
+   "dek": "The Abraham Initiatives' tally of Arab citizens and residents killed this year rose to 186 after Ibrahim Bashkar died of gunshot wounds.",
+   "body": [
+    "Ibrahim Bashkar, an elderly resident of Shefa-Amr, died on Friday 23 October after being shot in the town. Two other men were lightly hurt. Police said the shooting had a criminal background and began searching for suspects.",
+    "With his death the Abraham Initiatives count for 2026 stands at 186: 177 citizens and 9 residents. Of them, 158 were shot, 9 stabbed and 6 died in arson; 13 were women and girls and 9 were killed by police gunfire.",
+    "At the same point in 2025 the group had recorded 208 deaths, so this year is running about 10.5% lower. The comparison year ended at 252, the highest on record.",
+    "Reports differ on his age: the same article gives 81 in the headline and 82 in the count paragraph."
+   ],
+   "people": [
+    {
+     "name": "Ibrahim Bashkar",
+     "role": "victim, Shefa-Amr"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "ضحية جريمة اطلاق النار في شفاعمرو: الحاج ابراهيم بشكار (81 عامًا)",
+     "url": "https://bokra.net/Article-1606300",
+     "date": "2026-10-23"
+    },
+    {
+     "outlet": "Najah News",
+     "title": "مقتل مسن وإصابة زوجته وابنه بجريمة إطلاق نار في شفا عمرو",
+     "url": "https://nn.najah.edu/news/flstynyo-48/2026/10/23/572449/",
+     "date": "2026-10-23"
+    }
+   ],
+   "figures": [
+    {
+     "v": "186",
+     "label": "killed since 1 Jan 2026"
+    },
+    {
+     "v": "208",
+     "label": "same date 2025"
+    },
+    {
+     "v": "158",
+     "label": "shot"
+    },
+    {
+     "v": "9",
+     "label": "killed by police"
+    }
+   ],
+   "verified": true,
+   "n": 186,
+   "photo": "shefa-amr-view-2011"
+  },
+  "rahat-man-shot-and-run-over-parking-dispute": {
+   "date": "2026-10-10",
+   "section": "police",
+   "place": "Rahat",
+   "headline": "Rahat man shot and run over; police look at a parking dispute",
+   "dek": "Mousa Yousef al-Jabour, 26, was killed in Rahat's Neighbourhood 25, ending two weeks without a counted killing.",
+   "body": [
+    "Mousa Yousef al-Jabour, 26, was shot inside a house in Rahat on Saturday 10 October, then taken out to the street, shot again and run over, according to published accounts.",
+    "Police said they were examining whether the killing grew out of a quarrel over a parking spot days earlier between two families. A suspect was arrested.",
+    "Residents of Neighbourhood 25 had lived through days of gunfire. Schools moved children into shelters and protected rooms, and police said they had raided compounds in neighbourhoods 24, 25 and 27.",
+    "He was the 183rd person counted by the Abraham Initiatives this year, against 197 at the same point in 2025."
+   ],
+   "people": [
+    {
+     "name": "Mousa Yousef al-Jabour",
+     "role": "victim, 26, Rahat"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الضحية رقم 183 في المجتمع العربي: موسى يوسف الجبور",
+     "url": "https://bokra.net/Article-1605457",
+     "date": "2026-10-10"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "مقتل موسى يوسف الجبور في رهط.. الرصاص يحاصر حارة 25",
+     "url": "https://bokra.net/Article-1605441",
+     "date": "2026-10-10"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "مقتل موسى يوسف الجبور في رهط: اعتقال مشتبه",
+     "url": "https://bokra.net/Article-1605468",
+     "date": "2026-10-10"
+    }
+   ],
+   "figures": [
+    {
+     "v": "183",
+     "label": "count after his death"
+    },
+    {
+     "v": "197",
+     "label": "same date 2025"
+    }
+   ],
+   "verified": true,
+   "n": 183,
+   "photo": "rahat-view-2012"
+  },
+  "two-young-men-killed-segev-shalom-umm-al-fahm": {
+   "date": "2026-10-13",
+   "section": "police",
+   "place": "Umm al-Fahm / Segev Shalom",
+   "headline": "Two young men shot dead in Segev Shalom and Umm al-Fahm within a day",
+   "dek": "Yassin al-Shawi was killed in a suspected family feud in the Negev; Nimer Jabareen, 20, was shot in Umm al-Fahm the next morning.",
+   "body": [
+    "Yassin al-Shawi was shot in Segev Shalom (Shaqib al-Salam) on the evening of Monday 12 October. Police said the first suspicion was a feud between families. A 38-year-old man was moderately hurt. Bokra gives his age as about 20; the Times of Israel says 23.",
+    "On Tuesday 13 October Nimer Jabareen, 20, was shot in Umm al-Fahm and declared dead at HaEmek Hospital in Afula. Another man was lightly hurt. Police said the shooting appeared criminal and had not yet found where it took place.",
+    "Jabareen was the 11th person from Umm al-Fahm killed this year, Arab48 reported. The Times of Israel cited an Abraham Initiatives count of 184, of whom 156 were shot, against 200 at the same point last year."
+   ],
+   "people": [
+    {
+     "name": "Yassin al-Shawi",
+     "role": "victim, Segev Shalom"
+    },
+    {
+     "name": "Nimer Jabareen",
+     "role": "victim, 20, Umm al-Fahm"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "مقتل ياسين الشاوي بإطلاق نار في شقيب السلام",
+     "url": "https://bokra.net/Article-1605630",
+     "date": "2026-10-12"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "جريمة قتل في أم الفحم: مقتل الشاب نمر جبارين رميًا بالرصاص",
+     "url": "https://bokra.net/Article-1605642",
+     "date": "2026-10-13"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Man shot dead in Umm al-Fahm, another in southern Bedouin town, in separate incidents",
+     "url": "https://www.timesofisrael.com/man-shot-dead-in-suspected-feud-between-families-in-bedouin-town-of-segev-shalom/",
+     "date": "2026-10-13"
+    }
+   ],
+   "figures": [
+    {
+     "v": "184",
+     "label": "count cited by ToI, 13 Oct"
+    },
+    {
+     "v": "200",
+     "label": "same period 2025"
+    }
+   ],
+   "verified": true,
+   "n": 184,
+   "photo": "umm-al-fahm-centre-2023"
+  },
+  "police-claim-14-percent-drop-in-arab-murders": {
+   "date": "2026-10-22",
+   "section": "police",
+   "place": "Jerusalem (police national HQ)",
+   "headline": "Police say murders in Arab society fell about 14% this year",
+   "dek": "Commissioner Danny Levy called the figures the best in three years, but the statement gave no underlying numbers.",
+   "body": [
+    "Israel Police said on Thursday 22 October that murders in Arab society had dropped by about 14% since the start of 2026 compared with the same period last year.",
+    "The figures were presented at a meeting chaired by Police Commissioner Danny Levy, who described them as the best in three years and ordered more operations against crime organisations and their finances.",
+    "The statement did not give the totals behind the percentage or say how it was calculated, and it refers to murder incidents rather than the number of people killed. The Abraham Initiatives' count of people killed shows a fall of about 10.5% on 2025."
+   ],
+   "people": [
+    {
+     "name": "Danny Levy",
+     "role": "Israel Police Commissioner"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الشرطة تدّعي انخفاض جرائم القتل في المجتمع العربي بنحو 14%",
+     "url": "https://bokra.net/Article-1606248",
+     "date": "2026-10-22"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "186 ضحية للعنف والجريمة في المجتمع العربي منذ مطلع العام",
+     "url": "https://bokra.net/Article-1606300",
+     "date": "2026-10-23"
+    }
+   ],
+   "figures": [
+    {
+     "v": "-14%",
+     "label": "police figure, murder cases"
+    },
+    {
+     "v": "-10.5%",
+     "label": "Abraham Initiatives, people killed"
+    }
+   ],
+   "verified": true,
+   "n": 184,
+   "photo": "tel-aviv-red-hand-placards-2026",
+   "weight": 2
+  },
+  "kafr-manda-shootout-nazareth-gang-cell": {
+   "date": "2026-10-08",
+   "section": "police",
+   "place": "Kafr Manda",
+   "headline": "Police exchange fire with armed Nazareth group in Kafr Manda, arrest four",
+   "dek": "Police say the group was behind shootings at businesses across the north; one suspect was wounded.",
+   "body": [
+    "Police and an armed group suspected of belonging to a Nazareth crime organisation exchanged fire in Kafr Manda on the morning of Thursday 8 October. Four suspects, all from Nazareth, were arrested and one was moderately wounded.",
+    "Police said months of investigation into shootings at businesses in the north led them to the group, and that officers deployed after learning of a planned new attack. Gunmen got out of a car and fired at a building before officers returned fire and chased them.",
+    "A pistol, an M16 rifle and vehicles with bullet marks were seized. Northern District commander Meir Eliyahu said operations against illegal weapons would continue."
+   ],
+   "people": [
+    {
+     "name": "Meir Eliyahu",
+     "role": "Northern District police commander"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "اعتقال خلية مسلحة من الناصرة",
+     "url": "https://bokra.net/Article-1605273",
+     "date": "2026-10-08"
+    }
+   ],
+   "figures": [
+    {
+     "v": "4",
+     "label": "arrested"
+    },
+    {
+     "v": "1",
+     "label": "suspect wounded"
+    }
+   ],
+   "verified": true,
+   "n": 182,
+   "photo": "kafr-manda-2012"
+  },
+  "shin-bet-72-negev-residents-detained": {
+   "date": "2026-10-08",
+   "section": "police",
+   "place": "Negev",
+   "headline": "Shin Bet says 72 Negev residents detained on security suspicion this year",
+   "dek": "The agency says about 50 were indicted and describes a Segev Shalom cell it says planned an armed battalion.",
+   "body": [
+    "The Shin Bet said 72 people from the Negev and the south had been detained for questioning on suspicion of security offences since the start of 2026, 67 of them Israeli citizens. Indictments were filed against about 50.",
+    "Among the cases it described were five young Bedouin men from Segev Shalom arrested in May and June. The agency alleges they planned to form an armed battalion modelled on West Bank groups and to attack the local police station and Beersheba's central bus station.",
+    "The allegations are the agency's own account; court proceedings are continuing."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الشاباك: اعتقال 72 من سكان النقب والجنوب بشبهة نشاط أمني منذ بداية العام",
+     "url": "https://bokra.net/Article-1605299",
+     "date": "2026-10-08"
+    }
+   ],
+   "figures": [
+    {
+     "v": "72",
+     "label": "detained since Jan"
+    },
+    {
+     "v": "67",
+     "label": "of them citizens"
+    },
+    {
+     "v": "~50",
+     "label": "indicted"
+    }
+   ],
+   "verified": true,
+   "n": 182
+  },
+  "police-enter-tel-sheva-mosque-in-shoes": {
+   "date": "2026-09-26",
+   "section": "police",
+   "place": "Tel Sheva",
+   "headline": "Police enter Tel Sheva mosque in their shoes over a noise complaint",
+   "dek": "Officers and National Guard members walked onto the prayer carpets of al-Salam mosque and later fined it over the call to prayer.",
+   "body": [
+    "Police officers from the 'Towns' station and members of the National Guard entered al-Salam mosque in Tel Sheva on the afternoon of 26 September wearing their shoes, angering residents.",
+    "Police said they came after complaints of unusual noise and went in to locate the loudspeakers because nobody responsible was present. A fine was later issued over the volume of the call to prayer. The police spokesman declined to comment on the shoes.",
+    "On 18 October police issued another noise fine to a Tel Sheva mosque and said they would keep acting against loudspeakers, balancing worship against residents' quiet."
+   ],
+   "people": [
+    {
+     "name": "Nawaf al-Nabari",
+     "role": "Bokra southern correspondent"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "دخول الشرطة مسجد السلام في تل السبع بالأحذية يثير غضب السكان",
+     "url": "https://bokra.net/Article-1604532",
+     "date": "2026-09-27"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "الشرطة تواصل ملاحقة مكبّرات الصوت في المساجد وتحرّر مخالفة في تل السبع",
+     "url": "https://bokra.net/Article-1606018",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [
+    {
+     "v": "2",
+     "label": "noise fines reported in Tel Sheva, 26 Sep and 18 Oct"
+    }
+   ],
+   "verified": true,
+   "n": 182,
+   "photo": "tel-sheva-commercial-area-2026"
+  },
+  "ben-gvir-boasts-of-arresting-arara-negev-women": {
+   "date": "2026-10-11",
+   "section": "police",
+   "place": "Ar'ara an-Naqab",
+   "headline": "Four women arrested in Ar'ara an-Naqab; Ben Gvir says women are now arrested too",
+   "dek": "Police say the women threw stones at relatives in a family feud; the minister posted that his policy had changed.",
+   "body": [
+    "Police arrested four women from Ar'ara an-Naqab on Sunday 11 October on suspicion of throwing stones at members of their family during a running family dispute. Police said video showed them gathering and throwing stones.",
+    "Station commander Baruch Honig said nobody would be allowed to take the law into their own hands.",
+    "National Security Minister Itamar Ben Gvir wrote that police had for years avoided arresting women before he took office, and that under him 'women are arrested too', calling the suspects criminals."
+   ],
+   "people": [
+    {
+     "name": "Itamar Ben Gvir",
+     "role": "National Security Minister"
+    },
+    {
+     "name": "Baruch Honig",
+     "role": "Ar'ara police station commander"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "اعتقال أربع نساء من عرعرة النقب بشبهة رشق حجارة.. وبن غفير يتفاخر",
+     "url": "https://bokra.net/Article-1605610",
+     "date": "2026-10-12"
+    }
+   ],
+   "figures": [
+    {
+     "v": "4",
+     "label": "women arrested"
+    }
+   ],
+   "verified": true,
+   "n": 183
+  },
+  "two-relatives-arrested-asma-abu-ghanem-killing": {
+   "date": "2026-10-19",
+   "section": "police",
+   "place": "Ramla",
+   "headline": "Two relatives arrested over the June killing of Asma Abu Ghanem, 19, in Ramla",
+   "dek": "The arrests come about four months after she was killed in the Jawarish neighbourhood.",
+   "body": [
+    "Police arrested two members of Asma Abu Ghanem's family on suspicion of involvement in her killing in June in Ramla's Jawarish neighbourhood. She was 19.",
+    "Police did not name the two or say how they are related to her. Four other suspects had been arrested about two months after the killing.",
+    "The arrests are on suspicion only; no charges had been announced."
+   ],
+   "people": [
+    {
+     "name": "Asma Abu Ghanem",
+     "role": "victim, 19, Ramla"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "تطور جديد في جريمة قتل أسماء أبو غانم بالرملة.. اعتقال مشتبهين من عائلتها",
+     "url": "https://bokra.net/Article-1606067",
+     "date": "2026-10-19"
+    }
+   ],
+   "figures": [
+    {
+     "v": "19",
+     "label": "her age"
+    },
+    {
+     "v": "~4 months",
+     "label": "since the killing"
+    }
+   ],
+   "verified": true,
+   "n": 184,
+   "photo": "ramla-market-2016"
+  },
+  "570-arabs-hospitalised-or-killed-by-gunfire-2025": {
+   "date": "2026-10-11",
+   "section": "police",
+   "place": "Nationwide",
+   "headline": "570 Arab citizens were hospitalised or died from gunshot wounds in 2025",
+   "dek": "A Haaretz report compares the figure with 67 Jewish citizens and finds most Arab violence casualties were shot.",
+   "body": [
+    "Haaretz journalist Diaa Haj Yahia reported that 570 Arab citizens were admitted to hospital or died there from gunshot wounds in 2025, against 67 Jewish citizens.",
+    "Gunshot victims made up about 61% of Arab citizens hospitalised or killed by criminal violence last year, a side of the problem the death toll does not show.",
+    "An August survey by the Elaf centre found about 60% of respondents named fear of being shot in their own town as one of their main daily worries."
+   ],
+   "people": [
+    {
+     "name": "Diaa Haj Yahia",
+     "role": "Haaretz journalist"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "570 عربيًا أصيبوا بإطلاق النار أو توفوا في المستشفيات خلال عام 2025",
+     "url": "https://bokra.net/Article-1605559",
+     "date": "2026-10-11"
+    }
+   ],
+   "figures": [
+    {
+     "v": "570",
+     "label": "Arab gunshot casualties in hospital, 2025"
+    },
+    {
+     "v": "67",
+     "label": "Jewish, same period"
+    },
+    {
+     "v": "~60%",
+     "label": "fear being shot (Elaf survey)"
+    }
+   ],
+   "verified": false,
+   "n": 183,
+   "photo": "tel-aviv-coffins-installation-2023"
+  },
+  "netanyahu-billion-shekels-shin-bet-crime": {
+   "date": "2026-10-08",
+   "section": "government",
+   "place": "Jerusalem",
+   "headline": "Netanyahu promises an 'iron fist' and NIS 1 billion for a Shin Bet role",
+   "dek": "The prime minister posted in Arabic as funding to involve the security service in fighting Arab crime was announced.",
+   "body": [
+    "Prime Minister Benjamin Netanyahu said on his Arabic Facebook page that the government would strike crime organisations in Arab society 'with an iron fist'.",
+    "The post came with an announcement of NIS 1 billion to involve the Shin Bet in fighting crime and violence in Arab towns.",
+    "In July the cabinet had already approved moving about NIS 497 million from the 550 five-year plan for Arab society to the Shin Bet and police, a decision the Abraham Initiatives, ACRI and Mossawa criticised."
+   ],
+   "people": [
+    {
+     "name": "Benjamin Netanyahu",
+     "role": "Prime Minister"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "نتنياهو: سنضرب منظمات الجريمة في المجتمع العربي بيد من حديد",
+     "url": "https://bokra.net/Article-1605318",
+     "date": "2026-10-08"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Government okays Shin Bet to fight crime in Arab society, sparking rights concerns",
+     "url": "https://www.timesofisrael.com/government-okays-shin-bet-to-fight-crime-in-arab-society-sparking-rights-concerns/",
+     "date": "2026-07-16"
+    }
+   ],
+   "figures": [
+    {
+     "v": "NIS 1bn",
+     "label": "announced for Shin Bet role"
+    },
+    {
+     "v": "NIS 497m",
+     "label": "moved from 550 plan in July"
+    }
+   ],
+   "verified": true,
+   "n": 182,
+   "photo": "tel-aviv-crime-march-black-banner-2026"
+  },
+  "netanyahu-orders-negev-weapons-plan": {
+   "date": "2026-10-07",
+   "section": "government",
+   "place": "Negev",
+   "headline": "Netanyahu asks Shin Bet for a Negev weapons plan after chief's warning",
+   "dek": "Shin Bet head David Zini told ministers of armed groups in Bedouin communities; an MK wants the army involved.",
+   "body": [
+    "Israel Hayom reported that Shin Bet chief David Zini told the cabinet of military-style infrastructure and attempts to form battalions in some Bedouin communities. Netanyahu asked the agency for a report and a plan to stop it.",
+    "MK Almog Cohen is pushing a bill for a national task force, including the army, to act inside Bedouin society against weapons.",
+    "Roy Kahlon, head of the Prime Minister's Office authority on crime in Arab society, said crime groups hold LAW rockets, MAG machine guns, Claymore charges and explosive drones."
+   ],
+   "people": [
+    {
+     "name": "David Zini",
+     "role": "Shin Bet director"
+    },
+    {
+     "name": "Almog Cohen",
+     "role": "MK"
+    },
+    {
+     "name": "Roy Kahlon",
+     "role": "head, PMO authority on crime in Arab society"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "نتنياهو يطلب خطة بشأن السلاح في النقب عقب تحذيرات رئيس الشاباك",
+     "url": "https://bokra.net/Article-1605252",
+     "date": "2026-10-07"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "n": 182,
+   "photo": "hura-main-street-2015"
+  },
+  "acri-warns-964m-cut-from-arab-plan": {
+   "date": "2026-10-14",
+   "section": "government",
+   "place": "Jerusalem",
+   "headline": "ACRI asks government not to divert NIS 964 million from future Arab plan",
+   "dek": "Finance Minister Smotrich proposed using money set aside for a coming plan for Arab society to bring forward defence purchases.",
+   "body": [
+    "The Association for Civil Rights in Israel wrote to the government and the attorney general on 14 October asking them not to approve Finance Minister Bezalel Smotrich's proposal to take NIS 964 million from funds meant for a future multi-year plan for Arab society.",
+    "Attorney Hagar Shechter said the move would damage the plan before it was even drawn up, after cuts to the current five-year plan. Taken two weeks before the election, she said, it binds the next government's budgets for 2027-2029.",
+    "Bokra reported that an earlier cut of about NIS 1 billion for 12 Apache helicopters came mostly from the five-year plan, and that ministers were to weigh a further NIS 2.6 billion across-the-board cut."
+   ],
+   "people": [
+    {
+     "name": "Hagar Shechter",
+     "role": "attorney, ACRI"
+    },
+    {
+     "name": "Bezalel Smotrich",
+     "role": "Finance Minister"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "المحامية شيخطر لـ«بكرا»: اقتطاع 964 مليون شيكل من خطة المجتمع العربي",
+     "url": "https://bokra.net/Article-1605780",
+     "date": "2026-10-15"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "بعد اقتطاع أموال المجتمع العربي لشراء 12 «أباتشي»",
+     "url": "https://bokra.net/Article-1605806",
+     "date": "2026-10-15"
+    }
+   ],
+   "figures": [
+    {
+     "v": "NIS 964m",
+     "label": "proposed diversion"
+    },
+    {
+     "v": "~NIS 1bn",
+     "label": "earlier cut for 12 Apaches"
+    },
+    {
+     "v": "NIS 2.6bn",
+     "label": "further cut proposed"
+    }
+   ],
+   "verified": true,
+   "n": 184,
+   "photo": "knesset-plenum-2023"
+  },
+  "herzog-calls-for-much-larger-police-force": {
+   "date": "2026-10-12",
+   "section": "government",
+   "place": "Nationwide",
+   "headline": "Herzog calls crime in Arab society a disaster and wants a bigger police force",
+   "dek": "The president said more than 1.3 million citizens live 'under terror' and police are beyond their capacity.",
+   "body": [
+    "President Isaac Herzog said in a pre-recorded interview aired at a Yedioth Ahronoth conference that crime in Arab society is a disaster.",
+    "He said more than 1.3 million citizens were living under terror day and night, that police were doing their best but were beyond their capacity, and that Israel needs a much larger force.",
+    "The Times of Israel noted that the rise in killings coincided with Itamar Ben Gvir's term as minister responsible for police."
+   ],
+   "people": [
+    {
+     "name": "Isaac Herzog",
+     "role": "President of Israel"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Times of Israel",
+     "title": "Herzog says Israel needs bigger police force to stop violent crime, settler attacks",
+     "url": "https://www.timesofisrael.com/herzog-says-israel-needs-bigger-police-force-to-stop-violent-crime-settler-attacks/",
+     "date": "2026-10-12"
+    }
+   ],
+   "figures": [
+    {
+     "v": "1.3m+",
+     "label": "citizens Herzog said live 'under terror'"
+    },
+    {
+     "v": "252",
+     "label": "killed in 2025"
+    }
+   ],
+   "verified": true,
+   "n": 183,
+   "photo": "tel-aviv-habima-square-rally-2026"
+  },
+  "smotrich-party-800-families-negev-galilee": {
+   "date": "2026-10-22",
+   "section": "government",
+   "place": "Negev and Galilee",
+   "headline": "Smotrich's party says 800 families signed up for new Negev and Galilee towns",
+   "dek": "Religious Zionism says the plan for 40 new towns aims to add a million Jews and to cancel approved plans in Arab towns.",
+   "body": [
+    "Finance Minister Bezalel Smotrich's Religious Zionism party said 800 Jewish families registered within a month to join settlement groups it plans for the Negev and Galilee: 424 for the Galilee, 196 for the Negev and 180 for either.",
+    "The party's plan, which Smotrich unveiled in August, speaks of 40 new towns and dozens of farms and of adding a million Jews to both regions. It also calls for cancelling development plans already approved for Arab towns, which the party says take up too much land.",
+    "Smotrich said the settlement project would move from the West Bank to the Negev and Galilee. Bokra published the report on 24 October, saying the announcement came on Thursday."
+   ],
+   "people": [
+    {
+     "name": "Bezalel Smotrich",
+     "role": "Finance Minister, Religious Zionism leader"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "حزب سموتريتش: 800 عائلة مسجّلة للاستيطان في 40 بلدة جديدة بالنقب والجليل",
+     "url": "https://bokra.net/Article-1606231",
+     "date": "2026-10-24"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Desperate for change, Israel's Arab minority sees election as existential",
+     "url": "https://www.timesofisrael.com/desperate-for-change-israels-arab-minority-sees-election-as-existential/",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [
+    {
+     "v": "800",
+     "label": "families registered"
+    },
+    {
+     "v": "40",
+     "label": "new towns planned"
+    },
+    {
+     "v": "1m",
+     "label": "Jews the plan aims to add"
+    }
+   ],
+   "verified": true,
+   "n": 184,
+   "photo": "majd-al-krum-roundabout-2025"
+  },
+  "interior-ministry-keeps-al-qaisoum-head": {
+   "date": "2026-10-18",
+   "section": "government",
+   "place": "al-Qaisoum regional council (Negev)",
+   "headline": "Interior Ministry keeps al-Qaisoum council head, replaces members with appointed panel",
+   "dek": "The council failed to pass its 2026 budget; the ministry blamed the opposing members rather than chairman Jabr Abu Kaf.",
+   "body": [
+    "Interior Ministry director general Israel Ozan decided to keep Jabr Abu Kaf as head of the al-Qaisoum regional council until the end of the term, although the council missed the legal deadline to approve its 2026 budget.",
+    "After hearings on 1 September, the ministry found the main responsibility did not lie with the chairman and that the opposing members acted out of political disputes, offering no alternatives for seven months.",
+    "An appointed professional committee will take over the members' duties alongside the chairman to pass the budget and keep services running."
+   ],
+   "people": [
+    {
+     "name": "Jabr Abu Kaf",
+     "role": "head, al-Qaisoum regional council"
+    },
+    {
+     "name": "Israel Ozan",
+     "role": "Interior Ministry director general"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "وزارة الداخلية تُبقي جبر أبو كف رئيسًا لمجلس القيصوم وتعين لجنة مهنية",
+     "url": "https://bokra.net/Article-1606003",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [
+    {
+     "v": "7 months",
+     "label": "without a passed budget"
+    }
+   ],
+   "verified": true,
+   "n": 184
+  },
+  "aya-abu-hajjaj-killers-sentenced": {
+   "date": "2026-10-08",
+   "section": "courts",
+   "place": "Lod",
+   "headline": "Father, brother and cousin sentenced for the 2023 killing of Aya Abu Hajjaj",
+   "dek": "She was stabbed in Lod in front of her two small children while heavily pregnant.",
+   "body": [
+    "The Central District Court in Lod sentenced her paternal half-brother, about 14 and a half at the time, to 22 years and a cousin, about 15 and a half, to 17 years for aggravated murder. Her father got 15 years for aiding the murder.",
+    "The three must pay more than NIS 300,000 to her children. Prosecutors said she was killed because she and her sisters backed their mother in refusing to return to live with the father's family in Hura.",
+    "According to the indictment, the two minors waited masked outside her home and stabbed her about 20 times as she walked her children, aged four and five, to kindergarten. Her unborn baby also died."
+   ],
+   "people": [
+    {
+     "name": "Aya Abu Hajjaj",
+     "role": "victim, 26"
+    },
+    {
+     "name": "Sharon Mishal and Eliran Ashkenazi",
+     "role": "Central District prosecutors"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "بعد 3 سنوات على مقتل آية أبو حجاج أمام طفليها.. أحكام بالسجن",
+     "url": "https://bokra.net/Article-1605290",
+     "date": "2026-10-08"
+    }
+   ],
+   "figures": [
+    {
+     "v": "22 / 17 / 15",
+     "label": "years in prison"
+    },
+    {
+     "v": "NIS 300,000+",
+     "label": "compensation to her children"
+    }
+   ],
+   "verified": true,
+   "nlabel": "case from 2023"
+  },
+  "life-sentence-maisar-burning-killing": {
+   "date": "2026-10-21",
+   "section": "courts",
+   "place": "Maisar",
+   "headline": "Life sentence for man who set Rafe Harsha alight in his bed in Maisar",
+   "dek": "The Haifa court also ordered the maximum NIS 258,000 compensation to the victim's son.",
+   "body": [
+    "The Haifa District Court sentenced Mohammed Abu Obeid to life for the aggravated murder of Rafe Harsha, whom he doused with a flammable liquid and set alight while he slept at home in Maisar in 2022.",
+    "Harsha got out of the house and his sons put out the flames; he died about two months later from complications of the burns. The court rejected the defence argument that the death was not caused by the attack.",
+    "Judges found the killing was planned and especially cruel, and unanimously imposed life and the maximum compensation."
+   ],
+   "people": [
+    {
+     "name": "Mohammed Abu Obeid",
+     "role": "convicted"
+    },
+    {
+     "name": "Rafe Harsha",
+     "role": "victim"
+    },
+    {
+     "name": "Yossi Gimbel",
+     "role": "Haifa District prosecutor"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "جريمة هزّت ميسر: السجن المؤبد لقاتل رافع هرشة حرقًا حتى الموت",
+     "url": "https://bokra.net/Article-1606168",
+     "date": "2026-10-21"
+    }
+   ],
+   "figures": [
+    {
+     "v": "life",
+     "label": "sentence"
+    },
+    {
+     "v": "NIS 258,000",
+     "label": "compensation"
+    }
+   ],
+   "verified": true,
+   "n": 184
+  },
+  "bar-ilan-professor-charged-plot-against-arabs": {
+   "date": "2026-10-05",
+   "section": "courts",
+   "place": "Lod",
+   "headline": "Bar-Ilan maths professor charged with plotting mass attacks on Arab citizens",
+   "dek": "Prosecutors say Shahar Nevo planned simultaneous attacks to kill hundreds and drive Arabs out of the country.",
+   "body": [
+    "Prosecutors filed an indictment in the Central District Court against Prof. Shahar Nevo, 59, a mathematics lecturer at Bar-Ilan University, for preparing a terror act, extortion by threats and obstruction of justice.",
+    "The indictment says that from February 2023 until his arrest about two weeks earlier he worked on a plan he called by a Hebrew acronym meaning 'the people will carry out transfer', aiming to kill hundreds of Arab citizens, Bedouin, East Jerusalem residents and West Bank Palestinians and push others to flee.",
+    "According to the charges he meant to recruit 72 people into 12 armed cells. Prosecutors asked that he be held until the end of proceedings. He is presumed innocent."
+   ],
+   "people": [
+    {
+     "name": "Shahar Nevo",
+     "role": "accused, Bar-Ilan mathematics professor"
+    },
+    {
+     "name": "Roi Rice and Tomer Steinberg",
+     "role": "prosecutors"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "اتهام محاضر جامعي بالتخطيط لتنفيذ هجمات إرهابية ضد مئات المواطنين العرب",
+     "url": "https://bokra.net/Article-1605102",
+     "date": "2026-10-05"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "طلاب بار إيلان عن بروفيسور شاحر نيفو",
+     "url": "https://bokra.net/Article-1605223",
+     "date": "2026-10-07"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "البروفيسورة ساعر لـبكرا: الجامعات لم تعد مكانًا آمنًا للطلاب العرب",
+     "url": "https://bokra.net/Article-1605550",
+     "date": "2026-10-11"
+    }
+   ],
+   "figures": [
+    {
+     "v": "72",
+     "label": "people he allegedly planned to recruit"
+    },
+    {
+     "v": "12",
+     "label": "planned cells"
+    },
+    {
+     "v": "3+ years",
+     "label": "of planning alleged"
+    }
+   ],
+   "verified": true,
+   "n": 182
+  },
+  "court-freezes-abu-mtair-demolitions-tayibe": {
+   "date": "2026-10-01",
+   "section": "courts",
+   "place": "Tayibe",
+   "headline": "Netanya court freezes demolition of Abu Mtair family homes in Tayibe",
+   "dek": "The orders were more than twenty years old; five large families live in the houses.",
+   "body": [
+    "Duty judge Hilmi Hajjouj of the Netanya Magistrate's Court issued an order on 1 October stopping the national planning enforcement authority from demolishing the Abu Mtair family's homes in Tayibe until the case is decided.",
+    "Attorney Dr. Qais Nasser argued the orders were issued over twenty years ago and that the houses are the only homes of five families, including two seriously ill residents.",
+    "The Times of Israel, reporting on 18 October, put the number of Abu Mtair family members at risk at about 40. Nasser later said other old orders in Tayibe had been scheduled for election day, 27 October."
+   ],
+   "people": [
+    {
+     "name": "Hilmi Hajjouj",
+     "role": "judge, Netanya Magistrate's Court"
+    },
+    {
+     "name": "Qais Nasser",
+     "role": "attorney for the family"
+    },
+    {
+     "name": "Akram Abu Mtair",
+     "role": "resident, 47 (ToI)"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الطيبة: أمر قضائي يمنع هدم منازل عائلة أبو مطير",
+     "url": "https://bokra.net/Article-1604837",
+     "date": "2026-10-01"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Desperate for change, Israel's Arab minority sees election as existential",
+     "url": "https://www.timesofisrael.com/desperate-for-change-israels-arab-minority-sees-election-as-existential/",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [
+    {
+     "v": "20+ years",
+     "label": "age of the demolition orders"
+    },
+    {
+     "v": "5",
+     "label": "families in the homes"
+    }
+   ],
+   "verified": true,
+   "n": 182,
+   "photo": "tayibe-painted-street-2022"
+  },
+  "tel-aviv-man-charged-with-killing-mohammed-qatwan": {
+   "date": "2026-10-11",
+   "section": "courts",
+   "place": "Tel Aviv-Jaffa",
+   "headline": "Tel Aviv man, 22, charged with planned killing of Mohammed Qatwan",
+   "dek": "Prosecutors say Mohammed Zeitounia lured Qatwan to a meeting on 30 August, shot him and fired at two companions.",
+   "body": [
+    "Prosecutors filed an indictment in the Tel Aviv District Court against Mohammed Zeitounia, 22, of Jaffa, for the murder of Mohammed Raafat Ahmad Qatwan in Jaffa on 30 August. Another man was seriously wounded.",
+    "The indictment says he arranged to meet Qatwan, opened fire when he arrived with two others, shot him again to make sure he was dead, then fired at the two companions.",
+    "He is accused of fleeing and changing his clothes to hide evidence."
+   ],
+   "people": [
+    {
+     "name": "Mohammed Zeitounia",
+     "role": "accused"
+    },
+    {
+     "name": "Mohammed Qatwan",
+     "role": "victim"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "لائحة اتهام ضد شاب من تل أبيب بقتل محمد أحمد ومحاولة طمس آثار الجريمة",
+     "url": "https://bokra.net/Article-1605534",
+     "date": "2026-10-11"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "تطورات في جريمة قتل محمد قطوان بيافا: تصريح مدعٍ ضد شاب من المدينة",
+     "url": "https://bokra.net/Article-1605267",
+     "date": "2026-10-08"
+    }
+   ],
+   "figures": [
+    {
+     "v": "22",
+     "label": "age of accused"
+    }
+   ],
+   "verified": true,
+   "n": 183
+  },
+  "october-2000-anniversary-march-arraba": {
+   "date": "2026-10-03",
+   "section": "protest",
+   "place": "Arraba",
+   "headline": "Arab towns mark 26 years since October 2000 with a march in Arraba",
+   "dek": "The High Follow-Up Committee led visits to the graves of those killed and a central march.",
+   "body": [
+    "Arab citizens marked the anniversary of the October 2000 events on Saturday 3 October with visits to graves and memorials and a central march in Arraba, called by the High Follow-Up Committee.",
+    "The day began at the graves in Jatt and moved through Umm al-Fahm, Muawiya, Nazareth, Kafr Kanna, Kafr Manda and Sakhnin before reaching Arraba. The march left the old mosque on Daher al-Omar Street at 4 pm and ended by the memorial in the school square.",
+    "The committee said wide participation affirmed the community's attachment to its rights."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الجماهير العربية تحيي اليوم ذكرى هبة القدس والأقصى بمسيرات",
+     "url": "https://bokra.net/Article-1604928",
+     "date": "2026-10-03"
+    }
+   ],
+   "figures": [
+    {
+     "v": "26",
+     "label": "years since October 2000"
+    },
+    {
+     "v": "8",
+     "label": "towns on the memorial route"
+    }
+   ],
+   "verified": true,
+   "n": 182,
+   "photo": "arraba-from-mount-achim-2011"
+  },
+  "protest-outside-ben-gvir-home-mosques": {
+   "date": "2026-10-05",
+   "section": "protest",
+   "place": "Kiryat Arba",
+   "headline": "Protest outside Ben Gvir's home over mosque raids and call-to-prayer fines",
+   "dek": "Kulanu Makom co-chairs Rula Daoud and Alon-Lee Green asked whether the Arab vote frightens the minister.",
+   "body": [
+    "Rula Daoud and Alon-Lee Green, co-chairs of the party Kulanu Makom (A Place for All of Us), protested outside National Security Minister Itamar Ben Gvir's home in Kiryat Arba on 5 October.",
+    "They objected to police entering mosques, fining them and trying to lower the call to prayer, citing recent cases in Tel Sheva's al-Salam mosque and in Hura.",
+    "The party said dozens of security personnel arrived to stop the protest and asked where such forces are when citizens need protection from crime."
+   ],
+   "people": [
+    {
+     "name": "Rula Daoud",
+     "role": "co-chair, Kulanu Makom"
+    },
+    {
+     "name": "Alon-Lee Green",
+     "role": "co-chair, Kulanu Makom"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "احتجاج أمام منزل بن غفير: «الصوت العربي يخيفك؟»",
+     "url": "https://bokra.net/Article-1605120",
+     "date": "2026-10-05"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "n": 182
+  },
+  "students-disrupt-ben-gvir-tel-aviv-university": {
+   "date": "2026-10-18",
+   "section": "protest",
+   "place": "Tel Aviv",
+   "headline": "Students stop Ben Gvir from speaking at Tel Aviv University",
+   "dek": "Dozens from the Standing Together campus cell stood on chairs and chanted until he could not deliver his speech.",
+   "body": [
+    "Dozens of students from Standing Together's cell at Tel Aviv University disrupted an election event with Itamar Ben Gvir on the evening of 18 October and prevented him from speaking.",
+    "They stood on their seats as he took the stage and blamed his policies for record numbers of crime victims and a rise in killings of women. Activists from his party tried to stop them.",
+    "The students urged people to vote on Tuesday 27 October to remove him from government."
+   ],
+   "people": [
+    {
+     "name": "Itamar Ben Gvir",
+     "role": "National Security Minister, Otzma Yehudit"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "طلاب من حراك نقف معا يحتجون على بن غفير ويمنعونه من إلقاء كلمته في جامعة تل أبيب",
+     "url": "https://bokra.net/Article-1606028",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "n": 184
+  },
+  "kafr-qara-conference-incitement-arab-doctors": {
+   "date": "2026-10-04",
+   "section": "protest",
+   "place": "Kafr Qara",
+   "headline": "Kafr Qara emergency conference answers incitement against Arab doctors",
+   "dek": "Doctors, mayors and health groups met under the slogan 'We won't let incitement harm the health system'.",
+   "body": [
+    "Doctors, mayors and senior medical figures met in Kafr Qara's cultural centre on Sunday 4 October for an emergency conference on incitement and racism directed at Arab doctors and health workers.",
+    "It was led by the Forum for the Advancement of Health in Arab Society with the municipality and groups including the Arab doctors' association in the Negev and White Coats. Mayor Firas Badhi called for legal action against inciters.",
+    "On 14 October Israel Medical Association director general Leah Wapner urged the next government to protect the unity of medical teams and keep politicians from exploiting the health system."
+   ],
+   "people": [
+    {
+     "name": "Firas Ahmad Badhi",
+     "role": "mayor of Kafr Qara"
+    },
+    {
+     "name": "Salim Haj Yahya",
+     "role": "professor, speaker"
+    },
+    {
+     "name": "Leah Wapner",
+     "role": "director general, Israel Medical Association"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "بلدية كفر قرع تحتضن مؤتمرًا طارئًا واسعًا لمواجهة التحريض والعنصرية ضد الأطباء",
+     "url": "https://bokra.net/Article-1605096",
+     "date": "2026-10-05"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "نقابة الأطباء تدعو لحماية الطواقم العربية",
+     "url": "https://bokra.net/Article-1605669",
+     "date": "2026-10-14"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "n": 182
+  },
+  "haifa-horev-anti-government-rally-arab-vote": {
+   "date": "2026-10-17",
+   "section": "protest",
+   "place": "Haifa",
+   "headline": "At Haifa rally, protesters call for Arab and Jewish turnout on 27 October",
+   "dek": "The anti-government demonstration at Horev Centre featured Ehud Olmert and bereaved families.",
+   "body": [
+    "An anti-government demonstration at Haifa's Horev Centre on Saturday 17 October heard calls for wider Arab and Jewish participation in the election.",
+    "Participants told Bokra that staying home shrinks representation, and rejected racism and Jewish-supremacist rhetoric. A street initiative, 'Let's talk about democracy', has held meetings in Wadi Nisnas, Baqa al-Gharbiya, Daliyat al-Karmel and Yarka.",
+    "Speakers listed included former prime minister Ehud Olmert and relatives of people killed on 7 October and in the war."
+   ],
+   "people": [
+    {
+     "name": "Ehud Olmert",
+     "role": "former prime minister, listed speaker"
+    },
+    {
+     "name": "Rotem Perlman Farhi",
+     "role": "attorney, host"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "مشاركون في مظاهرة حيفا لـ«بكرا»: التصويت العربي ضرورة للتأثير",
+     "url": "https://bokra.net/Article-1606026",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "n": 184
+  },
+  "or-yarok-134-arab-road-deaths": {
+   "date": "2026-10-06",
+   "section": "roads",
+   "place": "Nationwide",
+   "headline": "134 Arab citizens killed on the roads this year, up 19%",
+   "dek": "Or Yarok counts 39% of all road deaths among Arab citizens, about twice their share of the population.",
+   "body": [
+    "Road-safety group Or Yarok counted 134 Arab citizens killed in road crashes from 1 January to 5 October 2026, against 113 in the same period of 2025. Fourteen died in September.",
+    "About 342 people have been killed on Israel's roads this year; Arab citizens are 39% of them while making up about 20% of the population.",
+    "Of the Arab dead, 61 were in private cars, 21 were pedestrians and 25 rode motorcycles or scooters. Sixteen were children under 14 and 50 were aged 15 to 24; 95 died on intercity roads.",
+    "Or Yarok chief executive Yaniv Yaakov said the transport ministry had failed to reduce deaths, especially in Arab society."
+   ],
+   "people": [
+    {
+     "name": "Yaniv Yaakov",
+     "role": "CEO, Or Yarok"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "134 وفاة بحوادث الطرق في المجتمع العربي منذ بداية 2026 بزيادة 19%",
+     "url": "https://bokra.net/Article-1605173",
+     "date": "2026-10-06"
+    }
+   ],
+   "figures": [
+    {
+     "v": "134",
+     "label": "Arab road deaths to 5 Oct"
+    },
+    {
+     "v": "+19%",
+     "label": "vs 2025 (113)"
+    },
+    {
+     "v": "39%",
+     "label": "of 342 national deaths"
+    },
+    {
+     "v": "16",
+     "label": "children under 14"
+    }
+   ],
+   "verified": true,
+   "n": 134,
+   "nlabel": "second ledger · roads",
+   "photo": "route-65-megiddo-afula-2024"
+  },
+  "road-safety-absent-from-party-platforms": {
+   "date": "2026-09-27",
+   "section": "roads",
+   "place": "Nationwide",
+   "headline": "Road deaths pass 330 but road safety is missing from most party platforms",
+   "dek": "State Comptroller data show 40% of Arab schools had no road-safety coordinator.",
+   "body": [
+    "Or Yarok's counter showed 331 people killed on Israel's roads in 2026 by late September, yet most parties' platforms offered no specific road-safety plan, Bokra reported.",
+    "By 5 September 120 Arab citizens had been killed, against 100 in the same period of 2025.",
+    "A State Comptroller report found 40% of schools in Arab society had no road-safety coordinator, against 22% in Jewish schools, and criticised the lack of a funded multi-year government plan."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "أكثر من 330 قتيلًا على الطرق منذ بداية العام.. والعرب من الأكثر تضررًا",
+     "url": "https://bokra.net/Article-1604593",
+     "date": "2026-09-27"
+    }
+   ],
+   "figures": [
+    {
+     "v": "331",
+     "label": "road deaths nationally, late Sep"
+    },
+    {
+     "v": "120",
+     "label": "Arab deaths to 5 Sep"
+    },
+    {
+     "v": "40% vs 22%",
+     "label": "schools without safety coordinator"
+    }
+   ],
+   "verified": true
+  },
+  "arab-bus-drivers-45-attacks": {
+   "date": "2026-10-10",
+   "section": "roads",
+   "place": "Hadera / Jerusalem",
+   "headline": "Arab bus drivers report 45 attacks this year as Umm al-Fahm driver is beaten",
+   "dek": "Abed Mahajna was hit in the face and racially abused after someone threw an object at his bus in Hadera.",
+   "body": [
+    "Worker's organisation Koach La'Ovdim has logged 45 attacks this year on Superbus drivers in Jerusalem alone, including beatings, stoning, spitting and insults; other companies do not publish figures.",
+    "On 2 October at least six Arab drivers were attacked in Jerusalem within 24 hours, with only one minor detained.",
+    "Abed Mahajna of Umm al-Fahm said that on Wednesday evening in Hadera a man threw an object at his bus and then struck him in the face when he got out, knocking him down and abusing Arabs. He was treated for light injuries; it was the second attack on him in four years."
+   ],
+   "people": [
+    {
+     "name": "Abed Mahajna",
+     "role": "bus driver, Umm al-Fahm"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "45 اعتداءً منذ بداية العام.. عبد محاجنة يطالب بحماية السائقين العرب",
+     "url": "https://bokra.net/Article-1605425",
+     "date": "2026-10-10"
+    }
+   ],
+   "figures": [
+    {
+     "v": "45",
+     "label": "attacks logged on Jerusalem Superbus drivers"
+    },
+    {
+     "v": "6",
+     "label": "drivers attacked in 24 hours, 2 Oct"
+    }
+   ],
+   "verified": true
+  },
+  "afula-arrest-racist-attack-bus-driver": {
+   "date": "2026-10-12",
+   "section": "roads",
+   "place": "Afula",
+   "headline": "Man arrested in Afula after punching Arab bus driver and threatening to kill him",
+   "dek": "The driver on line 247 said the suspect spat at him and shouted that Arabs should be killed.",
+   "body": [
+    "Police in Afula arrested a man suspected of attacking an Arab Superbus driver on line 247, spitting at him, punching him on the back of the neck and threatening to kill him because he is Arab.",
+    "The driver stopped the bus and called police; the suspect damaged the ticket machine and door while trying to leave.",
+    "The driver said the man was known locally and had been linked to similar attacks before."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "أنت عربي ويجب قتلك.. اعتقال مشتبه به في العفولة",
+     "url": "https://bokra.net/Article-1605576",
+     "date": "2026-10-12"
+    }
+   ],
+   "figures": [
+    {
+     "v": "247",
+     "label": "bus line"
+    }
+   ],
+   "verified": true
+  },
+  "al-dahiya-negev-village-demolished": {
+   "date": "2026-10-12",
+   "section": "rights",
+   "place": "al-Dahiya (unrecognised village, Negev)",
+   "headline": "Dozens of homes and a mosque demolished in Negev village of al-Dahiya",
+   "dek": "Accounts range from about 50 homes and 250 people to 80 structures and 400 people, all of the Abu Wadi family.",
+   "body": [
+    "Authorities demolished a neighbourhood of the unrecognised village of al-Dahiya, north of Rahat, on Monday 12 October, including its mosque.",
+    "The Regional Council of Unrecognised Villages said about 50 homes housing some 250 members of the Abu Wadi family were destroyed, plus dozens of other buildings. Ra'am MK Walid al-Huashla, from the village, put it at more than 70 homes. AFP, via the Times of Israel, reported about 80 structures and 400 people.",
+    "The forum of Arab local council heads in the south accused ministers Itamar Ben Gvir and Amichai Chikli of using demolitions for electoral gain. Councils opened schools to shelter families. On 13 October homes of the Abu Qrinat family in southern Rahat were also demolished."
+   ],
+   "people": [
+    {
+     "name": "Suleiman al-Huashla",
+     "role": "director, Regional Council of Unrecognised Villages"
+    },
+    {
+     "name": "Walid al-Huashla",
+     "role": "Ra'am MK"
+    },
+    {
+     "name": "Adnan Abu Wadi",
+     "role": "resident left homeless with four children (ToI)"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "سليمان الهواشلة لـ«بكرا»: هدم نحو 50 بيتًا في الضحية",
+     "url": "https://bokra.net/Article-1605605",
+     "date": "2026-10-12"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "هدم أكثر من 70 منزلًا ومسجد في قرية ضحية بالنقب",
+     "url": "https://bokra.net/Article-1605574",
+     "date": "2026-10-12"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "هدم منازل في رهط اليوم.. منتدى رؤساء السلطات العربية في الجنوب",
+     "url": "https://bokra.net/Article-1605666",
+     "date": "2026-10-13"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Desperate for change, Israel's Arab minority sees election as existential",
+     "url": "https://www.timesofisrael.com/desperate-for-change-israels-arab-minority-sees-election-as-existential/",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [
+    {
+     "v": "~50-80",
+     "label": "homes/structures destroyed (accounts differ)"
+    },
+    {
+     "v": "250-400",
+     "label": "people affected"
+    },
+    {
+     "v": "1",
+     "label": "mosque"
+    }
+   ],
+   "verified": true
+  },
+  "deir-hanna-wedding-hall-demolished": {
+   "date": "2026-10-22",
+   "section": "rights",
+   "place": "Deir Hanna",
+   "headline": "Authorities demolish a wedding hall in Deir Hanna days before the vote",
+   "dek": "Police sealed off the area while bulldozers took down the hall, said to be built without a permit.",
+   "body": [
+    "Authorities demolished a wedding hall in Deir Hanna, in the Batuf valley, on the morning of Thursday 22 October, citing construction without a permit.",
+    "A large police force closed the area and kept residents away while bulldozers worked.",
+    "The demolition came amid a run of demolitions in Arab towns in the final weeks of the campaign."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "جرافات الهدم تصل إلى دير حنا وتهدم قاعة أفراح",
+     "url": "https://bokra.net/Article-1606203",
+     "date": "2026-10-22"
+    }
+   ],
+   "figures": [],
+   "verified": true
+  },
+  "umm-al-fahm-second-self-demolition": {
+   "date": "2026-10-20",
+   "section": "rights",
+   "place": "Umm al-Fahm",
+   "headline": "Second family in days demolishes its own home in Umm al-Fahm",
+   "dek": "Saeed Ighbariya tore down his house in al-Ayoun before bulldozers arrived, to avoid the state's bill.",
+   "body": [
+    "Saeed Ighbariya demolished his own home in the al-Ayoun neighbourhood of Umm al-Fahm before dawn on Tuesday 20 October, the second home in the neighbourhood taken down by its owners within days.",
+    "He was told late at night that police and bulldozers would come at dawn, and chose to do it himself rather than face costs that can reach hundreds of thousands of shekels.",
+    "Five days earlier, on 15 October, Mohammed Jamal Ibrahim Khalifa demolished the house he had built in the Suweisa neighbourhood for his coming marriage, after spending more than NIS 600,000 on it.",
+    "Ra'am has asked the Supreme Court and the attorney general to stop demolitions until the election."
+   ],
+   "people": [
+    {
+     "name": "Saeed Ighbariya",
+     "role": "homeowner"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "منزل ثانٍ يهدمه صاحبه ذاتيًا خلال أيام في أم الفحم",
+     "url": "https://bokra.net/Article-1606105",
+     "date": "2026-10-20"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "أم الفحم: شاب يهدم منزل أحلامه بيديه عقب تلقيه أمر هدم",
+     "url": "https://bokra.net/Article-1605745",
+     "date": "2026-10-15"
+    }
+   ],
+   "figures": [
+    {
+     "v": "2",
+     "label": "self-demolitions in al-Ayoun within days"
+    }
+   ],
+   "verified": true,
+   "photo": "umm-al-fahm-skyline-2014"
+  },
+  "tayibe-old-orders-set-for-election-day": {
+   "date": "2026-10-15",
+   "section": "rights",
+   "place": "Tayibe",
+   "headline": "Twenty-year-old demolition orders in Tayibe scheduled for election day",
+   "dek": "Attorney Qais Nasser says the State Comptroller's office is examining the timing.",
+   "body": [
+    "Occupied homes in Tayibe face demolition on 27 October, election day, under orders issued about twenty years ago and never carried out, attorney Dr. Qais Nasser told Bokra.",
+    "He said the Israel Land Authority recently asked the enforcement authority to activate the old orders, with more homes set for the following days, and that a team at the State Comptroller's office began examining the file after he sent it material.",
+    "Nasser argued the timing aims to intimidate Arab voters and serve right-wing parties; he presented this as his own assessment."
+   ],
+   "people": [
+    {
+     "name": "Qais Nasser",
+     "role": "attorney"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "د. قيس ناصر لـ«بكرا»: أوامر هدم عمرها نحو 20 عاماً تُفعّل في الطيبة يوم الانتخابات",
+     "url": "https://bokra.net/Article-1605803",
+     "date": "2026-10-15"
+    }
+   ],
+   "figures": [
+    {
+     "v": "~20 years",
+     "label": "age of orders"
+    },
+    {
+     "v": "27 Oct",
+     "label": "scheduled date"
+    }
+   ],
+   "verified": true,
+   "photo": "tayibe-painted-street-2022"
+  },
+  "abbas-asks-ag-to-freeze-demolitions": {
+   "date": "2026-10-11",
+   "section": "rights",
+   "place": "Negev / nationwide",
+   "headline": "Mansour Abbas asks attorney general to freeze home demolitions until after the vote",
+   "dek": "The Ra'am leader says Ben Gvir is using demolitions in his campaign.",
+   "body": [
+    "Ra'am leader MK Mansour Abbas wrote to Attorney General Gali Baharav-Miara asking for an immediate freeze on administrative and judicial demolition orders, and on new administrative orders, until the election is over and a government formed.",
+    "He said Itamar Ben Gvir was boasting of demolitions in his campaign, harming the fairness of the election and the neutrality of law enforcement.",
+    "Abbas said residents of unrecognised Negev villages cannot get permits because the state has not planned them, and asked that no occupied home there be demolished without the attorney general's personal approval."
+   ],
+   "people": [
+    {
+     "name": "Mansour Abbas",
+     "role": "Ra'am leader, MK"
+    },
+    {
+     "name": "Gali Baharav-Miara",
+     "role": "Attorney General"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "النائب عباس يطالب بتجميد هدم المنازل قبل الانتخابات",
+     "url": "https://bokra.net/Article-1605538",
+     "date": "2026-10-11"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "photo": "mansour-abbas-interview-2022"
+  },
+  "arab-students-attacked-jerusalem": {
+   "date": "2026-10-19",
+   "section": "rights",
+   "place": "Jerusalem",
+   "headline": "Four Arab women students doused with drinks and called 'terrorists' in Jerusalem",
+   "dek": "The students, from Tayibe, Qalansawe and Baqa al-Gharbiya, say the attack was filmed for social media.",
+   "body": [
+    "Four Arab women students, one from Tayibe, two from Qalansawe and one from Baqa al-Gharbiya, said a man poured soft drinks over them in Jerusalem while others shouted racist slurs including 'terrorists'.",
+    "The attack was filmed, and the students said the aim appeared to be posting and boasting about it online.",
+    "They described the incident in an interview with journalist Hassan Shaalan."
+   ],
+   "people": [
+    {
+     "name": "Hassan Shaalan",
+     "role": "journalist who interviewed them"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "(فيديو) اعتداء على أربع طالبات عربيات في القدس وسكب مشروبات عليهن",
+     "url": "https://bokra.net/Article-1606042",
+     "date": "2026-10-19"
+    }
+   ],
+   "figures": [
+    {
+     "v": "4",
+     "label": "students"
+    }
+   ],
+   "verified": true
+  },
+  "raam-adopts-plan-to-recognise-negev-villages": {
+   "date": "2026-09-29",
+   "section": "rights",
+   "place": "Segev Shalom",
+   "headline": "Ra'am adopts the unrecognised villages' plan for Negev regional councils",
+   "dek": "Mansour Abbas and Walid al-Huashla say recognising the villages needs a partnership in government.",
+   "body": [
+    "Ra'am adopted the 'regional councils plan' drawn up by the Regional Council of Unrecognised Villages in the Negev after a meeting in Segev Shalom with MKs Mansour Abbas and Walid al-Huashla and village representatives.",
+    "The plan seeks recognition of the villages, proper planning and services. Abbas and al-Huashla said they would push it in the next Knesset and work to stop demolitions, and that it requires being part of a supportive government.",
+    "Democrats leader Yair Golan repeated his call to stop demolitions and prepare master plans for the villages. The plan remains a proposal."
+   ],
+   "people": [
+    {
+     "name": "Mansour Abbas",
+     "role": "Ra'am leader"
+    },
+    {
+     "name": "Walid al-Huashla",
+     "role": "Ra'am MK"
+    },
+    {
+     "name": "Yair Golan",
+     "role": "Democrats leader"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الموحدة تتبنى خطة للاعتراف بالقرى غير المعترف بها في النقب",
+     "url": "https://bokra.net/Article-1604587",
+     "date": "2026-09-29"
+    }
+   ],
+   "figures": [],
+   "verified": true,
+   "photo": "al-araqib-cemetery-2026"
+  },
+  "supreme-court-lets-arab-lists-run": {
+   "date": "2026-10-02",
+   "section": "elections",
+   "place": "Jerusalem",
+   "headline": "Supreme Court lets Ra'am and the Joint List run; Abu Shehadeh withdraws",
+   "dek": "The court unanimously overturned the elections committee's bans on both lists and cleared MK Ofer Cassif by 7-2.",
+   "body": [
+    "The Supreme Court on Friday 2 October unanimously overturned the Central Elections Committee's decisions to bar Ra'am and the Joint List from the 27 October election, saying the material did not meet the legal standard.",
+    "MK Ofer Cassif was cleared by seven justices to two; David Mintz and Alex Stein would have barred him. The justices condemned his statements while ruling them short of the threshold.",
+    "Balad chairman Sami Abu Shehadeh withdrew his candidacy on 1 October after Court President Isaac Amit said a majority leaned towards upholding his disqualification over an article written the day after 7 October. Balad says he remains party leader."
+   ],
+   "people": [
+    {
+     "name": "Isaac Amit",
+     "role": "Supreme Court President"
+    },
+    {
+     "name": "Ofer Cassif",
+     "role": "Joint List MK"
+    },
+    {
+     "name": "Sami Abu Shehadeh",
+     "role": "Balad chairman"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Times of Israel",
+     "title": "Supreme Court unanimously overturns election panel's ban on Arab parties",
+     "url": "https://www.timesofisrael.com/supreme-court-unanimously-overturns-election-panels-ban-on-arab-parties/",
+     "date": "2026-10-02"
+    },
+    {
+     "outlet": "JTA",
+     "title": "Israel's Supreme Court says Arab parties can run in Oct. 27 election",
+     "url": "https://www.jta.org/2026/10/05/israel/israels-supreme-court-says-arab-parties-can-run-in-oct-27-election",
+     "date": "2026-10-05"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "المحكمة العليا تقرر: عوفر كسيف و«الموحدة» و«المشتركة» يخوضون الانتخابات",
+     "url": "https://bokra.net/Article-1604889",
+     "date": "2026-10-02"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "التجمع: أبو شحادة يسحب ترشحه بعد إعلان شطبه",
+     "url": "https://bokra.net/Article-1604845",
+     "date": "2026-10-01"
+    }
+   ],
+   "figures": [
+    {
+     "v": "9-0",
+     "label": "on Ra'am and the Joint List"
+    },
+    {
+     "v": "7-2",
+     "label": "on Ofer Cassif"
+    }
+   ],
+   "verified": true,
+   "photo": "supreme-court-jerusalem-2018"
+  },
+  "final-polls-arab-lists-14-to-16-seats": {
+   "date": "2026-10-23",
+   "section": "elections",
+   "place": "Nationwide",
+   "headline": "Final polls give the two Arab lists between 14 and 16 seats",
+   "dek": "All three TV polls put the Joint List at 9; Ra'am ranges from 5 to 7, and neither bloc reaches 61.",
+   "body": [
+    "The last polls before the legal publication cut-off, released on Friday 23 October, gave the Joint List 9 seats in each of the three TV surveys.",
+    "Channel 13 (Madad) gave Ra'am 7, for 16 Arab seats; Channel 12 (Midgam) and Kan (Kantar) gave Ra'am 5, for 14.",
+    "The opposition bloc led by Gadi Eisenkot polled 52 to 56 seats and Netanyahu's bloc 50, leaving both short of a majority without the Arab lists."
+   ],
+   "people": [
+    {
+     "name": "Gadi Eisenkot",
+     "role": "Yashar leader, opposition bloc"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Times of Israel",
+     "title": "Final polls before election show both blocs short of majority, small parties out of Knesset",
+     "url": "https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/",
+     "date": "2026-10-24"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "استطلاع أخير قبل انتخابات الكنيست: 82% يعتزمون التصويت",
+     "url": "https://bokra.net/Article-1606317",
+     "date": "2026-10-23"
+    }
+   ],
+   "figures": [
+    {
+     "v": "9",
+     "label": "Joint List, all three polls"
+    },
+    {
+     "v": "5-7",
+     "label": "Ra'am"
+    },
+    {
+     "v": "14-16",
+     "label": "Arab lists combined"
+    }
+   ],
+   "verified": true,
+   "photo": "ballot-slips-2022"
+  },
+  "arab-turnout-forecast-63-percent": {
+   "date": "2026-10-21",
+   "section": "elections",
+   "place": "Nazareth",
+   "headline": "Pollsters expect Arab turnout near 63%, well up on 2022",
+   "dek": "Stat-Net forecasts 63%; Maariv's poll found intent to vote among Arab-party supporters up to 81%.",
+   "body": [
+    "The Stat-Net Research Institute forecast Arab turnout of 63% on 27 October, Reuters and the Times of Israel reported, compared with 56% in 2022 by its measure. Other outlets put 2022 Arab turnout at about 53-54%.",
+    "In Maariv's poll of 19-22 October, expected turnout among supporters of Arab parties rose from 74% on 8 October to 81%. A Joint List poll cited by the Christian Science Monitor projects more than 60%.",
+    "A Moshe Dayan Center survey in May had projected 53%, rising to 67% if the Joint List reunited, which it did."
+   ],
+   "people": [
+    {
+     "name": "Mansour Abbas",
+     "role": "Ra'am leader"
+    },
+    {
+     "name": "Yousef Jabareen",
+     "role": "Joint List leader"
+    },
+    {
+     "name": "Ahmad Tibi",
+     "role": "Joint List, Hadash-Ta'al"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Times of Israel",
+     "title": "Turnout among Israel's Arab voters could make or break hopes to unseat Netanyahu",
+     "url": "https://www.timesofisrael.com/turnout-among-israels-arab-voters-could-make-or-break-hopes-to-unseat-netanyahu/",
+     "date": "2026-10-21"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "استطلاع «معاريف»: ارتفاع نية التصويت لدى مؤيدي الأحزاب العربية إلى 81%",
+     "url": "https://bokra.net/Article-1606264",
+     "date": "2026-10-23"
+    },
+    {
+     "outlet": "Christian Science Monitor",
+     "title": "In these Israeli elections, Arab citizens could be the deciding vote",
+     "url": "https://www.csmonitor.com/World/Middle-East/2026/1021/israel-arab-election-netanyahu-palestinian",
+     "date": "2026-10-21"
+    }
+   ],
+   "figures": [
+    {
+     "v": "63%",
+     "label": "Stat-Net forecast"
+    },
+    {
+     "v": "81%",
+     "label": "Arab-party supporters sure to vote (Maariv)"
+    },
+    {
+     "v": "53-56%",
+     "label": "Arab turnout 2022 (sources differ)"
+    }
+   ],
+   "verified": false,
+   "photo": "lod-polling-station-2020"
+  },
+  "channel-13-poll-arab-lists-14": {
+   "date": "2026-09-30",
+   "section": "elections",
+   "place": "Nationwide",
+   "headline": "Channel 13 poll: Netanyahu bloc 54, opposition 52, Arab lists 14",
+   "dek": "The Joint List polled 9 and Ra'am 5 at the start of the final month.",
+   "body": [
+    "A Channel 13 poll on 30 September gave Netanyahu's camp 54 seats, the Zionist opposition 52 and the two Arab lists 14: Joint List 9, Ra'am 5.",
+    "Yashar, led by Gadi Eisenkot, led with 21 seats and Likud had 19.",
+    "By the final poll on 23 October Channel 13 had the Arab lists at 16."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "استطلاع القناة 13: معسكر نتنياهو يتقدم بمقعدين و14 مقعدًا للقائمتين العربيتين",
+     "url": "https://bokra.net/Article-1604785",
+     "date": "2026-09-30"
+    }
+   ],
+   "figures": [
+    {
+     "v": "14",
+     "label": "Arab lists, 30 Sep"
+    },
+    {
+     "v": "16",
+     "label": "Arab lists, 23 Oct"
+    }
+   ],
+   "verified": true,
+   "photo": "lod-joint-list-billboard-2021"
+  },
+  "anonymous-anti-raam-campaign-traced": {
+   "date": "2026-10-19",
+   "section": "elections",
+   "place": "Tayibe / Tira",
+   "headline": "Anonymous campaign against Ra'am traced to firms tied to Channel 14's owner",
+   "dek": "FakeReporter says billboards and Arabic polling link to companies of Yitzhak Mirilashvili.",
+   "body": [
+    "An investigation by FakeReporter found that an anonymous campaign against Ra'am and its alliance with Yoav Segalovitz led to companies linked to businessman Yitzhak Mirilashvili, owner of Channel 14.",
+    "The campaign began in mid-October with large billboards near Tayibe and Tira and in Givatayim. A polling firm owned by the same group ran Arabic-language surveys about Ra'am weeks earlier, and suspected fake accounts that once had Vietnamese names posted similar content.",
+    "A petition was filed with the Central Elections Committee to reveal who funded the campaign."
+   ],
+   "people": [
+    {
+     "name": "Yitzhak Mirilashvili",
+     "role": "owner of Channel 14"
+    },
+    {
+     "name": "Yoav Segalovitz",
+     "role": "No. 2 on Ra'am's slate"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "تحقيق يكشف: حملة لضرب الموحدة تعود إلى شركات مرتبطة بمالك القناة 14",
+     "url": "https://bokra.net/Article-1606075",
+     "date": "2026-10-19"
+    }
+   ],
+   "figures": [],
+   "verified": true
+  },
+  "eisenkot-rules-out-raam": {
+   "date": "2026-09-27",
+   "section": "elections",
+   "place": "Nationwide",
+   "headline": "Eisenkot says Ra'am will not sit in a government he leads",
+   "dek": "He set conditions including recognising Israel as a Jewish state; Segalovitz replied there is no Eisenkot government without Ra'am.",
+   "body": [
+    "Yashar leader Gadi Eisenkot told Channel 12 that Ra'am would not be part of any government he heads.",
+    "He said joining required recognising Israel as Jewish and democratic, the values of the Declaration of Independence, compulsory service and Hamas as a terror group, and that Ra'am does not meet them.",
+    "Ra'am's Yoav Segalovitz answered that there will be no Eisenkot government without Ra'am. The Times of Israel reported on 21 October that Eisenkot repeated he would not align with any Arab party."
+   ],
+   "people": [
+    {
+     "name": "Gadi Eisenkot",
+     "role": "Yashar leader"
+    },
+    {
+     "name": "Yoav Segalovitz",
+     "role": "Ra'am No. 2"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "آيزنكوت: «الموحدة» لن تشارك في حكومة برئاستي",
+     "url": "https://bokra.net/Article-1604584",
+     "date": "2026-09-27"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Turnout among Israel's Arab voters could make or break hopes to unseat Netanyahu",
+     "url": "https://www.timesofisrael.com/turnout-among-israels-arab-voters-could-make-or-break-hopes-to-unseat-netanyahu/",
+     "date": "2026-10-21"
+    }
+   ],
+   "figures": [],
+   "verified": true
+  },
+  "democrats-pledge-billion-a-year-against-crime": {
+   "date": "2026-10-15",
+   "section": "elections",
+   "place": "Nazareth",
+   "headline": "Democrats pledge NIS 1 billion a year against crime and a demolitions freeze",
+   "dek": "At a Nazareth event the party said it would seek the internal security portfolio.",
+   "body": [
+    "The Democrats presented their programme for Arab society at the Ramada hotel in Nazareth on Thursday 15 October.",
+    "They promised a national emergency task force with NIS 1 billion a year against crime, to freeze the Kaminitz law and to halt demolitions and administrative fines until planning is settled. The party said it would ask for the internal security ministry.",
+    "The programme also includes amending the nation-state law and anchoring equality in a Basic Law. MKs Gilad Kariv and Naama Lazimi and candidates Sumaya Bashir and Ali Salalha took part."
+   ],
+   "people": [
+    {
+     "name": "Gilad Kariv",
+     "role": "Democrats MK"
+    },
+    {
+     "name": "Naama Lazimi",
+     "role": "Democrats MK"
+    },
+    {
+     "name": "Sumaya Bashir",
+     "role": "Democrats candidate"
+    },
+    {
+     "name": "Ali Salalha",
+     "role": "Democrats candidate"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الديمقراطيون يتعهدون بمليار شيكل سنوياً لمكافحة الجريمة وتجميد كامينتس",
+     "url": "https://bokra.net/Article-1605804",
+     "date": "2026-10-15"
+    }
+   ],
+   "figures": [
+    {
+     "v": "NIS 1bn",
+     "label": "a year for an anti-crime task force"
+    }
+   ],
+   "verified": true
+  },
+  "free-public-transport-election-day": {
+   "date": "2026-10-11",
+   "section": "elections",
+   "place": "Nationwide",
+   "headline": "Intercity buses and trains free from the evening before election day",
+   "dek": "The Central Elections Committee set free travel from 8 pm on 26 October until services end on 27 October.",
+   "body": [
+    "The Central Elections Committee decided that intercity buses and Israel Railways trains will be free for all from 8 pm on Monday 26 October until the end of service on election day.",
+    "The aim is to let voters reach polling stations without travel costs. Election day is a public holiday."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "بمناسبة انتخابات الكنيست: المواصلات العامة مجانًا ابتداءً من مساء 26 أكتوبر",
+     "url": "https://bokra.net/Article-1605568",
+     "date": "2026-10-11"
+    }
+   ],
+   "figures": [
+    {
+     "v": "8 pm, 26 Oct",
+     "label": "free travel starts"
+    }
+   ],
+   "verified": false
+  },
+  "court-bans-real-time-voter-counts": {
+   "date": "2026-10-22",
+   "section": "elections",
+   "place": "Jerusalem",
+   "headline": "Supreme Court bars party observers from sending live voter counts",
+   "dek": "Polling-station members may not digitally tally who has voted and pass it to parties in real time.",
+   "body": [
+    "The Supreme Court accepted a petition and barred polling-committee members and party observers from using digital tools to count how many people have voted at a station and pass that to their parties during election day.",
+    "The ban covers both the digital tally and real-time transmission.",
+    "Likud and Religious Zionism had said they would place nearly 2,000 observers at polling stations in Arab communities, citing unproven fraud claims."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "المحكمة العليا تمنع نقل بيانات التصويت رقميًا إلى الأحزاب لحظة بلحظة",
+     "url": "https://bokra.net/Article-1606234",
+     "date": "2026-10-22"
+    },
+    {
+     "outlet": "Times of Israel",
+     "title": "Turnout among Israel's Arab voters could make or break hopes to unseat Netanyahu",
+     "url": "https://www.timesofisrael.com/turnout-among-israels-arab-voters-could-make-or-break-hopes-to-unseat-netanyahu/",
+     "date": "2026-10-21"
+    }
+   ],
+   "figures": [
+    {
+     "v": "~2,000",
+     "label": "observers Likud and RZP planned for Arab polling stations"
+    }
+   ],
+   "verified": false,
+   "photo": "supreme-court-knesset-aerial-2009"
+  },
+  "threshold-could-cost-ten-seats": {
+   "date": "2026-10-03",
+   "section": "elections",
+   "place": "Nationwide",
+   "headline": "About 420,000 votes were lost below the threshold in 2022, Taub Center says",
+   "dek": "A list may need 171,000 to 195,000 votes to enter the Knesset this time, depending on turnout.",
+   "body": [
+    "The Taub Center found that about 420,000 votes in 2022, around 8.8% and close to ten seats, went to parties that missed the 3.25% threshold.",
+    "About 155,000 valid votes were enough to pass in 2022. With eligible voters up from about 6.789 million to about 7.561 million, a list may need about 171,000 votes at 70% turnout, 183,000 at 75% and 195,000 at 80%."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "420 ألف صوت ذهبت سدى.. نسبة الحسم قد تصبح فخًا",
+     "url": "https://bokra.net/Article-1604965",
+     "date": "2026-10-03"
+    }
+   ],
+   "figures": [
+    {
+     "v": "420,000",
+     "label": "votes wasted in 2022"
+    },
+    {
+     "v": "3.25%",
+     "label": "threshold"
+    },
+    {
+     "v": "7.561m",
+     "label": "eligible voters 2026"
+    }
+   ],
+   "verified": true,
+   "photo": "hadash-taal-president-consultations-2022"
+  },
+  "hasoub-arabs-under-2-percent-of-hi-tech": {
+   "date": "2026-10-17",
+   "section": "life",
+   "place": "Nazareth",
+   "headline": "Arab citizens still under 2% of hi-tech workers, Hasoub chairman says",
+   "dek": "Ayman Saif told the group's annual conference the path to the industry is still long.",
+   "body": [
+    "Ayman Saif, chairman of Hasoub, said at the organisation's annual conference that Arab citizens remain under 2% of the roughly 400,000 hi-tech employees in Israel.",
+    "Hasoub works with entrepreneurs, Arab investors and university students. Saif said the number of Arab tech founders and investors has grown, but called for partners to open jobs, companies and funding."
+   ],
+   "people": [
+    {
+     "name": "Ayman Saif",
+     "role": "chairman, Hasoub"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "مؤتمر حاسوب| أيمن سيف لـ بكرا: العرب أقل من 2% من العاملين في الهايتك",
+     "url": "https://bokra.net/Article-1605928",
+     "date": "2026-10-17"
+    }
+   ],
+   "figures": [
+    {
+     "v": "<2%",
+     "label": "Arab share of hi-tech workforce"
+    },
+    {
+     "v": "~400,000",
+     "label": "hi-tech employees"
+    }
+   ],
+   "verified": false
+  },
+  "tel-aviv-university-honours-said-abu-shakra": {
+   "date": "2026-10-14",
+   "section": "life",
+   "place": "Umm al-Fahm",
+   "headline": "Tel Aviv University to award honorary doctorate to Umm al-Fahm museum founder",
+   "dek": "Artist Said Abu Shakra founded the Umm al-Fahm Art Gallery thirty years ago with his brother Farid.",
+   "body": [
+    "Tel Aviv University's senate decided to give an honorary doctorate to artist Said Abu Shakra, founder and director of the Umm al-Fahm art museum, for thirty years of cultural work.",
+    "He received a similar honour from the Bezalel Academy of Arts and Design a year ago.",
+    "The museum grew from a gallery he founded with his brother, artist Farid Abu Shakra, and includes an oral-history archive of the area and an information centre on contemporary Palestinian art."
+   ],
+   "people": [
+    {
+     "name": "Said Abu Shakra",
+     "role": "artist, founder of Umm al-Fahm art museum"
+    },
+    {
+     "name": "Farid Abu Shakra",
+     "role": "artist, co-founder"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "جامعة تل أبيب تقرّر منح سعيد أبو شقرة الدكتوراه الفخرية",
+     "url": "https://bokra.net/Article-1605731",
+     "date": "2026-10-14"
+    }
+   ],
+   "figures": [
+    {
+     "v": "30",
+     "label": "years of the gallery"
+    }
+   ],
+   "verified": true,
+   "photo": "umm-al-fahm-from-gallery-2023"
+  },
+  "sakhnin-school-tops-excellence-bagrut": {
+   "date": "2026-10-23",
+   "section": "life",
+   "place": "Sakhnin",
+   "headline": "Sakhnin school tops national table for excellence matriculation, 82.4%",
+   "dek": "103 of 125 graduates of al-Bashaer school earned the distinguished certificate, ministry data show.",
+   "body": [
+    "Al-Bashaer school for science and leadership in Sakhnin, part of the Arab Orthodox College network, had 82.4% of graduates earning a distinguished matriculation certificate in the Education Ministry's 2025 data, ranking it first among Arab and Jewish schools on that measure.",
+    "103 of its 125 graduates earned the certificate. Principal Dr. Amir al-Haj called it a source of pride and responsibility.",
+    "Separate ministry data for 2024-2025 showed Sajur, al-Jish and Hurfeish among 18 local authorities with no exam booklets cancelled for integrity breaches; Kseifa and Abu Snan had the highest Arab rate at 2.5%."
+   ],
+   "people": [
+    {
+     "name": "Amir al-Haj",
+     "role": "principal"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "البشائر الأهلية للعلوم والقيادة في سخنين تحقق إنجازًا تاريخيًا",
+     "url": "https://bokra.net/Article-1606289",
+     "date": "2026-10-23"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "البجروت في البلدات العربية: تفاوت في نسب إلغاء الامتحانات",
+     "url": "https://bokra.net/Article-1606257",
+     "date": "2026-10-22"
+    }
+   ],
+   "figures": [
+    {
+     "v": "82.4%",
+     "label": "distinguished matriculation"
+    },
+    {
+     "v": "103/125",
+     "label": "graduates"
+    }
+   ],
+   "verified": false,
+   "photo": "sakhnin-city-view-2025"
+  },
+  "shoresh-23-percent-first-graders-arabic-speakers": {
+   "date": "2026-10-15",
+   "section": "life",
+   "place": "Nationwide",
+   "headline": "Arabic speakers are 23% of first graders; Shoresh warns on education gaps",
+   "dek": "Arabic-speaking pupils scored below every OECD country in PISA 2025, the institute's report says.",
+   "body": [
+    "Prof. Dan Ben-David of the Shoresh Institution said Arabic-speaking pupils make up 23% of Israel's first graders in 2026, and their schooling will shape the economy for decades.",
+    "The Shoresh 2026 report, released two weeks before the election, says Arabic-speaking pupils' PISA 2025 results were below all OECD countries and below six of the seven Arab countries that took part.",
+    "Ben-David said closing the gaps serves both Arab society and the state as a whole."
+   ],
+   "people": [
+    {
+     "name": "Dan Ben-David",
+     "role": "president, Shoresh Institution"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "البروفيسور دان بن دافيد لـ«بكرا»: 23% من طلاب الصف الأول ناطقون بالعربية",
+     "url": "https://bokra.net/Article-1605779",
+     "date": "2026-10-15"
+    }
+   ],
+   "figures": [
+    {
+     "v": "23%",
+     "label": "of first graders speak Arabic"
+    },
+    {
+     "v": "6 of 7",
+     "label": "Arab countries scoring above Arabic-speaking Israeli pupils"
+    }
+   ],
+   "verified": true,
+   "photo": "sakhnin-al-safa-school-2019"
+  },
+  "nour-abbas-heavy-truck-driver": {
+   "date": "2026-10-24",
+   "section": "life",
+   "place": "Deir Hanna",
+   "headline": "Nour Abbas of Deir Hanna went from bus driver to heavy-truck driver",
+   "dek": "The 32-year-old mother of two is one of very few Arab women in the trade.",
+   "body": [
+    "Nour Abbas, 32, from Deir Hanna, drove buses before moving to heavy trucks, a job in which Arab women are still rare.",
+    "She got her bus licence at 26, after marrying and having two children, and drove for Superbus on lines around Nazareth, Afula and Wadi Ara. Her mother first opposed the idea out of worry for her safety."
+   ],
+   "people": [
+    {
+     "name": "Nour Abbas",
+     "role": "truck driver, Deir Hanna"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "نور عباس... من حلم الطفولة إلى قيادة الشاحنات الثقيلة",
+     "url": "https://bokra.net/Article-1606360",
+     "date": "2026-10-24"
+    }
+   ],
+   "figures": [
+    {
+     "v": "32",
+     "label": "her age"
+    },
+    {
+     "v": "26",
+     "label": "age she got a bus licence"
+    }
+   ],
+   "verified": true
+  },
+  "alfanar-war-hit-arab-employment": {
+   "date": "2026-10-13",
+   "section": "life",
+   "place": "Nationwide",
+   "headline": "War cut Arab employment harder than Jewish, Alfanar director says",
+   "dek": "Arab men's employment fell about 27% at the start of the war, against 11% for Jewish men.",
+   "body": [
+    "Dr. Hussam Abu Bakr, director of the Alfanar organisation, said Bank of Israel data show Arab men's employment dropped about 27% when the war began, against about 11% among Jewish men. Arab employment is still about 5% below its pre-war level.",
+    "Broad unemployment in Arab society was 15.6% in October 2023, against 8.6% among Jews.",
+    "An Israel Democracy Institute survey from May 2026 found 56% of Arabs who worked before 7 October reported less work, against 22% of non-Haredi Jews, up from 42% in April 2025."
+   ],
+   "people": [
+    {
+     "name": "Hussam Abu Bakr",
+     "role": "director, Alfanar"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "حسام ابو بكرا لـ بكرا: الحرب أضرت بتشغيل العرب",
+     "url": "https://bokra.net/Article-1605422",
+     "date": "2026-10-13"
+    }
+   ],
+   "figures": [
+    {
+     "v": "-27%",
+     "label": "Arab men's employment at war's start"
+    },
+    {
+     "v": "56%",
+     "label": "Arabs reporting less work (IDI, May 2026)"
+    }
+   ],
+   "verified": true,
+   "photo": "tamra-missile-damage-2025"
+  },
+  "sakhnin-fans-bus-stoned": {
+   "date": "2026-10-10",
+   "section": "life",
+   "place": "Tel Aviv / Sakhnin",
+   "headline": "Bus carrying Bnei Sakhnin fans stoned on the way home from Bloomfield",
+   "dek": "League chief Erez Halfon called it another red line crossed; the club asked police for protection at away games.",
+   "body": [
+    "A bus carrying Ihud Bnei Sakhnin supporters was pelted with stones on the evening of 10 October as they returned from a match at Bloomfield Stadium in Tel Aviv.",
+    "Israel Football League chairman Erez Halfon condemned the attack and said violent people belong behind bars, not in the stands.",
+    "The club wrote to the police commissioner asking for protection for players and fans at away matches, including travel. On 20 October the club held a memorial match for its late player Lior Asulin with the 2004 State Cup-winning squad."
+   ],
+   "people": [
+    {
+     "name": "Erez Halfon",
+     "role": "chairman, Israel Football League"
+    },
+    {
+     "name": "Lior Asulin",
+     "role": "late Bnei Sakhnin player"
+    }
+   ],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "إدانات ومطالبات بملاحقة المعتدين بعد رشق حافلة مشجعي اتحاد أبناء سخنين بالحجارة",
+     "url": "https://bokra.net/Article-1605512",
+     "date": "2026-10-11"
+    },
+    {
+     "outlet": "Bokra",
+     "title": "مساء اليوم: أبناء سخنين ينظم مباراة تخليدًا لليئور أسولين",
+     "url": "https://bokra.net/Article-1606017",
+     "date": "2026-10-18"
+    }
+   ],
+   "figures": [
+    {
+     "v": "2004",
+     "label": "year Sakhnin won the State Cup"
+    }
+   ],
+   "verified": true,
+   "photo": "bnei-sakhnin-fans-2015"
+  },
+  "nazareth-city-palace-music-days": {
+   "date": "2026-10-10",
+   "section": "life",
+   "place": "Nazareth",
+   "headline": "Nazareth announces 'City Palace Music Days' festival for November",
+   "dek": "Six evenings of Arab classical, tarab, orchestral and contemporary music at the Nazareth cultural palace.",
+   "body": [
+    "Nazareth municipality's culture, sport and youth department announced the 'City Palace Music Days 2026' festival, to be held in November at the city's cultural palace with Culture Ministry support.",
+    "The programme has six evenings mixing classical Arab music, tarab, orchestral works and contemporary experiments."
+   ],
+   "people": [],
+   "sources": [
+    {
+     "outlet": "Bokra",
+     "title": "الناصرة تستعيد ألقها الثقافي والفني… انطلاق مهرجان «أيام قصر المدينة للموسيقى 2026»",
+     "url": "https://bokra.net/Article-1605435",
+     "date": "2026-10-10"
+    }
+   ],
+   "figures": [
+    {
+     "v": "6",
+     "label": "evenings"
+    }
+   ],
+   "verified": true,
+   "photo": "nazareth-panorama-2019"
+  }
+ }
+}
